@@ -1,0 +1,20 @@
+---
+# Required Front Matter placeholder; currently empty.
+---
+
+@charset "utf-8";
+
+$carousel-height: 350px;
+
+// Theme colors.  Should be kept in sync with the colors of the carousel
+// background.
+$glyphicon-background-color: #da3;
+$glyphicon-foreground-color: white;
+$footer-border-color: #fc5;
+
+$vertical-rhythm: 30px;
+
+@import
+  "base",
+  "syntax-highlighting"
+;
