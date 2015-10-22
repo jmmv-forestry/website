@@ -146,3 +146,27 @@ ul, ol, dl, figure,
 %vertical-rhythm {
   margin-bottom: $vertical-rhythm / 2;
 }
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $vertical-rhythm;
+  }
+}
+
+.post-meta {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.post-link {
+  display: block;
+  font-size: 24px;
+}
+
+.rss-subscribe {
+  font-size: 12px;
+  font-style: italic;
+}

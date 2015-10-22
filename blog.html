@@ -1,0 +1,28 @@
+---
+layout: page
+title: News
+permalink: /blog/
+---
+
+<p>This news page contains a collection of major happenings in my life.  In
+particular, I will announce here any new writings or launches, but may also post
+other arbitrary stuff.  <i>"Is this a blog?"</i>  I don't know.  As is already
+explained in the <a href="{{ "/writing/" | prepend: site.baseurl }}">Writing</a>
+section, I currently publish my articles elsewhere (on Medium mostly), but when
+I do so, I will drop a note here as well.  Think of this page as "the master
+list" for updates.</p>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+    </li>
+  {% endfor %}
+</ul>
+
+<p class="rss-subscribe">[<a
+href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a>]</p>
