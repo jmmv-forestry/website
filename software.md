@@ -52,6 +52,9 @@ peek of the projects I started:
   Originally developed as part of Kyua but split into its own project due to
   popular demand.
 
+* **[Markdown2Social](http://github.com/jmmv/markdown2social/)**: Converts
+  simple Markdown documents to Google+ posts.  Written in Python.
+
 * **[Shell Toolkit (shtk)](http://github.com/jmmv/shtk/)**: Application toolkit
   for programmers writing POSIX-compliant shell scripts.  This is a simple
   collection of shell functions to simplify the implementation of user-friendly
