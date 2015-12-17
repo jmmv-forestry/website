@@ -55,6 +55,10 @@ peek of the projects I started:
 * **[Markdown2Social](http://github.com/jmmv/markdown2social/)**: Converts
   simple Markdown documents to Google+ posts.  Written in Python.
 
+* **[Nudgy Timer](http://github.com/jmmv/nudgytimer/)**: Time tracker for
+  Android that subtly pokes you every few minutes to help you figure out
+  where your precious time is going to.  Written in Java.
+
 * **[Shell Toolkit (shtk)](http://github.com/jmmv/shtk/)**: Application toolkit
   for programmers writing POSIX-compliant shell scripts.  This is a simple
   collection of shell functions to simplify the implementation of user-friendly
