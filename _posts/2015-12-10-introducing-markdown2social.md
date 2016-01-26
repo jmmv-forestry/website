@@ -3,6 +3,10 @@ layout: post
 title:  Introducing Markdown2Social
 date:   2015-12-10 10:00:00
 categories: software
+
+excerpt: Markdown2Social is a new open-source tool, originally written
+  at Google for Google-internal posts, that converts Markdown documents
+  to Google+ posts.
 ---
 
 During the course of this year, I have experimented with writing internal

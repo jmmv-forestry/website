@@ -3,6 +3,7 @@ layout: post
 title:  Introducing Nudgy Timer
 date:   2015-12-17 17:30:00
 categories: software
+excerpt_separator: <!--end-of-excerpt-->
 ---
 
 <p style="margin-left: 20px; float: right">
@@ -19,6 +20,8 @@ last Thanksgiving week, I took three days off of work to focus on writing
 my first Android app.  The goal was to get a basic app that could later be
 built on iteratively as open source.  The specifics of the app did not
 matter much for this exercise, but I had a simple idea in mind.
+
+<!--end-of-excerpt-->
 
 And those three days played out really well.  After three intense days, I
 had a functional application running on my phone, ready to be demoed on

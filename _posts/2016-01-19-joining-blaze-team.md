@@ -3,6 +3,7 @@ layout: post
 title:  Joining the Blaze team
 date:   2016-01-19 08:30:00
 categories: google work
+excerpt_separator: <!--end-of-excerpt-->
 ---
 
 It has been [over 6 years since I joined
@@ -18,6 +19,8 @@ time has come for me to make a move and pursue that thought in an effort to
 grow in a different direction.  And why now, you ask?  Well, simply because I
 have found a role in the NYC office for a project that I am personally
 passionate about.
+
+<!--end-of-excerpt-->
 
 # The new team
 
