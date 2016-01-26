@@ -6,10 +6,10 @@ categories: software
 excerpt_separator: <!--end-of-excerpt-->
 ---
 
-<p style="margin-left: 20px; float: right">
 <img src="{{ "/images/2015-12-17-nudgytimer.png" | prepend: site.baseurl }}"
-     style="border-style: solid; border-width: 1px" width="300px"/>
-</p>
+     alt="Nudgy Timer screenshot"
+     class="float-right with-border"
+     width="300px" />
 
 For the last two years, I had been meaning to write an Android app just for
 the sake of it.  I had attempted to do so in short chunks of "free time",

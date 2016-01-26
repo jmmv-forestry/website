@@ -179,3 +179,24 @@ header .cover-image {
   opacity: 0.5;
   width: 100%;
 }
+
+article img.with-border {
+  border-style: solid;
+  border-width: 1px;
+}
+
+article img.float-left {
+  margin-right: 20px;
+  float: left;
+}
+
+article img.float-right {
+  margin-left: 20px;
+  float: right;
+}
+
+article img.block {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
