@@ -1,0 +1,8 @@
+{
+  "editor.insertSpaces": "auto",
+  "editor.renderWhitespace": true,
+  "editor.tabSize": 2,
+  "editor.wrappingColumn": 80,
+  "editor.wrappingIndent": "none",
+  "files.trimTrailingWhitespace": true
+}
