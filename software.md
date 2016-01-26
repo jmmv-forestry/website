@@ -26,7 +26,7 @@ peek of the projects I started:
   </div>
 </div>
 
-## Authored projects
+# Authored projects
 
 * **[Boost.Process](http://www.highscore.de/boost/process/)**: A flexible
   framework for the C++ programming language to execute programs and manage
@@ -79,7 +79,7 @@ peek of the projects I started:
   small utility manipulate SGML and XML catalogs.  Designed to be integrated
   into packaging systems as a lightweight dependency.
 
-## Contributions to existing projects
+# Contributions to existing projects
 
 I have also contributed significantly to the following projects:
 

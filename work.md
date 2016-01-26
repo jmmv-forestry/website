@@ -51,12 +51,12 @@ details on what my work entails and see my [LinkedIn
 profile](https://www.linkedin.com/in/juliomerino) for further information on my
 education and work history.
 
-## Consulting
+# Consulting
 
 Am I available for hire and/or long-term freelance work?  Maybe.  [Ask me.  Sell
 me your project.](/about)
 
-## Education
+# Education
 
 I have a 5-year long **Undergraduate Degree in Computer Science** and a
 **Master's Degree in Computer Architecture, Networks and Systems**, both by the

@@ -19,7 +19,7 @@ grow in a different direction.  And why now, you ask?  Well, simply because I
 have found a role in the NYC office for a project that I am personally
 passionate about.
 
-## The new team
+# The new team
 
 So, without further ado, **today is my first day in the Blaze development
 team**.  The specific details of what I'll be doing is something I cannot share
@@ -39,7 +39,7 @@ interests are.  I don't know if I'll have the time to address the issues I
 described in that article about Bazel, but I surely hope to have a chance to
 contribute to the open source project.
 
-## Writing Java
+# Writing Java
 
 As you may know, Blaze/Bazel are Java.  Some of my peers have made fun of this
 fact, but you know what?  Modern Java is quite nice and enjoyable to write with
@@ -51,7 +51,7 @@ ago.  I had not coded in Java for 7 years and I started doing so again for this
 app, resulting in a pretty nice experience.  (Not because Android Studio, which
 I'd rant about... but because of Java itself and IntelliJ's coding aids.)
 
-## Looking back
+# Looking back
 
 I don't leave my previous SRE position without realizing that I have learned a
 damn lot over these 6 years in this role.  You know, when I joined Google I
