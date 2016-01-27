@@ -200,3 +200,23 @@ article img.block {
   margin: 0 auto;
   width: 80%;
 }
+
+article .frame {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+
+  .content {
+    margin: 0 auto;
+
+    iframe {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .footer {
+    font-size: smaller;
+    text-align: center;
+  }
+}
