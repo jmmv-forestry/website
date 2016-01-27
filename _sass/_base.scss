@@ -33,8 +33,11 @@
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
-  color: black;
-  text-shadow: 0 0px 2px #aaaaaa;
+
+  h1, p {
+    color: black;
+    text-shadow: 0 0px 2px #aaaaaa;
+  }
 }
 
 /* Declare heights because of positioning of img element */
@@ -46,8 +49,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
-  height: $carousel-height;
+  height: auto;
+  width: auto;
+  min-height: $carousel-height;
 }
 
 /* Center align the text within the three columns below the carousel */
