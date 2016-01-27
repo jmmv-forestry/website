@@ -21,8 +21,26 @@ layout: base
 </div>
 
 <div class="container">
-  <p class="rss-subscribe">[<a
-  href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a>]
-  &middot;
-  [<a href="{{ "/blog/" | prepend: site.baseurl }}">Go to posts index</a>]</p>
+  <p class="post-links">
+    {% if page.gplus %}
+    <a href="https://plus.google.com/+JulioMerino/posts/{{ page.gplus }}">
+    Posted on Google+</a>
+    &middot;
+    {% endif %}
+
+    {% if page.julipedia %}
+    <a href="http://julipedia.meroh.net/{{ page.julipedia }}">Posted on
+    The Julipedia</a>
+    &middot;
+    {% endif %}
+
+    {% if page.medium %}
+    <a href="https://medium.com/@jmmv/{{ page.medium }}">Posted on Medium</a>
+    &middot;
+    {% endif %}
+
+    <a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a>
+    &middot;
+    <a href="{{ "/blog/" | prepend: site.baseurl }}">Go to posts index</a>
+  </p>
 </div>
