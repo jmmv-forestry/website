@@ -11,6 +11,7 @@ description: >
 
 baseurl: ""
 permalink: /blog/:year/:month/:day/:title.html
+url: http://julio.meroh.net
 
 analytics_account: UA-63557333-1
 

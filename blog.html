@@ -15,11 +15,13 @@ list" for updates.</p>
 <ul class="post-list">
   {% for post in site.posts %}
     <li>
-      <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
-
       <h2>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
+      <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}
+        &middot;
+        <a href="{{ post.url | prepend: site.url }}#disqus_thread">Comments</a>
+      </span>
       {% if post.excerpt %}
       <p>
         {{ post.excerpt | strip_html }}
@@ -32,3 +34,5 @@ list" for updates.</p>
 
 <p class="post-links"><a
 href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a></p>
+
+<script id="dsq-count-scr" src="//jmmv.disqus.com/count.js" async></script>
