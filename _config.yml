@@ -2,7 +2,7 @@ title: Julio Merino
 author: Julio Merino
 email: julio@meroh.net
 
-last_updated: January 19th, 2016
+last_updated: January 28th, 2016
 
 description: >
   This is Julio Merino's homepage.  This site acts as the gateway to my
@@ -11,6 +11,7 @@ description: >
 
 baseurl: ""
 permalink: /blog/:year/:month/:day/:title.html
+url: http://julio.meroh.net
 
 analytics_account: UA-63557333-1
 

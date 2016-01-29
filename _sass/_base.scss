@@ -170,7 +170,53 @@ ul, ol, dl, figure,
   font-size: 24px;
 }
 
-.rss-subscribe {
+.post-links {
   font-size: 12px;
   font-style: italic;
+}
+
+header .cover-image {
+  opacity: 0.5;
+  width: 100%;
+}
+
+article img.with-border {
+  border-style: solid;
+  border-width: 1px;
+}
+
+article img.float-left {
+  margin-right: 20px;
+  float: left;
+}
+
+article img.float-right {
+  margin-left: 20px;
+  float: right;
+}
+
+article img.block {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+
+article .frame {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+
+  .content {
+    margin: 0 auto;
+
+    iframe {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .footer {
+    font-size: smaller;
+    text-align: center;
+  }
 }

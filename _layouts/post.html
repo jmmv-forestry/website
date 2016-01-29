@@ -4,6 +4,11 @@ layout: base
 
 <div class="content container">
   <header>
+    {% if page.cover-image %}
+    <img src="/images/{{ page.cover-image }}"
+         class="cover-image" />
+    {% endif %}
+
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
@@ -16,8 +21,47 @@ layout: base
 </div>
 
 <div class="container">
-  <p class="rss-subscribe">[<a
-  href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a>]
-  &middot;
-  [<a href="{{ "/blog/" | prepend: site.baseurl }}">Go to posts index</a>]</p>
+  <p class="post-links">
+    {% if page.gplus %}
+    <a href="https://plus.google.com/+JulioMerino/posts/{{ page.gplus }}">
+    Posted on Google+</a>
+    &middot;
+    {% endif %}
+
+    {% if page.julipedia %}
+    <a href="http://julipedia.meroh.net/{{ page.julipedia }}">Posted on
+    The Julipedia</a>
+    &middot;
+    {% endif %}
+
+    {% if page.medium %}
+    <a href="https://medium.com/@jmmv/{{ page.medium }}">Posted on Medium</a>
+    &middot;
+    {% endif %}
+
+    <a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a>
+    &middot;
+    <a href="{{ "/blog/" | prepend: site.baseurl }}">Go to posts index</a>
+  </p>
+
+  <div id="disqus_thread">
+    <script>
+      var disqus_config = function () {
+        this.page.url = "{{ page.url | prepend: site.url }}";
+        this.page.identifier = "{{ page.id }}";
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//jmmv.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a>
+    </noscript>
+  </div>
 </div>
