@@ -88,7 +88,7 @@ I then have an alias for `open-session.sh` called `s` so that I can jump into an
 
 You can find the verbatim contents of my script here:
 
-```shell
+```sh
 #! /bin/sh
 
 if [ ${#} -eq 2 ]; then
