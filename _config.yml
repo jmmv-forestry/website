@@ -17,3 +17,5 @@ analytics_account: UA-63557333-1
 
 highlighter: pygments
 markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]

@@ -220,3 +220,13 @@ article .frame {
     text-align: center;
   }
 }
+
+table {
+  // Bootstrap requires tables to carry a .table class in order for styling to
+  // be applied.  However, redcarpet emits table elements without the class and
+  // it is not possible to customize it.  Therefore, just override the default
+  // styling for the table element and apply what we like.
+  @extend .table;
+  @extend .table-bordered;
+  @extend .table-hover;
+}
