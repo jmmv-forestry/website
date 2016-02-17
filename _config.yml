@@ -15,7 +15,7 @@ url: http://julio.meroh.net
 
 analytics_account: UA-63557333-1
 
-highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: ["tables"]
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
