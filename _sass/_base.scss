@@ -1,3 +1,10 @@
+.navbar {
+  font-size: $font-size-navbar;
+}
+.navbar-brand {
+  font-size: $font-size-navbar-brand;
+}
+
 /* Special class on .container surrounding .navbar, used for positioning it
  * into place. */
 .navbar-wrapper {
@@ -149,6 +156,10 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
   margin-bottom: $vertical-rhythm / 2;
+}
+
+.post-title {
+  font-family: $title-font-family;
 }
 
 .post-list {
