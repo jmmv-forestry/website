@@ -4,20 +4,43 @@ title: Blog
 permalink: /blog/
 ---
 
-<p>This section of the website contains my blog, which in turn contains
-all kinds of write-ups: from short announcements to long-form essays.
-The latter, in particular, are sometimes republished in other sites such
-as Medium so watch out for the "Posted on" links at the bottom of each
-article if you would like to engage elsewhere.</p>
+<div class="row">
 
-<p>My other blog is called <a href="http://julipedia.meroh.net/">The
-Julipedia</a> though I am currently thinking of completely abandoning it
-in favor of this site.  There is still a ton of valuable content in
-there and I'm considering to migrate most of the useful articles here
-and index them properly.  See <a
-href="/blog/2015/05/24/hello-medium.html">Hello, Medium!</a> and <a
-href="/blog/2016/01/28/medium-experiment-wrapup.html">The Medium
-experiment wrap-up</a> for details on why.</p>
+  <div class="col-lg-9">
+    <p>This section of the website contains my blog, which in turn contains
+    all kinds of write-ups: from short announcements to long-form essays.
+    The latter, in particular, are sometimes republished in other sites such
+    as Medium so watch out for the "Posted on" links at the bottom of each
+    article if you would like to engage elsewhere.</p>
+
+    <p>My other blog is called <a href="http://julipedia.meroh.net/">The
+    Julipedia</a> though I am currently thinking of completely abandoning it
+    in favor of this site.  There is still a ton of valuable content in
+    there and I'm considering to migrate most of the useful articles here
+    and index them properly.  See <a
+    href="/blog/2015/05/24/hello-medium.html">Hello, Medium!</a> and <a
+    href="/blog/2016/01/28/medium-experiment-wrapup.html">The Medium
+    experiment wrap-up</a> for details on why.</p>
+  </div>
+
+  <div class="col-lg-3">
+    <form class="feedburner"
+          action="https://feedburner.google.com/fb/a/mailverify"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=jmmv', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+      <p>Enter your email address to subscribe</p>
+      <p><input type="text" style="width:140px" name="email"/></p>
+      <input type="hidden" value="jmmv" name="uri"/>
+      <input type="hidden" name="loc" value="en_US"/>
+      <input type="submit" value="Subscribe" />
+      <p><small>Delivered by <a href="https://feedburner.google.com" target="_blank">FeedBurner</a></small></p>
+    </form>
+
+    <p class="center"><a
+href="{{ "/feed.xml" | prepend: site.baseurl }}">Or subscribe via RSS</a></p>
+  </div>
+</div>
 
 <ul class="post-list">
   {% for post in site.posts %}
@@ -38,8 +61,5 @@ experiment wrap-up</a> for details on why.</p>
     </li>
   {% endfor %}
 </ul>
-
-<p class="post-links"><a
-href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a></p>
 
 <script id="dsq-count-scr" src="//jmmv.disqus.com/count.js" async></script>

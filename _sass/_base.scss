@@ -248,3 +248,14 @@ table {
   @extend .table-bordered;
   @extend .table-hover;
 }
+
+form.feedburner {
+  background: #eaeaea;
+  border: 1px solid #ccc;
+  padding: 3px;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
