@@ -21,28 +21,45 @@ layout: base
 </div>
 
 <div class="container">
-  <p class="post-links">
-    {% if page.gplus %}
-    <a href="https://plus.google.com/+JulioMerino/posts/{{ page.gplus }}">
-    Posted on Google+</a>
-    &middot;
-    {% endif %}
+  <div class="post-links">
+    <p>
+      {% if page.gplus %}
+      <a href="https://plus.google.com/+JulioMerino/posts/{{ page.gplus }}">
+      Posted on Google+</a>
+      &middot;
+      {% endif %}
 
-    {% if page.julipedia %}
-    <a href="http://julipedia.meroh.net/{{ page.julipedia }}">Posted on
-    The Julipedia</a>
-    &middot;
-    {% endif %}
+      {% if page.julipedia %}
+      <a href="http://julipedia.meroh.net/{{ page.julipedia }}">Posted on
+      The Julipedia</a>
+      &middot;
+      {% endif %}
 
-    {% if page.medium %}
-    <a href="https://medium.com/@jmmv/{{ page.medium }}">Posted on Medium</a>
-    &middot;
-    {% endif %}
+      {% if page.medium %}
+      <a href="https://medium.com/@jmmv/{{ page.medium }}">Posted on Medium</a>
+      &middot;
+      {% endif %}
 
-    <a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a>
-    &middot;
-    <a href="{{ "/blog/" | prepend: site.baseurl }}">Go to posts index</a>
-  </p>
+      <a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a>
+      &middot;
+      <a href="{{ "/blog/" | prepend: site.baseurl }}">Go to posts index</a>
+    </p>
+
+    <form
+        action="https://feedburner.google.com/fb/a/mailverify"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=jmmv', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+      <p>Or subscribe to the blog via email:
+        <input type="text" style="width:200px" name="email"/>
+        <input type="hidden" value="jmmv" name="uri"/>
+        <input type="hidden" name="loc" value="en_US"/>
+        <input type="submit" value="Subscribe" />
+        &nbsp;&nbsp;&nbsp;Delivered by
+        <a href="https://feedburner.google.com" target="_blank">FeedBurner</a>
+      </p>
+    </form>
+  </div>
 
   <div id="disqus_thread">
     <script>

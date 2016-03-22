@@ -181,9 +181,13 @@ ul, ol, dl, figure,
   font-size: 24px;
 }
 
-.post-links {
+div.post-links {
+  border-top: 2px dotted #ddd;
   font-size: 12px;
   font-style: italic;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
 header .cover-image {
