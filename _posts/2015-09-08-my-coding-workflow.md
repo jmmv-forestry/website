@@ -26,9 +26,9 @@ With that spirit in mind, this post presents what **my** current development wor
 
 # History of my workflow
 
-Over the many years I've been coding&mdash;more than 20 at this point &lt;insert horror face/expletive here&gt;&mdash;I have gone through many different workflows.  But on 2007 the churn stopped and, since then, I have stabilized on a relatively simple workflow that I still use to this day.
+Over the many years I've been coding---more than 20 at this point &lt;insert horror face/expletive here&gt;---I have gone through many different workflows.  But on 2007 the churn stopped and, since then, I have stabilized on a relatively simple workflow that I still use to this day.
 
-What happened in 2007? My undergraduate project, which required me to work directly on a remote machine&mdash;a PlayStation 3 running Fedora, if you must know. My previous approach of using a local graphical editor with multiple terminal windows spread out throughout various virtual desktops did not play well with such remote work. (X forwarding? No thank you.)
+What happened in 2007? My undergraduate project, which required me to work directly on a remote machine---a PlayStation 3 running Fedora, if you must know. My previous approach of using a local graphical editor with multiple terminal windows spread out throughout various virtual desktops did not play well with such remote work. (X forwarding? No thank you.)
 
 Such change in circumstances made me start using SSH exclusively to remotely edit and compile code. I must confess that doing so was oppressing at first: the feeling of not being able to escape the terminal was claustrophobic, and it felt that way because the change in environment slowed the typical edit/build/test cycle considerably.
 
@@ -61,7 +61,7 @@ tmux groups running applications in sessions. Each time tmux is invoked, a new s
 
 If you are just getting started with tmux or Screen, remap the default command key before you build muscle memory around it. By default, tmux uses `Ctrl+B` and Screen uses `Ctrl+A`. Unfortunately, these keys conflict with standard keystrokes used in Emacs and readline-based command-line editing, which will get in your way if you are used to these shortcuts.
 
-In my case, I chose `Ctrl+J` years ago as a replacement because this particular combination of keys did not seem to interfere with any other common keybinding&mdash;and have not found any conflicts yet during the years.
+In my case, I chose `Ctrl+J` years ago as a replacement because this particular combination of keys did not seem to interfere with any other common keybinding---and have not found any conflicts yet during the years.
 
 For tmux, add this to your `~/.tmux.conf`:
 
@@ -139,13 +139,13 @@ A tmux session holds windows, each window holds one or more panels, and each pan
 All my coding sessions follow pretty much the same pattern:
 
 * Window 0 typically is reserved for "scratch" work that does not fit anywhere else. E.g. a quick check on an unrelated project without going through the creation of a new sessions.
-* Window 1 is the editing window, and usually holds an Emacs instance running throughout the life of the session. It could also be vim&mdash;yes, I use both; no need to argue.
+* Window 1 is the editing window, and usually holds an Emacs instance running throughout the life of the session. It could also be vim---yes, I use both; no need to argue.
 * Window 2 is the compilation and execution window where I just run "make" and "make test". Sometimes I may also run "make" from within Emacs.
 * Window 3, if it exists, is where I may do any other work such as researching stuff, keeping some reference information easily available, or keeping temporary program output for investigation.
 
 For non-coding sessions, such as the session I keep for on-call response, the layout is more unstructured. I tend to run Emacs and compilations in windows 1 and 2 respectively when needed, but if the task at hand does not require neither editing nor building, the windows just get used for anything.
 
-I use tmux's window splitting&mdash;especially vertical splitting, which Screen is not as good at&mdash;_a lot_. Many times, when I'm caught in a fast edit/build/test cycle where I must see the code and the output of the running program side-by-side, I will split Window 1 vertically to keep the editor on the left side and one or two terminal emulators stacked on the right side.  Once again, learning the keybindings for window management within tmux is critical for fast operation.
+I use tmux's window splitting---especially vertical splitting, which Screen is not as good at---_a lot_. Many times, when I'm caught in a fast edit/build/test cycle where I must see the code and the output of the running program side-by-side, I will split Window 1 vertically to keep the editor on the left side and one or two terminal emulators stacked on the right side.  Once again, learning the keybindings for window management within tmux is critical for fast operation.
 
 # Am I missing out?
 

@@ -23,4 +23,4 @@ in Markdown is actually quite nice, and the support for code snippets is very
 welcome based on the kinds of articles I typically write.
 
 Enjoy the site and don't forget to subscribe by clicking the link
-below&mdash;you can't predict if first-class content will *only* show up here!
+below---you can't predict if first-class content will *only* show up here!

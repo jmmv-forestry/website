@@ -10,7 +10,7 @@ Dear online support staff member,
 
 I am probably not your average customer. If I send a support request to your team by email, it is because I have already exhausted all possible resources on my side and concluded, with good certainty, that there is an issue on your service.
 
-Yes, I have read your online support material. I have tried different browsers. I have tried different devices and operating systems. I have tried disabling browser extensions. I have tried clearing cookies. I have looked at the Javascript console for errors&mdash;which, by the way, your application is probably throwing even during normal operation; shrug. I have danced three times around the computer and clapped my hands.
+Yes, I have read your online support material. I have tried different browsers. I have tried different devices and operating systems. I have tried disabling browser extensions. I have tried clearing cookies. I have looked at the Javascript console for errors---which, by the way, your application is probably throwing even during normal operation; shrug. I have danced three times around the computer and clapped my hands.
 
 Therefore, when I compose a support request and send it via email or via some unnecessary contortions on your website, I take good care to provide as much detail as I can to describe: _first_, what the problem I am experiencing is; _second_, any possible actions I have taken to conclude my system is not at fault (aka the how-to-reproduce); _third_, what I would expect the outcome to be; and, _fourth_, what I would like you to do to help me. Heck, sometimes I am even able to pinpoint what the problem _might_ be on your service side. You know, kinda like what any decent bug report is supposed to contain.
 

@@ -68,7 +68,7 @@ And because of this, I want this same stealthy process to improve my software
 development skills.  It's true that I have been working as a software engineer
 in a multitude of distributed open source project like NetBSD, but being an
 enthusiast is one thing and developing professionally for a project whose
-developers sit in the same cube as oneself is a very different one&mdash;and I
+developers sit in the same cube as oneself is a very different one---and I
 have never done the latter yet.
 
 Exciting times lie ahead.

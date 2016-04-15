@@ -20,7 +20,7 @@ Where is the code you ask? Nowhere yet unfortunately; I hope to make it availabl
 
 The summary of what follows is simple: after two weeks, I'm in love with Go.
 
-I remember languages people dismiss Go back in 2009 on the grounds that it was a simplistic language without novel concepts&hellip; but there lies its beauty: Go lets you get things done quickly and safely with few performance penalties. I feel I can write much more robust code with Go than with any other comparable language.
+I remember languages people dismiss Go back in 2009 on the grounds that it was a simplistic language without novel concepts... but there lies its beauty: Go lets you get things done quickly and safely with few performance penalties. I feel I can write much more robust code with Go than with any other comparable language.
 
 **Disclaimer:** Keep in mind that I'm still a newbie. I'm sure that some of the items below are na&iuml;ve, incomplete or plain incorrect. If so, please let me know!
 
@@ -58,7 +58,7 @@ I remember languages people dismiss Go back in 2009 on the grounds that it was a
 
   Unfortunately, that's not the case and this is the reason I pinpoint this particular module from the standard library. The real benefits of using `glog` come when the *whole stack* uses the same logging infrastructure and principles. Because `glog` is not the standard module, some Go packages will use it and others will not. As a result, you do not get the full benefits of using `glog` in your project because most libraries you depend on will not do the same.
 
-* **Mutability by default (aka no `const` keyword):** Before you say "hey, `const` is currently not present, but if we find the need for it later on, we'll add it!", that's&hellip; not great. The problem with adding a `const` keyword post-facto is that this is the wrong keyword to add: *state should be immutable by default*, and what the language should have is a `mutable` keyword to clearly mark those variables that hold multiple values throughout their lifetime.
+* **Mutability by default (aka no `const` keyword):** Before you say "hey, `const` is currently not present, but if we find the need for it later on, we'll add it!", that's... not great. The problem with adding a `const` keyword post-facto is that this is the wrong keyword to add: *state should be immutable by default*, and what the language should have is a `mutable` keyword to clearly mark those variables that hold multiple values throughout their lifetime.
 
   The reason I point out this specific language feature is because I've mentally gotten very accustomed to separating constant vs. mutable variables in code. Reading code that adheres to this strict separation is easy to follow: you can quickly map the immutable state in your mind and then focus on the mutable pieces of the code to understand what's happening. Without these clues, you need extra effort.
 
@@ -70,7 +70,7 @@ I remember languages people dismiss Go back in 2009 on the grounds that it was a
 
 * **Maximum line length:** Even though Go has a predefined coding style, there is no pre-specified maximum line length. While it is great to want to abolish a custom that remains from the punch-card days, keeping code narrow has its benefits: think of two or three side-by-side editors in a small laptop screen.
 
-  This would be a non-issue if editors were able to wrap long code lines in a way that made sense&mdash;just like word processors do with text&mdash;but current editors are terrible at this. So, personally, I will stick to the 80 character limit; I have given 100 a try per more modern recommendations&hellip; but when I opened the code in my laptop and couldn't see two files at once without wrapping, I knew I had to go back to 80.
+  This would be a non-issue if editors were able to wrap long code lines in a way that made sense---just like word processors do with text---but current editors are terrible at this. So, personally, I will stick to the 80 character limit; I have given 100 a try per more modern recommendations... but when I opened the code in my laptop and couldn't see two files at once without wrapping, I knew I had to go back to 80.
 
 # A note on Visual Studio Code
 

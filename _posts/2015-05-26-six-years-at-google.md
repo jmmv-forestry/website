@@ -34,7 +34,7 @@ My relationship with Google is a long one. It all started in 2005 when I applied
 
 By the end of 2007, I got this funny-looking email that my brain-based spam filter threw away only to realize, seconds later, that the subject said something about Google. I recovered the email and read it. There it was: a Google sourcerer expressing interest in what I had to say about C++ and Unix based on [my blog](http://julipedia.meroh.net/).
 
-A couple of discussions with friends to convince myself and a few emails later, I was on my way to applying for an internship&mdash;something I had not thought about earlier because internships, as U.S. tech students know them, are not a common thing in Spain: for one, they are not well-paid if at all, and for another, they are not glamorous.
+A couple of discussions with friends to convince myself and a few emails later, I was on my way to applying for an internship---something I had not thought about earlier because internships, as U.S. tech students know them, are not a common thing in Spain: for one, they are not well-paid if at all, and for another, they are not glamorous.
 
 The internship application went well and I was set to start in New York City in July 2008. _OMG_, really: I had never left home, never traveled, never lived alone before. This was a big change and, spoiler alert, the personal experience was much more valuable than the job itself.
 
@@ -47,7 +47,7 @@ The internship application went well and I was set to start in New York City in 
   </div>
 </div>
 
-How did I get the internship position, you ask? I am convinced that _the hands-on experience I gained through contributions to open source_ and, in particular, via all the work I put in porting software&mdash;_cough_ [Gnome](http://www.gnome.org/) 2.x _cough_&mdash;to NetBSD were crucial in getting me the internship and, later, the full-time position. Not because of the open source work itself, but because of all I learned in the process: porting software across operating systems requires a lot of deep systems knowledge and troubleshooting skills, both of which are key competencies for an SRE.
+How did I get the internship position, you ask? I am convinced that _the hands-on experience I gained through contributions to open source_ and, in particular, via all the work I put in porting software---_cough_ [Gnome](http://www.gnome.org/) 2.x _cough_---to NetBSD were crucial in getting me the internship and, later, the full-time position. Not because of the open source work itself, but because of all I learned in the process: porting software across operating systems requires a lot of deep systems knowledge and troubleshooting skills, both of which are key competencies for an SRE.
 
 > Pro-tip: If you want to gain real-world experience as a student before
 shooting for a real job, look at the open source world and _get involved_. It doesn't matter if you don't yet know much as long as you embrace your activities as a learning opportunity. Be ready to take (possibly harsh) feedback in a constructive manner and head to [Producing Open Source Software](http://producingoss.com/) by Karl Fogel for a good book on the topic.
@@ -60,7 +60,7 @@ When I started as an SRE in 2009, I did so in one of the Storage Infrastructure 
 
 After GFS, I have been in three other storage SRE teams: the team supporting [Bigtable](http://research.google.com/archive/bigtable.html), the team supporting the successor to GFS, and the team supporting Persistent Disk. All of these teams have been tightly related at times and changed forms over the years, so it's hard for me to really say that these have been four different teams in all.
 
-Location-wise, I have been based in two offices so far&mdash;2 years in Dublin, 4 in New York City&mdash;and visited seven other offices and two datacenters worldwide if memory serves well. Both the Dublin and New York offices have changed massively during these 6 years and grown from relatively "small" locations to the two big giants that they are today. Much fancier now than they were, I must add.
+Location-wise, I have been based in two offices so far---2 years in Dublin, 4 in New York City---and visited seven other offices and two datacenters worldwide if memory serves well. Both the Dublin and New York offices have changed massively during these 6 years and grown from relatively "small" locations to the two big giants that they are today. Much fancier now than they were, I must add.
 
 And interns! I found my internship experience enlightening in many different ways and, for this reason, I especially enjoy mentoring interns nowadays. This is why I had to close the cycle: I hosted my first intern in 2013; two engineering practicum interns in 2014; and, just today, I welcomed my intern for 2015.
 
@@ -72,9 +72,9 @@ What is SRE? Ben Treynor, VP of Site Reliability Engineering, and Niall Murphy h
 >
 > In this interview, Ben Treynor (VP, Site Reliability Engineering) shares his thoughts with Niall Murphy
 
-but, of course, I did not know any of this back in 2009&mdash;if only because, at the time, SRE was a pretty new term and the details of the job were not as formalized as they are today.
+but, of course, I did not know any of this back in 2009---if only because, at the time, SRE was a pretty new term and the details of the job were not as formalized as they are today.
 
-One thing that was obvious then and is even more obvious now is that I did not know "anything" about what being an SRE meant back in 2009. I'm convinced that I landed into the SRE organization instead of into a pure software engineering position because of my experience with Unix systems as a programmer, not because of any previous expertise with large distributed systems&mdash;mind you, I had none. This is not a bad thing actually.
+One thing that was obvious then and is even more obvious now is that I did not know "anything" about what being an SRE meant back in 2009. I'm convinced that I landed into the SRE organization instead of into a pure software engineering position because of my experience with Unix systems as a programmer, not because of any previous expertise with large distributed systems---mind you, I had none. This is not a bad thing actually.
 
 Friends have asked if I received training during these years. Sincerely, I do not think I have ever had any kind of formal training during this period of time, but I am well aware that I have learned _a damn lot_ while doing my job.  For this alone, having been an SRE this far has been very rewarding.
 
@@ -87,13 +87,13 @@ intensively; another week you may be writing a design document to propose a solu
 are many more. It is expected for you to drive your own work and, to some extent, to "define yourself".
 
 > What's more interesting, though, is that as an SRE you have to care about
-"the big picture" instead of just a single component or module of the product you support. This gives you more opportunities to streamline the system and easier chances to interact with other teams&mdash;if that's the kind of thing you like doing.
+"the big picture" instead of just a single component or module of the product you support. This gives you more opportunities to streamline the system and easier chances to interact with other teams---if that's the kind of thing you like doing.
 
 Oftentimes I have thoughts of transferring to a pure development job to have the time to "just code", but then I change my mind when I think I would be losing the variety of tasks described above; it's hard to get bored!
 
 # Projects
 
-It is hard to tell you much about any of the specific projects I have worked on. As you may expect, this is because of confidentiality reasons but not because the projects themselves have been super-secret and cannot be explained, but because explaining the projects requires a ton of context&mdash;and that context is what is confidential. That said, let me try to describe something interesting in this area.
+It is hard to tell you much about any of the specific projects I have worked on. As you may expect, this is because of confidentiality reasons but not because the projects themselves have been super-secret and cannot be explained, but because explaining the projects requires a ton of context---and that context is what is confidential. That said, let me try to describe something interesting in this area.
 
 Myself, being a software engineer _first_, a systems engineer _second_, and a systems administrator _third_, I have focused on the design and implementation of software solutions to various issues we had in the management of our storage stack. Most of the times, these "software solutions" have been automation systems to manage the software we deploy with the goal to reduce manual operational overhead and to permit the deployment of "higher-level" components.
 

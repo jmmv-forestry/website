@@ -59,10 +59,10 @@ That said, there are a bunch of legitimate cases for building from source.  Name
 * to apply code changes (duh),
 * to tune compiler optimization settings,
 * to disable features for smaller binaries,
-* to disable features that have a measurable impact on performance&mdash;for whose run-time kill-switch is not sufficient to kill those implications, and
+* to disable features that have a measurable impact on performance---for whose run-time kill-switch is not sufficient to kill those implications, and
 * to target a new platform.
 
-If the cases above do _not_ apply, then compiling from source should not be _necessary_: alternatives exist, and they can be implemented. If building from source is necessary, either **you have done a poor job as a developer**&mdash;e.g. by not allowing sufficient run-time configuration&mdash;or **you do not have sufficient resources to run the project**&mdash;e.g. by being unable to provide binary packages for common platforms.
+If the cases above do _not_ apply, then compiling from source should not be _necessary_: alternatives exist, and they can be implemented. If building from source is necessary, either **you have done a poor job as a developer**---e.g. by not allowing sufficient run-time configuration---or **you do not have sufficient resources to run the project**---e.g. by being unable to provide binary packages for common platforms.
 
 A pet peeve of mine are software packages whose functionality depends on the libraries chosen at build-time by means of configure switches. These kind of software packages are really problematic when the time to offer binary packages comes: "what options should you enable?" or "how will the user be able to choose a leaner installation?". There are mechanisms to allow the modification of dependencies at run time (think of dynamically-loadable plugins), but they often are _much_ more complex to implement than just configure switches.
 

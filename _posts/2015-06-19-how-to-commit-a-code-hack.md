@@ -42,9 +42,9 @@ To keep the rest of the text simple, **I will focus exclusively on changelists t
 
 Question: Are _you_ aware that your proposed fix is a gross hack?
 
-If you do, great: you are already on the right track! If you do not, then you are [missing details](https://en.wikipedia.org/wiki/DunningKruger_effect) on the problem at hand&mdash;and missing details when fixing a bug is dangerous because: you probably won't fix the root cause; your "fix" may obscure the problem in most cases, but not all; or your "fix" may be introducing other bugs or changing the semantics of the code logic.
+If you do, great: you are already on the right track! If you do not, then you are [missing details](https://en.wikipedia.org/wiki/DunningKruger_effect) on the problem at hand---and missing details when fixing a bug is dangerous because: you probably won't fix the root cause; your "fix" may obscure the problem in most cases, but not all; or your "fix" may be introducing other bugs or changing the semantics of the code logic.
 
-**To the reviewer:** everything stated here applies _equally_ to you. If you lack fundamental knowledge on the codebase in which the change is being made, _you are not qualified to review the change_ because you cannot predict its ramifications throughout the system. Find someone else to act as (secondary) reviewer&mdash;assuming "that someone else" exists and is still available which is not always the case.
+**To the reviewer:** everything stated here applies _equally_ to you. If you lack fundamental knowledge on the codebase in which the change is being made, _you are not qualified to review the change_ because you cannot predict its ramifications throughout the system. Find someone else to act as (secondary) reviewer---assuming "that someone else" exists and is still available which is not always the case.
 
 Checking in code developed under these circumstances is harmful in the medium to long term. Do not check in code if you or your reviewer do not have deep knowledge of the system to predict the effects of the fix. And always try to pick reviewers that will be strict on this topic!
 
@@ -62,7 +62,7 @@ Just as important as it is to acknowledge that a change is a hack is the fact of
 
 ## iv) Justify checking in the suboptimal changelist
 
-Explaining why the changelist is wrong is not sufficient, unfortunately. You still need to convince your reviewer that your suboptimal changelist is the right thing to do at this point in time&mdash;and if you are submitting a changelist for review that you _know_ is "incorrect", you will surely have reasons for doing so. Say them!
+Explaining why the changelist is wrong is not sufficient, unfortunately. You still need to convince your reviewer that your suboptimal changelist is the right thing to do at this point in time---and if you are submitting a changelist for review that you _know_ is "incorrect", you will surely have reasons for doing so. Say them!
 
 Reasons for checking in a suboptimal changelist may include: mitigating the effects of an outage when the root cause has not yet been identified or when fixing the root cause is a major effort; being able to deliver a feature sooner; setting up a transitional state for some other upcoming code; or applying a temporary change that will soon be removed by a refactoring.
 
@@ -82,6 +82,6 @@ Mind you: having this mental plan is essential because knowing how the future wi
 * Acknowledge upfront that the change you want to submit is not the best for reasons X, Y, and Z.
 * Demonstrate your full understanding of the issue by justifying the tradeoffs of committing your hack and explaining how you'd get rid of the hack in the future.
 
-These are the secrets to a smoother check-in process&mdash;even for those changes you will eventually regret. Do them and hope for an:
+These are the secrets to a smoother check-in process---even for those changes you will eventually regret. Do them and hope for an:
 
 > _LGTM. You'll burn in hell for this._

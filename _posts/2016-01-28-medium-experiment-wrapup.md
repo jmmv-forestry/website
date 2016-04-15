@@ -9,7 +9,7 @@ julipedia:  2016/01/the-medium-experiment-wrap-up.html
 Eight months ago, [I decided to try
 Medium](/blog/2015/05/24/hello-medium.html) as the platform on which to
 post my essays.  Over this time I have published a handful of posts in
-there&mdash;8, to be precise, which is... a very shy number&mdash;but the
+there---8, to be precise, which is... a very shy number---but the
 results have been quite satisfactory: the WYSIWYG composer is excellent,
 the analytics tools are simple but to the point, the looks are great, and
 the community is nice (though I haven't been able to tap into it just yet).
@@ -29,7 +29,7 @@ Let's go over the reasons.
 ## Post classification
 
 The first problem I have with Medium, which is a minor one, is that *I* see
-it as a place for high-quality, large-form essays&mdash;not the average
+it as a place for high-quality, large-form essays---not the average
 blog post with the musings of the day.  In other words: I see myself
 posting long opinion pieces (as I have done) and not something like the
 announcement of a new release of a personal project or incomplete thoughts

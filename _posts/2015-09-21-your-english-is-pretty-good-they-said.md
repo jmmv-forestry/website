@@ -19,7 +19,7 @@ By the way: I can't wait to be able to hear "  !" about my Korean because that w
 
 # My English learning process
 
-My parents had me in after-school English lessons from age 9. As far as I can remember, the lessons were very decent but what played a larger role in my learning was my involvement with programming (circa that time), on-line forums (1994), and the Linux / free software scene (1996). Computers in general, and the online world in particular, required reasonable English skills and&mdash;if paying attention&mdash;were a good way to learn.
+My parents had me in after-school English lessons from age 9. As far as I can remember, the lessons were very decent but what played a larger role in my learning was my involvement with programming (circa that time), on-line forums (1994), and the Linux / free software scene (1996). Computers in general, and the online world in particular, required reasonable English skills and---if paying attention---were a good way to learn.
 
 ## 2004 and onwards: Reading and writing
 
@@ -31,7 +31,7 @@ The surprising thing was that the manuscripts came back with minor edits and gen
 
 ## 2004-2008: On listening
 
-By this time, I was fully aware that my oral skills were not good enough. In an attempt to improve them, I started watching TV series in their original form circa 2004. (Note that in Barcelona, Spain&mdash;where I grew up&mdash; _everything_ is dubbed in Catalan and/or Spanish; it is hard to exercise English at all.)
+By this time, I was fully aware that my oral skills were not good enough. In an attempt to improve them, I started watching TV series in their original form circa 2004. (Note that in Barcelona, Spain---where I grew up--- _everything_ is dubbed in Catalan and/or Spanish; it is hard to exercise English at all.)
 
 The way I practiced was simple: I would put up an episode in its original version _without subtitles_ and watch it closely. Anytime I could not understand something, I would roll back and play that part again until I could grasp it and, if I had to give up, I would search for the episode's transcript online, painfully find the relevant sentence, and read it. This was annoying work but it paid off: once getting used to the voices and some common expressions, the rate at which I had to search for clarification decreased.  Eventually, I was able to watch full episodes without the aid of the transcript.
 
@@ -41,7 +41,7 @@ Was this listening practice sufficient to live abroad? Far from it.
 
 ## 2008: The move to the U.S.
 
-In the Summer of 2008, I moved to New York City for my Google internship. Oh my. Based on all the above, I assumed my English was decent, but as soon as I landed, I could not communicate. There were various accents I had not yet experienced and tons of unfamiliar words to be heard. As you might have noticed from the above, my skills were mostly around technical work &mdash;with its very limited vocabulary!&mdash;and then I had to _live_ with English on a day to day basis.
+In the Summer of 2008, I moved to New York City for my Google internship. Oh my. Based on all the above, I assumed my English was decent, but as soon as I landed, I could not communicate. There were various accents I had not yet experienced and tons of unfamiliar words to be heard. As you might have noticed from the above, my skills were mostly around technical work ---with its very limited vocabulary!---and then I had to _live_ with English on a day to day basis.
 
 That was a shocking difference. Going to the supermarket was frustrating.  Going to the pharmacy was frustrating. Going to well, anywhere was frustrating. Keep in mind that smartphones were still a shiny new thing in 2008 and I did not own one, so "just looking things up on Google Translate" was not something you could easily do. Oh, and speaking of phones, handling a phone call was something of another-world experience.
 
@@ -53,7 +53,7 @@ A few months after the internship ended, I moved to Ireland for my [full-time po
 
 First of all: the Irish accent, which was nothing like I had heard before in the U.S. nor in any of the language lessons I attended. (Mind you, I still cannot parse it fully at times, especially from Irish people outside of Dublin, but I really like the sound of it!) Going to the pharmacy, supermarket, etc. was once again challenging, and having phone conversations was hilarious. I'm still surprised the first taxi I requested arrived at the right location.
 
-But there was another issue: the population of the Google Dublin office was incredibly different than what I had been exposed to in the New York office.  While the New York office was mostly populated by Americans and Asians&mdash;dunno which specific nationalities though&mdash;, the Dublin office was plagued with accents from European countries. Very different altogether, and each with its own challenges both in accents and in idioms.
+But there was another issue: the population of the Google Dublin office was incredibly different than what I had been exposed to in the New York office.  While the New York office was mostly populated by Americans and Asians---dunno which specific nationalities though---, the Dublin office was plagued with accents from European countries. Very different altogether, and each with its own challenges both in accents and in idioms.
 
 It took weeks to get back to a comfortable level, but it wasn't as difficult as it had previously taken the year before in New York.
 

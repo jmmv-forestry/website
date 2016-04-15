@@ -15,7 +15,7 @@ Do you have any idea which online services and stores have you given your email 
 
 Three years ago, I was not able to answer these two simple questions when I decided to move my email account to our new family-owned domain.  Today? I trivially can, and so can you.
 
-The process to track the services you have registered to is a rigorous but easy one: **the key idea is to define filters to label the messages of each individual subscription with the name of the service they belong to.** Doing this leaves you with a collection of labels that represents the set of services you have handed your email address out to. As an added benefit, you will also always be able to know _why_ a certain piece of email is reaching your inbox&mdash;and possibly help cut down unsolicited email.
+The process to track the services you have registered to is a rigorous but easy one: **the key idea is to define filters to label the messages of each individual subscription with the name of the service they belong to.** Doing this leaves you with a collection of labels that represents the set of services you have handed your email address out to. As an added benefit, you will also always be able to know _why_ a certain piece of email is reaching your inbox---and possibly help cut down unsolicited email.
 
 The practical aspects in this post are for GMail but don't let that shy you away from reading: the theory and processes described in here apply equally to all major email providers including Outlook.com and Apple's iCloud.
 
@@ -43,7 +43,7 @@ Let me emphasize that last point because it is important: any tag added to your 
 
 ## Using address tags for email filtering
 
-The way to use address tags for better email subscription tracking is to use a new tag&mdash;hence a unique email address&mdash;for each service you subscribe to.
+The way to use address tags for better email subscription tracking is to use a new tag---hence a unique email address---for each service you subscribe to.
 
 For example: use `joe+medium@example.com` when registering for an account on Medium instead of the plain `joe@example.com` address. By doing this, any email sent by Medium to you would be _delivered to_ this special address regardless of the address Medium uses to send their correspondence _from_.
 
@@ -55,7 +55,7 @@ Now that you know what address tags are and how they work, it is time to put the
 
 Do this:
 
-1. Every time you hand out your email address to any service&mdash;be it an online site or a local physical store&mdash;append the name of the service or store as a tag to your address. Never hand out your untagged address if you can avoid it.
+1. Every time you hand out your email address to any service---be it an online site or a local physical store---append the name of the service or store as a tag to your address. Never hand out your untagged address if you can avoid it.
 1. Immediately after handing out your address, go to your email account and set up a new filter to label all incoming email from that service with a label that matches the service name. Continuing with GMail as our sample email provider, you would set up a filter to classify all email with the expression `deliveredto:joe+medium@example.com` and make the filter tag those emails with a label of the form `Subscriptions/medium`:
 
 <img src="/images/2015-06-06-deliveredto-filter.png"
@@ -66,23 +66,23 @@ Voil&agrave;! That's it. By being diligent this way, over time, your collection 
 
 ## The exception... there always is an exception
 
-Unfortunately, some services _do not support_ plus-addresses even though the plus sign is perfectly recognized by email standards (e.g. [RFC 6531](http://tools.ietf.org/html/rfc6531), [RFC 6532](http://tools.ietf.org/html/rfc6532), and [RFC 5233](https://tools.ietf.org/html/rfc5233)). For those services, you will have to hand out your real email address and then set up filters to label incoming email based on the address&mdash;or addresses&mdash;the service uses to send messages to you.
+Unfortunately, some services _do not support_ plus-addresses even though the plus sign is perfectly recognized by email standards (e.g. [RFC 6531](http://tools.ietf.org/html/rfc6531), [RFC 6532](http://tools.ietf.org/html/rfc6532), and [RFC 5233](https://tools.ietf.org/html/rfc5233)). For those services, you will have to hand out your real email address and then set up filters to label incoming email based on the address---or addresses---the service uses to send messages to you.
 
-Do not bother contacting support for any of the services that reject plus signs in email addresses; it is futile. I have tried in a handful of occasions and never got a positive acknowledgement of a bug. Canned responses&mdash;which you will get&mdash;feel particularly disrespectful.
+Do not bother contacting support for any of the services that reject plus signs in email addresses; it is futile. I have tried in a handful of occasions and never got a positive acknowledgement of a bug. Canned responses---which you will get---feel particularly disrespectful.
 
 ## Is it too late for you?
 
 The process above was trivial for me to implement three years ago because I religiously applied it after starting afresh with a new email address. But what if you are not getting a new email address? Can you still apply these techniques to your existing account? Sure you can, but it will take longer and you may miss some subscriptions.
 
-Do this: every time you receive an email that does not come from an individual &mdash;that is, an email that is not from a family member, from a friend, or from any other _person_&mdash;visit the site that sent the email, change your email address to use a new address tag, and then set up a filter to label the email accordingly.
+Do this: every time you receive an email that does not come from an individual ---that is, an email that is not from a family member, from a friend, or from any other _person_---visit the site that sent the email, change your email address to use a new address tag, and then set up a filter to label the email accordingly.
 
-The downside of this process is that it may take months for you to reach a point where the majority of your subscriptions are properly tagged&mdash;and even then, you may still be missing that odd corner case (see next section).
+The downside of this process is that it may take months for you to reach a point where the majority of your subscriptions are properly tagged---and even then, you may still be missing that odd corner case (see next section).
 
 Regardless, _start now_: the added benefit is worthwhile and you will be glad you did so in the future.
 
 ## Tracking the odd subscription before it is too late
 
-Last week, I tried to regain access to my old Dropbox account only to realize that I had signed up with an email address I no longer own&mdash;an address on a domain that no longer exists. I had forgotten to transfer this subscription to my new email address before the old one expired, and so I have lost access to my account forever. Oops.
+Last week, I tried to regain access to my old Dropbox account only to realize that I had signed up with an email address I no longer own---an address on a domain that no longer exists. I had forgotten to transfer this subscription to my new email address before the old one expired, and so I have lost access to my account forever. Oops.
 
 Not a big deal in this particular case, but this example highlights how important it is for you to keep track of all the services you have subscribed to using your email address: if you ever change email providers, you'll want to upgrade your services as soon as possible to prevent losing access to them.  Doing these changes en masse is only feasible if you have a record of all places that need to be updated!
 
@@ -98,6 +98,6 @@ The rationale: **if you create a different email address every time you hand it 
 
 The way you'll notice whether a specific tagged email address has been leaked will depend on your email provider. In the case of GMail, the way I notice is by visiting the _Spam_ folder and looking for any email with labels that start with _Subscription/_. (On email providers with real folders, you will see junk appearing on the various subfolders you have defined instead.)
 
-Is this effective? Yes&mdash;two major brands have lost my trust&mdash;but address tags are _not_ bulletproof. The rules behind address tags are well-known for all major email providers, so it is simple for spammers to strip out the tags in an attempt to hide where they got their addresses from. That said, and considering that the feature of address tags is not known at all by the majority, it's still a reasonable way of catching untrustworthy online services.
+Is this effective? Yes---two major brands have lost my trust---but address tags are _not_ bulletproof. The rules behind address tags are well-known for all major email providers, so it is simple for spammers to strip out the tags in an attempt to hide where they got their addresses from. That said, and considering that the feature of address tags is not known at all by the majority, it's still a reasonable way of catching untrustworthy online services.
 
 Want to make the solution bullet-proof? Run your own email server with real unique and disposable addresses (not sub-addresses) but then you get to manage your own server. Yikes; not worth the hassle.
