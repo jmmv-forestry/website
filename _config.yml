@@ -13,6 +13,8 @@ baseurl: ""
 permalink: /blog/:year/:month/:day/:title.html
 url: http://julio.meroh.net
 
+exclude: [CNAME, Makefile, README.md]
+
 analytics_account: UA-63557333-1
 
 highlighter: rouge
