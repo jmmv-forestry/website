@@ -1,0 +1,25 @@
+---
+layout: post
+title: #! /usr/bin/env considered harmful
+categories: portability programming scripts unix
+---
+
+Many programming guides recommend to use `#! /usr/bin/env` as the shebang of scripts to automatically locate the necessary interpreter. For example, you should start your Python scripts with `#! /usr/bin/env python` and, the saying goes, the script would then "just work" on any machine with Python installed.
+
+Unfortunately, that's just wishful thinking so let's see why. I'll use Python for illustration purposes, but **the following applies equally to any other interpreted language.**
+
+The first problem is that **using `#! /usr/bin/env` lets you find *an* interpreter but not necessarily the *correct* interpreter**. In our example above, we told the system to look for an interpreter called `python`… but we did not say *anything* about the compatible versions. Did you want Python 2.x or 3.x? Or maybe exactly 2.7? Or at least 3.2? You can't tell and the computer can't tell either, but the script *will* run regardless with whichever version it finds first. The danger is that the script can later fail if that version happens to be mismatched, and the failure can happen at a much later stage (e.g. syntax error in an infrequent code path).
+
+The second problem, assuming you ignore the version problem above because your script is compatible with all possible versions (hah), is that **you may pick up an interpreter that does not have all prerequisite dependencies installed**. Say your script decides to import a bunch of modules: where are those modules located? Typically, the modules exist in a centralized repository that is specific to the interpreter (e.g. the `XXX` directory for Python or `XXX` for Perl.) So maybe your program found a Python 2.7 under `/usr/local/bin/`, but in reality you needed it to find the one in `/usr/bin/` because that's where all your Python modules are.
+
+The third problem, assuming your script is portable to all versions (hah again) and that you don't need any modules (really?), is that **you are assuming that the interpreter is available via a specific name**. Unfortunately, the name of the interpreter can vary. For example: pkgsrc installs all `python` binaries with explicitly versioned names (e.g. `python2.7` and `python3.0`) to avoid ambiguity, and no `python` symlink is created by default.
+
+The fourth problem is that **you cannot pass flags to the interpreter**. The shebang line is intended to contain the name of the interpreter plus a single argument to it. Using `/usr/bin/env` as the interpreter consumes the first slot and the name of the interpreter consumes the second, so there is no room to pass additional flags to the program. This is not a big deal: one argument for flags is too restricted anyway and you can usually set up the interpreter later from within the script.
+
+The fifth and worst problem is that **your script is at the mercy of the user's environment configuration**. If the user has a "misconfigured" `PATH`, your script will mysteriously fail at run time in ways that you cannot expect and in ways that may be very difficult to troubleshoot later on. I quote "misconfigured" because this problem is very subtle. For example: I do have a shell configuration that I carry across many different machines and various operating systems; such configuration has complex logic to determine a sane `PATH` regardless of the system… but this, in turn, means that the `PATH` can end up containing more than one version of the same program. This is fine for interactive shell use, but it's not OK for any program to assume that my `PATH` can work for them.
+
+The sixth and last problem is that **a script prefixed with `#! /usr/bin/env` is not suitable to being installed**. This is justified by all the other problems illustrated above: once a program is installed on the system, it should behave deterministically no matter how it is invoked. More importantly, when you install a program, you do so under a set of assumptions either from a `configure`-like script or from a package manager. To ensure things work, the installed script must see the exact same environment used at installation time, which in particular means that the script must point at the correct interpreter version and at the interpreter that has access to all package dependencies.
+
+All this considered, you may still **use `#! /usr/bin/env` for the convenience of your own scripts, or as a placeholder for a better default**. For example, you could patch up the script during `make install` to point to the right interpreter, which is pretty much what pkgsrc does automatically. **Just don't assume that the magic `#! /usr/bin/env foo` is sufficient or even correct.**
+
+*Bonus chatter:* Did you know that the traditional shebang prefix is `#! /` (note the space)? This 4-byte character sequence was the one that the original Unix kernel searched for to determine if an external interpreter was necessary, not just `#!`.
