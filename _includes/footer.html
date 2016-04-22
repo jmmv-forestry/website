@@ -2,7 +2,7 @@
   <footer>
     <p class="pull-right"><a href="#">Back to top</a></p>
     <p>Copyright 2016 {{ site.author }}.
-    Last updated on {{ site.last_updated }}.</p>
+    Last updated on {% include date.html date=site.last_updated %}.</p>
   </footer>
 </div>
 
