@@ -43,7 +43,25 @@ href="{{ "/feed.xml" | prepend: site.baseurl }}">Or subscribe via RSS</a></p>
   </div>
 </div>
 
-{% include posts.html %}
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}
+        &middot;
+        <a href="{{ post.url | prepend: site.url }}#disqus_thread">Comments</a>
+      </span>
+      {% if post.excerpt %}
+      <p>
+        {{ post.excerpt | strip_html }}
+        <a href="{{ post.url | prepend: site.baseurl }}">[Continue reading]</a>
+      </p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
 
 {% if site.environment == "production" %}
 <script id="dsq-count-scr" src="//jmmv.disqus.com/count.js" async></script>

@@ -17,6 +17,10 @@ url: http://julio.meroh.net
 
 exclude: [CNAME, Makefile, README.md]
 
+gems: [jekyll-paginate]
+paginate: 7
+paginate_path: /blog/page:num
+
 analytics_account: UA-63557333-1
 
 highlighter: rouge
