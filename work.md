@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Work
+subtitle: What I do, and have done, for a living
 permalink: /work/
 ---
 
