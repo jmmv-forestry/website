@@ -9,6 +9,8 @@ description: >
   presence in the web, and summarizes all my work.  In fact, you can
   think of this page as my extended r&eacute;sum&eacute; or portfolio.
 
+environment: production
+
 baseurl: ""
 permalink: /blog/:year/:month/:day/:title.html
 url: http://julio.meroh.net

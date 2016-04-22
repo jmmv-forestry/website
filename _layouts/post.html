@@ -61,6 +61,7 @@ layout: base
     </form>
   </div>
 
+  {% if site.environment == "production" %}
   <div id="disqus_thread">
     <script>
       var disqus_config = function () {
@@ -81,4 +82,5 @@ layout: base
       powered by Disqus.</a>
     </noscript>
   </div>
+  {% endif %}
 </div>
