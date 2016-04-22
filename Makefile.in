@@ -40,7 +40,12 @@ serve-dev: build-dev
 	$(RUN_JEKYLL) serve --skip-initial-build $(JEKYLL_DEV_FLAGS)
 
 .PHONY: scripts
-scripts: _admin/new-draft _admin/publish-draft _admin/publish-site
+scripts: _admin/import-blogger _admin/new-draft \
+         _admin/publish-draft _admin/publish-site
+
+CLEANFILES += _admin/import-blogger
+_admin/import-blogger: _admin/import-blogger.sh
+	shtk build -o $@ $<
 
 CLEANFILES += _admin/new-draft
 _admin/new-draft: _admin/new-draft.sh
