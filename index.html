@@ -28,6 +28,10 @@ layout: base
     </div>
     <div class="col-md-3 marketing">
       <div class="row">
+        {% include subscription.html %}
+      </div>
+
+      <div class="row">
         <a href="{{ "/writing/" | prepend: site.baseurl }}">
           <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
         </a>

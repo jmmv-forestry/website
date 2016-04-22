@@ -165,8 +165,6 @@ table {
 }
 
 form.feedburner {
-  background: #eaeaea;
-  border: 1px solid #ccc;
   padding: 3px;
   text-align: center;
 }
@@ -216,4 +214,17 @@ div #toc {
   font-size: smaller;
   display: flex;
   justify-content: space-between;
+}
+
+ul.posts-archive {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.posts-archive li {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
