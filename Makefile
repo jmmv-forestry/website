@@ -5,10 +5,12 @@ serve: serve-dev
 
 .PHONY: serve-prod
 serve-prod:
+	rm -rf _site
 	$(JEKYLL) serve --config=_config.yml
 
 .PHONY: serve-dev
 serve-dev:
+	rm -rf _site
 	$(JEKYLL) serve --config=_config.yml,_config_dev.yml
 
 .PHONY: all
