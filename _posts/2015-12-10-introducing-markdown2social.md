@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Introducing Markdown2Social
-date:   2015-12-10 10:00:00
+date:   2015-12-10 10:00:00 -0500
 categories: software
 
 excerpt: Markdown2Social is a new open-source tool, originally written

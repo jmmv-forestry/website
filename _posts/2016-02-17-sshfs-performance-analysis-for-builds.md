@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Analysis of SSHFS performance for large builds
-date:       2016-02-17 08:30:00
+date:       2016-02-17 08:30:00 -0500
 categories: software
 excerpt_separator: <!--end-of-excerpt-->
 ---

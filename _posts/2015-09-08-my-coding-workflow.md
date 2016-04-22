@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:       My coding workflow
-date:        2015-09-07 12:00:00
+date:        2015-09-07 12:00:00 -0400
 categories:  best-practices development essay workflow
 medium:      my-coding-workflow-f26f81235752
 cover-image: 2015-09-08-header.png

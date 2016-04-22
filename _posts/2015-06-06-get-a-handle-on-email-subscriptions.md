@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:       Get a handle on email subscriptions
-date:        2015-06-06 12:00:00
+date:        2015-06-06 12:00:00 -0400
 categories:  best-practices email essay workflow
 medium:      get-a-handle-on-email-subscriptions-137a7472d71d
 cover-image: 2015-06-06-header.jpg

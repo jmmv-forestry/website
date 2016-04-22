@@ -53,7 +53,7 @@ main() {
     [ ${#} -eq 1 ] || shtk_cli_usage_error "Must provide a single draft name"
     local draft_file="${1}"; shift
 
-    local post_date="$(date +'%Y-%m-%d %H:%M:%S')"
+    local post_date="$(date +'%Y-%m-%d %H:%M:%S %z')"
     local file_date="$(echo "${post_date}" | cut -d ' ' -f 1)"
 
     local draft_name="$(basename "${draft_file}")"

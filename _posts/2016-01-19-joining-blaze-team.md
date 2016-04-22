@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Joining the Blaze team
-date:   2016-01-19 08:30:00
+date:   2016-01-19 08:30:00 -0500
 categories: google work
 excerpt_separator: <!--end-of-excerpt-->
 ---

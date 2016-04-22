@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:       '"Your English is pretty good!", they said'
-date:        2015-09-20 12:00:00
+date:        2015-09-20 12:00:00 -0400
 categories:  english essay personal-story writing
 medium:      your-english-is-pretty-good-they-said-b67e0aa7c99f
 cover-image: 2015-09-21-header.png

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome to my homepage, version 2.0!"
-date:   2015-10-22 13:30:00
+date:   2015-10-22 13:30:00 -0400
 categories: website
 ---
 

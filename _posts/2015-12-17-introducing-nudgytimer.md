@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Introducing Nudgy Timer
-date:   2015-12-17 17:30:00
+date:   2015-12-17 17:30:00 -0500
 categories: software
 excerpt_separator: <!--end-of-excerpt-->
 ---

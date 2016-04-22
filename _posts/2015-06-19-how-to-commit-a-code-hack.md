@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:       How to commit a code hack and not perish along the way
-date:        2015-06-19 12:00:00
+date:        2015-06-19 12:00:00 -0400
 categories:  best-practices development essay software
 medium:      how-to-commit-a-code-hack-and-not-perish-along-the-way-7059dac49df6
 cover-image: 2015-06-19-header.jpg

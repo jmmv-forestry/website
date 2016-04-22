@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      An open letter to online support staff
-date:       2015-09-24 12:00:00
+date:       2015-09-24 12:00:00 -0400
 categories: fun essay
 medium:     an-open-letter-to-online-support-staff-f4ea93ffc0df
 ---

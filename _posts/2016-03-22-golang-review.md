@@ -1,7 +1,7 @@
 ---
 layout:      post
 title:       A look at Go from a newbie's perspective
-date:        2016-03-22 17:00:00
+date:        2016-03-22 17:00:00 -0400
 categories:  software
 cover-image: 2016-03-22-header.png
 ---
