@@ -22,27 +22,33 @@
 }
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-md-3 {
+.marketing {
   margin-bottom: 20px;
   text-align: center;
+  font-size: 80%;
 }
 .marketing h2 {
   font-weight: normal;
 }
-.marketing .col-md-3 p {
+.marketing .row {
+  margin-top: $vertical-rhythm;
+  margin-bottom: $vertical-rhythm;
+}
+.marketing p {
   margin-right: 10px;
   margin-left: 10px;
 }
-
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+.marketing .glyphicon {
+  background-color: $glyphicon-background-color;
+  color: $glyphicon-foreground-color;;
+  font-size: 60px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
 }
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
+.marketing a:hover .glyphicon-link {
+  text-decoration: none;
 }
 
 .container > footer {
@@ -60,32 +66,6 @@ footer p {
   margin: $vertical-rhythm / 2;
 }
 
-@media (min-width: 768px) {
-  .featurette-heading {
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
-  }
-}
-
-.marketing .glyphicon {
-  background-color: $glyphicon-background-color;
-  color: $glyphicon-foreground-color;;
-  font-size: 90px;
-  width: 140px;
-  height: 140px;
-  line-height: 140px;
-  border-radius: 50%;
-}
-
-.marketing a:hover .glyphicon-link {
-  text-decoration: none;
-}
-
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -95,6 +75,7 @@ ul, ol, dl, figure,
 
 .post-list {
   margin-left: 0;
+  padding: 0;
   list-style: none;
 
   > li {

@@ -10,75 +10,62 @@ layout: base
     Runner.  Father of two.<br/>
     <strong>Currently:</strong> Senior Software Engineer at Google,
     New York City.</p>
-<!--
-    <div class="row">
-      <div class="col-xs-4 col-xs-offset-4">
-        {% include profiles.html %}
-      </div>
-    </div>-->
   </div>
 </div>
 
-<div class="container marketing">
+<div class="container">
   <div class="row">
-    <div class="col-md-3">
-      <a href="{{ "/writing/" | prepend: site.baseurl }}">
-        <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
-      </a>
-      <h2>Writing</h2>
-
-      <p>Writer by hobby, usually covering topics related to my work or
-      interests.  No fiction.</p>
-
-      <p><a class="btn btn-default" role="button"
-            href="{{ "/writing/" | prepend: site.baseurl }}">Read more
-      &raquo;</a>
-      <br/>or<br/>
-      <a class="btn btn-default" role="button"
-            href="{{ "/blog/" | prepend: site.baseurl }}">Go to blog
-      &raquo;</a></p>
+    <div class="col-md-9">
+      {% include posts.html %}
+<!-- TODO: Figure out what to do with this -->
+<!--
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+          {% include profiles.html %}
+        </div>
+      </div>
+-->
     </div>
+    <div class="col-md-3 marketing">
+      <div class="row">
+        <a href="{{ "/writing/" | prepend: site.baseurl }}">
+          <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+        </a>
+        <h2>Writing</h2>
 
-    <div class="col-md-3">
-      <a href="{{ "/software/" | prepend: site.baseurl }}">
-        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-      </a>
-      <h2>Software</h2>
+        <p>Writer by hobby, usually covering topics related to my work or
+        interests.  No fiction.</p>
+      </div>
 
-      <p>Author of various Open Source projects and contributor to others
-      &mdash; FreeBSD in particular.<br/>Motto: production software can be
-      beautiful.</p>
+      <div class="row">
+        <a href="{{ "/software/" | prepend: site.baseurl }}">
+          <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+        </a>
+        <h2>Software</h2>
 
-      <p><a class="btn btn-default" role="button"
-            href="{{ "/software/" | prepend: site.baseurl }}">Read more
-      &raquo;</a></p>
+        <p>Author of various Open Source projects and contributor to others
+        &mdash; FreeBSD in particular.<br/>Motto: production software can be
+        beautiful.</p>
+      </div>
+
+      <div class="row">
+        <a href="{{ "/work/" | prepend: site.baseurl }}">
+          <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+        </a>
+        <h2>Work</h2>
+
+        <p>Software Engineer (previously Site Reliability Engineer) at Google
+        in New York City.</p>
+      </div>
+
+      <div class="row">
+        <a href="{{ "/about/" | prepend: site.baseurl }}">
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+        </a>
+        <h2>Contact</h2>
+
+        <p>Want to reach me?<br/>See my about page for all the references.</p>
+      </div>
     </div>
-
-    <div class="col-md-3">
-      <a href="{{ "/work/" | prepend: site.baseurl }}">
-        <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
-      </a>
-      <h2>Work</h2>
-
-      <p>Software Engineer (previously Site Reliability Engineer) at Google
-      in New York City.</p>
-
-      <p><a class="btn btn-default" role="button"
-            href="{{ "/work/" | prepend: site.baseurl }}">Read more
-      &raquo;</a></p>
-    </div>
-
-    <div class="col-md-3">
-      <a href="{{ "/about/" | prepend: site.baseurl }}">
-        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-      </a>
-      <h2>Contact</h2>
-
-      <p>Want to reach me?<br/>See my about page for all the references.</p>
-
-      <p><a class="btn btn-default" role="button"
-            href="{{ "/about/" | prepend: site.baseurl }}">Read more
-      &raquo;</a></p>
-    </div>
- </div>
+  </div>
 </div>
