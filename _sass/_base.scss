@@ -23,11 +23,12 @@
 
 /* Center align the text within the three columns below the carousel */
 .marketing {
-  margin-bottom: 20px;
+  margin-top: $vertical-rhythm;
   text-align: center;
   font-size: 80%;
 }
 .marketing h2 {
+  color: $glyphicon-foreground-color;
   font-weight: normal;
 }
 .marketing .row {
@@ -41,10 +42,10 @@
 .marketing .glyphicon {
   background-color: $glyphicon-background-color;
   color: $glyphicon-foreground-color;;
-  font-size: 60px;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
+  font-size: 50px;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
   border-radius: 50%;
 }
 .marketing a:hover .glyphicon-link {
