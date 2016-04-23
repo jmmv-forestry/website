@@ -50,6 +50,18 @@
           {% endif %}
         {% endfor %}
       </ul>
+
+      <form class="navbar-form navbar-right" method="get" role="search"
+            action="http://www.google.com/search">
+          <div class="form-group">
+            <input type="text" name="query" class="form-control"
+                   placeholder="Search">
+            <input type="hidden" name="sitesearch" value="{{ site.url }}">
+          </div>
+          <button type="submit" value="Search" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button>
+      </form>
     </div>
   </div>
 </nav>
