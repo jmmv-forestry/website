@@ -57,8 +57,6 @@ main() {
     fi
     add_date "${post_file}" "${post_date}"
 
-    sed_in_place _config.yml -E "/^last_updated:/s/:.*$/: ${post_date}/"
-
     if shtk_bool_check "${is_tracked_draft}"; then
         git commit -m "Publish post ${post_name} (from drafts)" \
             "${draft_file}" "${post_file}" _config.yml
