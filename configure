@@ -1,0 +1,105 @@
+#! /bin/sh
+
+ProgName="${0##*/}"
+
+# Static package settings.
+SRCDIR="$(cd "$(dirname "${0}")" && pwd -P)"
+
+# Dynamically-configured settings.
+CLEANFILES=
+DISTCLEANFILES=
+JEKYLL=
+
+# List of variables exposed to the Makefile.
+MK_VARS="CLEANFILES DISTCLEANFILES JEKYLL"
+
+info() {
+    echo "${ProgName}: I: ${@}" 1>&2
+}
+
+err() {
+    echo "${ProgName}: E: ${@}" 1>&2
+    exit 1
+}
+
+find_prog() {
+    local prog="${1}"; shift
+
+    local oldifs="${IFS}"
+    IFS=:
+    set -- ${PATH}
+    IFS="${oldifs}"
+
+    while [ ${#} -gt 0 ]; do
+        if [ -x "${1}/${prog}" ]; then
+            echo "${1}/${prog}"
+            return 0
+        else
+            shift
+        fi
+    done
+    return 1
+}
+
+find_progs() {
+    while [ ${#} -gt 0 ]; do
+        if find_prog "${1}"; then
+            return 0
+        else
+            shift
+        fi
+    done
+    return 1
+}
+
+set_jekyll() {
+    local user_override="${1}"; shift
+
+    if [ -n "${user_override}" ]; then
+        [ -e "${user_override}" ] || err "jekyll not found in" \
+            "${user_override}; bogus argument to --jekyll?"
+        JEKYLL="${user_override}"
+    else
+        local jekyll="$(find_progs jekyll23 jekyll22 jekyll21 jekyll)"
+        [ -n "${jekyll}" ] || err "Cannot find jekyll in path; pass" \
+            "--jekyll=/path/to/jekyll to configure"
+        JEKYLL="${jekyll}"
+    fi
+
+    info "Using Jekyll from: ${JEKYLL}"
+}
+
+generate_makefile() {
+    local src="${1}"; shift
+    local dest="${1}"; shift
+
+    info "Generating ${dest}"
+    echo "# AUTOMATICALLY GENERATED; DO NOT EDIT!" >"${dest}.tmp"
+    for var in ${MK_VARS}; do
+        local value
+        eval "value=\"\$${var}\""
+        echo "${var} = ${value}" >>"${dest}.tmp"
+    done
+    cat "${src}" >>"${dest}.tmp"
+    mv "${dest}.tmp" "${dest}"
+}
+
+main() {
+    cd "${SRCDIR}"
+
+    local jekyll=
+    for arg in "${@}"; do
+        case "${arg}" in
+            --jekyll=*) jekyll="${arg#*=}" ;;
+            *) err "Unknown argument ${arg}" ;;
+        esac
+    done
+
+    set_jekyll "${jekyll}"
+    CLEANFILES=_site
+
+    DISTCLEANFILES="${DISTCLEANFILES} Makefile"
+    generate_makefile Makefile.in Makefile
+}
+
+main "${@}"

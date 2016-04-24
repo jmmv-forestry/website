@@ -1,0 +1,53 @@
+.PHONY: default
+default: Makefile scripts serve
+
+# TODO(jmmv): Should automatically reinvoke configure... but this is difficult
+# because we need to remember the flags originally passed by the user, and
+# we need to tell make to reload the Makefile somehow.
+Makefile: configure Makefile.in
+	@echo "Makefile out of date; rerun ./configure with desired args"
+	@false
+
+JEKYLL_PROD_FLAGS = --config=_config.yml
+JEKYLL_DEV_FLAGS = --config=_config.yml,_config_dev.yml --drafts --future
+
+.PHONY: build serve
+build: build-dev
+serve: serve-dev
+
+.PHONY: build-prod
+build-prod:
+	rm -rf _site
+	$(JEKYLL) build $(JEKYLL_PROD_FLAGS)
+
+.PHONY: build-dev
+build-dev:
+	rm -rf _site
+	$(JEKYLL) build $(JEKYLL_DEV_FLAGS)
+
+.PHONY: serve-prod
+serve-prod: build-prod
+	$(JEKYLL) serve --skip-initial-build $(JEKYLL_PROD_FLAGS)
+
+.PHONY: serve-dev
+serve-dev: build-dev
+	$(JEKYLL) serve --skip-initial-build $(JEKYLL_DEV_FLAGS)
+
+.PHONY: scripts
+scripts: _admin/new-draft _admin/publish
+
+CLEANFILES += _admin/new-draft
+_admin/new-draft: _admin/new-draft.sh
+	shtk build -o $@ $<
+
+CLEANFILES += _admin/publish
+_admin/publish: _admin/publish.sh
+	shtk build -o $@ $<
+
+.PHONY: clean
+clean:
+	rm -rf $(CLEANFILES)
+
+.PHONY: cleandir
+distclean: clean
+	rm -rf $(DISTCLEANFILES)
