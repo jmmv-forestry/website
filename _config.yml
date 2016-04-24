@@ -13,7 +13,7 @@ baseurl: ""
 permalink: /blog/:year/:month/:day/:title.html
 url: http://julio.meroh.net
 
-exclude: [CNAME, Makefile, Makefile.in, README.md, configure]
+exclude: [Makefile, Makefile.in, README.md, configure]
 
 gems: [jekyll-paginate]
 paginate: 7

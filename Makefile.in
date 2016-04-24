@@ -34,15 +34,23 @@ serve-dev: build-dev
 	$(JEKYLL) serve --skip-initial-build $(JEKYLL_DEV_FLAGS)
 
 .PHONY: scripts
-scripts: _admin/new-draft _admin/publish
+scripts: _admin/new-draft _admin/publish-draft _admin/publish-site
 
 CLEANFILES += _admin/new-draft
 _admin/new-draft: _admin/new-draft.sh
 	shtk build -o $@ $<
 
-CLEANFILES += _admin/publish
-_admin/publish: _admin/publish.sh
+CLEANFILES += _admin/publish-draft
+_admin/publish-draft: _admin/publish-draft.sh
 	shtk build -o $@ $<
+
+CLEANFILES += _admin/publish-site
+_admin/publish-site: _admin/publish-site.sh
+	shtk build -o $@ $<
+
+.PHONY: publish
+publish: build-prod _admin/publish-site
+	./_admin/publish-site _site $(LIVE_REPOSITORY)
 
 .PHONY: clean
 clean:
