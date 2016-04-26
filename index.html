@@ -2,6 +2,38 @@
 layout: base
 ---
 
+<!-- We need these to be present early during load so we can avoid hiding
+     or showing elements once the page has already been rendered. -->
+<script src="{{ '/js/jquery-1.11.2.min.js' | prepend: site.baseurl }}">
+</script>
+<script src="{{ '/js/js.cookie-2.1.1.min.js' | prepend: site.baseurl }}">
+</script>
+
+<script>
+  function loadMarketing() {
+      var cookie = Cookies.get("marketing-visible");
+      if (cookie === undefined || cookie === "true") {
+        toggleMarketing(true);
+      } else {
+        toggleMarketing(false);
+      }
+  }
+
+  function toggleMarketing(action) {
+    if (action) {
+      $("#collapse-row").show();
+      $("#buttons").show();
+      $("#expand-row").hide();
+      Cookies.set("marketing-visible", "true", {path: ""});
+    } else {
+      $("#expand-row").show();
+      $("#buttons").hide();
+      $("#collapse-row").hide();
+      Cookies.set("marketing-visible", "false", {path: ""});
+    }
+  }
+</script>
+
 <div class="page-header">
   <div class="container">
     <h1>Julio Merino</h1>
@@ -11,7 +43,7 @@ layout: base
     <strong>Currently:</strong> Senior Software Engineer at Google,
     New York City.</p>
 
-    <div class="marketing row">
+    <div class="marketing row" style="display: none" id="buttons">
       <div class="col-md-3">
         <a href="{{ "/writing/" | prepend: site.baseurl }}">
           <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
@@ -54,6 +86,35 @@ layout: base
         social networks.  See my about page for all the references.</p>
       </div>
     </div>
+
+    <div class="row" style="display: none" id="collapse-row">
+      <p class="text-center"><small>
+        <a href="javascript:toggleMarketing(false)">
+          <span class="glyphicon glyphicon-chevron-up"
+                aria-hidden="true"></span>
+          Collapse
+          <span class="glyphicon glyphicon-chevron-up"
+                aria-hidden="true"></span>
+        </a>
+      </small></p>
+    </div>
+
+    <div class="row" style="display: none" id="expand-row">
+      <p class="text-center"><small>
+        <a href="javascript:toggleMarketing(true)">
+          <span class="glyphicon glyphicon-chevron-down"
+                aria-hidden="true"></span>
+          Expand
+          <span class="glyphicon glyphicon-chevron-down"
+                aria-hidden="true"></span>
+        </a>
+      </small></p>
+    </div>
+
+    <!-- All the rows above were loaded hidden, so display only the needed
+         ones now.  This ensures that we are able to render the page
+         sequentially and prevent strange jumps during rendering. -->
+    <script>loadMarketing();</script>
   </div>
 </div>
 
