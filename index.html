@@ -62,18 +62,8 @@ layout: base
     <div class="col-md-9">
       {% include posts.html %}
     </div>
-    <div class="col-md-3">
-      <!-- TODO: Generalize this side panel in an include file so it can be
-           imported from the archive (and maybe from each post?), and tweak
-           its contents. -->
-      <div class="row">
-        {% include subscription.html %}
-      </div>
-      <div class="row">
-        <div class="col-xs-4 col-xs-offset-4">
-          {% include profiles.html %}
-        </div>
-      </div>
+    <div class="col-md-3 subscription">
+      {% include subscription.html %}
     </div>
   </div>
 </div>

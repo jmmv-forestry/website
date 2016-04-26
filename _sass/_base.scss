@@ -171,10 +171,6 @@ form.feedburner {
   text-align: center;
 }
 
-.center {
-  text-align: center;
-}
-
 div #toc {
   margin: 20px 0;
   padding: 15px 30px 15px 15px;
@@ -229,4 +225,9 @@ ul.posts-archive li {
   justify-content: space-between;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+}
+
+.subscription .row {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
