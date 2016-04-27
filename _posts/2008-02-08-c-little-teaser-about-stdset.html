@@ -1,0 +1,9 @@
+---
+layout: post
+title: "C++: Little teaser about std::set"
+date: 2008-02-08 11:17:00 -0500
+categories: c++ teasert
+julipedia: 2008/02/c-little-teaser-about-stdset.html
+excerpt: Post imported from The Julipedia; excerpt not available.
+---
+This does not build.  Can you guess why?  Without testing it?<pre>std::set&lt; int &gt; numbers;<br /><br />for (int i = 0; i &lt; 10; i++)<br />   numbers.insert(i);<br /><br />for (std::set&lt; int &gt;::iterator iter = numbers.begin();<br />    iter != numbers.end(); iter++) {<br />   int&amp; i = *iter;<br />   i++;<br />}</pre><b>Update (23:40)</b>: John gave a correct answer in the comments.
