@@ -8,8 +8,14 @@ Makefile: configure Makefile.in
 	@echo "Makefile out of date; rerun ./configure with desired args"
 	@false
 
+JEKYLL_ENV  = LANG=en_US
+JEKYLL_ENV += LC_ALL=C
+JEKYLL_ENV += TZ=UTC
+
 JEKYLL_PROD_FLAGS = --config=_config.yml
 JEKYLL_DEV_FLAGS = --config=_config.yml,_config_dev.yml --drafts --future
+
+RUN_JEKYLL = env $(JEKYLL_ENV) $(JEKYLL)
 
 .PHONY: build serve
 build: build-dev
@@ -18,20 +24,20 @@ serve: serve-dev
 .PHONY: build-prod
 build-prod:
 	rm -rf _site
-	$(JEKYLL) build $(JEKYLL_PROD_FLAGS)
+	$(RUN_JEKYLL) build $(JEKYLL_PROD_FLAGS)
 
 .PHONY: build-dev
 build-dev:
 	rm -rf _site
-	$(JEKYLL) build $(JEKYLL_DEV_FLAGS)
+	$(RUN_JEKYLL) build $(JEKYLL_DEV_FLAGS)
 
 .PHONY: serve-prod
 serve-prod: build-prod
-	$(JEKYLL) serve --skip-initial-build $(JEKYLL_PROD_FLAGS)
+	$(RUN_JEKYLL) serve --skip-initial-build $(JEKYLL_PROD_FLAGS)
 
 .PHONY: serve-dev
 serve-dev: build-dev
-	$(JEKYLL) serve --skip-initial-build $(JEKYLL_DEV_FLAGS)
+	$(RUN_JEKYLL) serve --skip-initial-build $(JEKYLL_DEV_FLAGS)
 
 .PHONY: scripts
 scripts: _admin/new-draft _admin/publish-draft _admin/publish-site
