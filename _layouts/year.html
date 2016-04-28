@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+    <title>Posts for {{ page.date | date: "%Y" }} - {{ site.title }}</title>
+  </head>
+
+  <body>
+    {% include header.html %}
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Posts for {{ page.date | date: "%Y" }}</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          {% include posts.html posts=page.posts %}
+        </div>
+        <div class="col-md-3 subscription">
+          {% include subscription.html %}
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>

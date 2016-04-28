@@ -21,7 +21,19 @@ exclude:
   - configure
   - external
 
-gems: [jekyll-paginate]
+gems: [jekyll-archives, jekyll-paginate]
+
+jekyll-archives:
+  enabled:
+    - month
+    - year
+  layouts:
+    month: month
+    year: year
+  permalinks:
+    month: '/:year/:month/'
+    year: '/:year/'
+
 paginate: 7
 paginate_path: /page:num
 
