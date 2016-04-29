@@ -1,0 +1,102 @@
+<div class="row">
+  <p class="text-center">
+    <a href="https://twitter.com/jmmv"
+    class="twitter-follow-button"
+    data-show-count="false"
+    data-size="large">Follow @jmmv</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </p>
+</div>
+
+<div class="row">
+  <form class="feedburner form-horizontal"
+        action="https://feedburner.google.com/fb/a/mailverify"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=jmmv', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+    <div class="form-group">
+      <div class="col-sm-10">
+        <input type="text" name="email"
+               placeholder="Enter your email" class="form-control"/>
+      </div>
+      <button type="submit" value="Subscribe" class="btn btn-default col-sm-2">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <input type="hidden" value="jmmv" name="uri"/>
+    <input type="hidden" name="loc" value="en_US"/>
+    <p>
+      <small>Subscription by
+      <a href="https://feedburner.google.com"
+      target="_blank">FeedBurner</a></small>
+    </p>
+  </form>
+</div>
+
+<div class="row">
+  <p class="text-center"><a
+  href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS feed</a></p>
+</div>
+
+<div class="row archive">
+  {% comment %}
+  This is ridiculous but Liquid doesn't seem to make the processing any
+  easier.  It may be worth filing a feature request with jekyll-archives
+  to expose a mapping of dates to posts based on the various indexing
+  criteria.  Would be trivial to do from Ruby, and I'm sure much faster.
+  {% endcomment %}
+  <ul>
+    {% capture raw_years %}
+      {% for post in site.posts %}
+        {{ post.date | date: "%Y" }}
+      {% endfor %}
+    {% endcapture %}
+    {% assign years = raw_years | split: " " | uniq %}
+
+    {% for year in years %}
+      {% capture raw_posts_in_year %}
+        {% for post in site.posts %}
+          {% assign post_year = post.date | date: "%Y" %}
+          {% if post_year == year %}
+            1
+          {% endif %}
+        {% endfor %}
+      {% endcapture %}
+      {% assign posts_in_year = raw_posts_in_year | split: " " %}
+      <li>
+        <a href="/{{ year }}">{{ year }}</a>
+        ({{ posts_in_year.size }})
+        <ul>
+          {% capture raw_months %}
+            {% for post in site.posts %}
+              {% assign post_year = post.date | date: "%Y" %}
+              {% if post_year == year %}
+                {{ post.date | date: "%m-%B" }}
+              {% endif %}
+            {% endfor %}
+          {% endcapture %}
+          {% assign months = raw_months | split: " " | uniq %}
+
+          {% for month in months %}
+            {% assign month_number = month | slice: 0, 2 %}
+            {% assign month_name = month | slice: 3, month.size - 3 %}
+            {% capture raw_posts_in_month %}
+              {% for post in site.posts %}
+                {% assign post_year = post.date | date: "%Y" %}
+                {% assign post_month = post.date | date: "%B" %}
+                {% if post_year == year and post_month == month_name %}
+                  1
+                {% endif %}
+              {% endfor %}
+            {% endcapture %}
+            {% assign posts_in_month = raw_posts_in_month | split: " " %}
+            <li>
+              <a href="/{{ year }}/{{ month_number }}">{{ month_name }}</a>
+              ({{ posts_in_month.size }})
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
