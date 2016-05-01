@@ -22,18 +22,22 @@ JEKYLL_DEV_FLAGS += --limit_posts=$(LIMIT_POSTS)
 
 RUN_JEKYLL = env $(JEKYLL_ENV) $(JEKYLL)
 
+.PHONY: clean-site
+clean-site:
+	rm -rf _site
+	mkdir _site
+	touch _site/.nojekyll
+
 .PHONY: build serve
 build: build-dev
 serve: serve-dev
 
 .PHONY: build-prod
-build-prod:
-	rm -rf _site
+build-prod: clean-site
 	$(RUN_JEKYLL) build $(JEKYLL_PROD_FLAGS)
 
 .PHONY: build-dev
-build-dev:
-	rm -rf _site
+build-dev: clean-site
 	$(RUN_JEKYLL) build $(JEKYLL_DEV_FLAGS)
 
 .PHONY: serve-prod
