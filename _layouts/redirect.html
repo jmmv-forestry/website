@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+    <title>Page moved - {{ site.title }}</title>
+    <meta http-equiv="refresh"
+          content="10;url={{ page.redirect | prepend: site.baseurl }}">
+  </head>
+
+  <body>
+    {% include header.html %}
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Oops! The page has moved!</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <article>
+        <p>I'm sorry, but the page you are looking for has moved to
+        <a href="{{ page.redirect | prepend: site.baseurl | prepend: site.url }}">{{ page.redirect | prepend: site.baseurl | prepend: site.url }}</a>.
+        You will be taken there in a few seconds... or you can click the link
+        to go there right now.</p>
+      </article>
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>

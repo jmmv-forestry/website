@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: empty
 ---
 
 <!-- We need these to be present early during load so we can avoid hiding
@@ -121,10 +121,31 @@ layout: base
 <div class="container">
   <div class="row">
     <div class="col-md-9">
-      {% include posts.html %}
+      {% include posts.html posts=paginator.posts %}
+
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          <span class="previous"><a
+          href="{{ paginator.previous_page_path }}">&laquo;
+          Newer posts</a></span>
+        {% else %}
+          <span class="previous"></span>
+        {% endif %}
+
+        <span class="current">Page {{ paginator.page }} of
+        {{ paginator.total_pages }}</span>
+
+        {% if paginator.next_page %}
+          <span class="next"><a
+          href="{{ paginator.next_page_path }}">Older posts
+          &raquo;</a></span>
+        {% else %}
+          <span class="next"></span>
+        {% endif %}
+      </div>
     </div>
-    <div class="col-md-3 subscription">
-      {% include subscription.html %}
+    <div class="col-md-3 sidebar">
+      {% include sidebar.html %}
     </div>
   </div>
 </div>

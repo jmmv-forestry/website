@@ -12,24 +12,39 @@ JEKYLL_ENV  = LANG=en_US
 JEKYLL_ENV += LC_ALL=C
 JEKYLL_ENV += TZ=UTC
 
+LIMIT_POSTS = 15
+
 JEKYLL_PROD_FLAGS = --config=_config.yml
-JEKYLL_DEV_FLAGS = --config=_config.yml,_config_dev.yml --drafts --future
+JEKYLL_DEV_FLAGS  = --config=_config.yml,_config_dev.yml
+JEKYLL_DEV_FLAGS += --drafts
+JEKYLL_DEV_FLAGS += --future
+JEKYLL_DEV_FLAGS += --limit_posts=$(LIMIT_POSTS)
 
 RUN_JEKYLL = env $(JEKYLL_ENV) $(JEKYLL)
+
+.PHONY: clean-site
+clean-site:
+	rm -rf _site
+	mkdir _site
+	touch _site/.nojekyll
 
 .PHONY: build serve
 build: build-dev
 serve: serve-dev
 
 .PHONY: build-prod
-build-prod:
-	rm -rf _site
+build-prod: clean-site _admin/generate-archive
+	echo >_includes/archive.html
 	$(RUN_JEKYLL) build $(JEKYLL_PROD_FLAGS)
+	_admin/generate-archive _site _includes/archive.html
+	$(RUN_JEKYLL) build --incremental $(JEKYLL_PROD_FLAGS)
 
 .PHONY: build-dev
-build-dev:
-	rm -rf _site
+build-dev: clean-site _admin/generate-archive
+	echo >_includes/archive.html
 	$(RUN_JEKYLL) build $(JEKYLL_DEV_FLAGS)
+	_admin/generate-archive _site _includes/archive.html
+	$(RUN_JEKYLL) build --incremental $(JEKYLL_DEV_FLAGS)
 
 .PHONY: serve-prod
 serve-prod: build-prod
@@ -40,7 +55,16 @@ serve-dev: build-dev
 	$(RUN_JEKYLL) serve --skip-initial-build $(JEKYLL_DEV_FLAGS)
 
 .PHONY: scripts
-scripts: _admin/new-draft _admin/publish-draft _admin/publish-site
+scripts: _admin/generate-archive _admin/import-blogger _admin/new-draft \
+         _admin/publish-draft _admin/publish-site
+
+CLEANFILES += _admin/generate-archive
+_admin/generate-archive: _admin/generate-archive.sh
+	shtk build -o $@ $<
+
+CLEANFILES += _admin/import-blogger
+_admin/import-blogger: _admin/import-blogger.sh
+	shtk build -o $@ $<
 
 CLEANFILES += _admin/new-draft
 _admin/new-draft: _admin/new-draft.sh
@@ -53,6 +77,13 @@ _admin/publish-draft: _admin/publish-draft.sh
 CLEANFILES += _admin/publish-site
 _admin/publish-site: _admin/publish-site.sh
 	shtk build -o $@ $<
+
+.PHONY: import
+import: import-blogger
+
+.PHONY: import-blogger
+import-blogger: _admin/import-blogger external/julipedia/blog-04-23-2016.xml
+	./_admin/import-blogger external/julipedia/blog-04-23-2016.xml
 
 .PHONY: publish
 publish: build-prod _admin/publish-site
