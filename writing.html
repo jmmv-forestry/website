@@ -1,63 +1,28 @@
 ---
 layout: page
 title: Writing
+subtitle: Recollection of key articles I have published
 permalink: /writing/
 ---
 
-<div class="row">
-
-<div class="col-md-4 text-center">
-<script async src="https://static.medium.com/embed.js"></script>
-<a class="m-profile" data-width="100%"
-   href="https://medium.com/@jmmv">Julio Merino</a>
-</div>
-
-<div class="col-md-8">
 <p>Writing is one of my hobbies and you can read all of my articles and
-essays online.  In particular, you will find in this page the
-recollection of my best posts, and <strong><a href="/blog">the blog
-section</a></strong> will give you access to even more content.</p>
+essays online.  This page contains a curated recollection of my best posts,
+and <strong><a href="/archive/">the archive section</a></strong> gives you
+access to even more content.</p>
 
-<p><a href="http://julipedia.meroh.net/">The Julipedia</a> is my other
-(previous) blog: a site I started back in 2004 that I am currently
-considering to drop in favor of this site.</p>
+<p>Writing is a hobby that started a long time ago and matured with <a
+href="http://julipedia.meroh.net/">The Julipedia</a>, my former blog, which I
+begain in 2004 and that is being subsumed into this site.</p>
 
-<p>A <strong>reduced selection</strong> of my most popular articles is
-this:</p>
+<p>The <strong>reduced selection</strong> of my best articles is this:</p>
 
 <ul>
-  <li>2015-10-23:
-  <a
-  href="https://medium.com/@jmmv/compilers-in-the-bsd-base-system-1c4515a18c49">Compilers
-  in the (BSD) base system</a> <small>[Medium]</small></li>
-
-  <li>2015-09-21:
-  <a
-  href="https://medium.com/@jmmv/your-english-is-pretty-good-they-said-b67e0aa7c99f">"Your
-  English is pretty good!", they said</a> <small>[Medium]</small></li>
-
-  <li>2015-09-08:
-  <a
-  href="https://medium.com/@jmmv/my-coding-workflow-f26f81235752">My
-  coding workflow</a> <small>[Medium]</small></li>
-
-  <li>2015-06-19:
-  <a
-  href="https://medium.com/@jmmv/how-to-commit-a-code-hack-and-not-perish-along-the-way-7059dac49df6">How
-  to commit a code hack and not perish along the way</a>
-  <small>[Medium]</small></li>
-
-  <li>2015-06-06:
-  <a href="https://medium.com/@jmmv/get-a-handle-on-email-subscriptions-137a7472d71d">Get
-  a handle on email subscriptions</a> <small>[Medium]</small></li>
-
-  <li>2015-05-26:
-  <a href="https://medium.com/@jmmv/six-years-at-google-8b06563fab08">Six
-  years at Google</a> <small>[Medium]</small></li>
-
-  <li>2015-05-24:
-  <a href="https://medium.com/@jmmv/hello-medium-2c73c580c4ca">Hello,
-  Medium!</a> <small>[Medium]</small></li>
+  {% for post in site.posts %}
+    {% if post.categories contains "essay" %}
+      <li>{{ post.date | date: "%Y-%m-%d" }}:
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
 
   <li>2015-04-14:
   <a href="http://julipedia.meroh.net/2015/04/on-bazel-and-open-source.html">On
@@ -112,6 +77,3 @@ this:</p>
   <a href="http://www.linuxdevcenter.com/pub/a/onlamp/2005/03/31/packaging.html">Making
   Packager-Friendly Software</a> <small>[ONLamp]</small></li>
 </ul>
-</div>
-
-</div>

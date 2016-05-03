@@ -31,24 +31,6 @@ add_date() {
         shtk_cli_error "Date not found in file after automated edit"
 }
 
-update_last_updated() {
-    local file="${1}"; shift
-
-    local year="$(date +'%Y')"
-    local month="$(date +'%B')"
-    local day="$(date +'%d')"
-    case "${day}" in
-        1|21|31) day="${day}st" ;;
-        2|22) day="${day}nd" ;;
-        3|23) day="${day}rd" ;;
-        *) day="${day}th" ;;
-    esac
-
-    local date="${month} ${day}, ${year}"
-
-    sed_in_place "${file}" -E "/^last_updated:/s/:.*$/: ${date}/"
-}
-
 main() {
     [ ${#} -eq 1 ] || shtk_cli_usage_error "Must provide a single draft name"
     local draft_file="${1}"; shift
@@ -74,8 +56,6 @@ main() {
         git add "${post_file}"
     fi
     add_date "${post_file}" "${post_date}"
-
-    update_last_updated _config.yml
 
     if shtk_bool_check "${is_tracked_draft}"; then
         git commit -m "Publish post ${post_name} (from drafts)" \

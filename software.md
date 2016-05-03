@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Software
+subtitle: The software I have written and contributed to
 permalink: /software/
 ---
 

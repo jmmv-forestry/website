@@ -5,84 +5,51 @@
   font-size: $font-size-navbar-brand;
 }
 
-/* Special class on .container surrounding .navbar, used for positioning it
- * into place. */
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
+.page-header {
+  background: $base-color;
+  background: linear-gradient(to bottom, $base-color, $accent-color);
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
-/* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
-  padding-right: 0;
-  padding-left: 0;
-}
-.navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.navbar-wrapper .navbar .container {
-  width: auto;
+.page-header h1 {
+  color: $header-primary-color;
+  font-family: $title-font-family;
 }
 
-.content {
-  margin-top: 80px;
-}
-
-.carousel {
-  height: $carousel-height;
-  margin-bottom: 60px;
-}
-
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-
-  h1, p {
-    color: black;
-    text-shadow: 0 0px 2px #aaaaaa;
-  }
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: $carousel-height;
-  background-color: #777;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: auto;
-  width: auto;
-  min-height: $carousel-height;
+.page-header p {
+  color: $header-secondary-color;
 }
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-md-3 {
-  margin-bottom: 20px;
+.marketing {
+  margin-top: $vertical-rhythm;
   text-align: center;
+  font-size: 80%;
 }
 .marketing h2 {
+  color: $glyphicon-foreground-color;
   font-weight: normal;
 }
-.marketing .col-md-3 p {
+.marketing .row {
+  margin-top: $vertical-rhythm;
+  margin-bottom: $vertical-rhythm;
+}
+.marketing p {
   margin-right: 10px;
   margin-left: 10px;
 }
-
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+.marketing .glyphicon {
+  background-color: $glyphicon-background-color;
+  color: $glyphicon-foreground-color;;
+  font-size: 50px;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  border-radius: 50%;
 }
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
+.marketing a:hover .glyphicon-link {
+  text-decoration: none;
 }
 
 .container > footer {
@@ -90,6 +57,7 @@
   border-width: 1px 0 0 0;
   border-style: solid;
   border-color: $footer-border-color;
+  font-size: smaller;
 }
 
 footer p {
@@ -100,57 +68,6 @@ footer p {
   margin: $vertical-rhythm / 2;
 }
 
-@media (min-width: 768px) {
-  /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px;
-  }
-  .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  .navbar-wrapper .navbar {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-    border-radius: 4px;
-  }
-
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
-
-  .featurette-heading {
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
-  }
-}
-
-.marketing .glyphicon {
-  background-color: $glyphicon-background-color;
-  color: $glyphicon-foreground-color;;
-  font-size: 90px;
-  width: 140px;
-  height: 140px;
-  line-height: 140px;
-  border-radius: 50%;
-}
-
-.marketing a:hover .glyphicon-link {
-  text-decoration: none;
-}
-
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -158,12 +75,9 @@ ul, ol, dl, figure,
   margin-bottom: $vertical-rhythm / 2;
 }
 
-.post-title {
-  font-family: $title-font-family;
-}
-
 .post-list {
   margin-left: 0;
+  padding: 0;
   list-style: none;
 
   > li {
@@ -190,8 +104,7 @@ div.post-links {
   padding-top: 20px;
 }
 
-header .cover-image {
-  opacity: 0.5;
+.page-header .cover-image {
   width: 100%;
 }
 
@@ -254,13 +167,7 @@ table {
 }
 
 form.feedburner {
-  background: #eaeaea;
-  border: 1px solid #ccc;
   padding: 3px;
-  text-align: center;
-}
-
-.center {
   text-align: center;
 }
 
@@ -299,4 +206,28 @@ div #toc {
 .callout-info {
   background-color: #f0f7fd;
   border-color: #d0e3f0;
+}
+
+.pagination {
+  font-size: smaller;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.posts-archive {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.posts-archive li {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.subscription .row {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

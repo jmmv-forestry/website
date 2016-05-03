@@ -5,5 +5,25 @@
   "editor.tabSize": 2,
   "editor.wrappingColumn": 80,
   "editor.wrappingIndent": "none",
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+
+  // TODO: Would be nice to extend the default values instead of duplicating
+  // them here.
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "_site": true,
+    "fonts": true,
+    "images": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "_site": true
+  },
+  "search.exclude": {
+    "_sass/bootstrap": true,
+    "_site": true,
+    "fonts": true,
+    "images": true
+  }
 }

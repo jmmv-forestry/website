@@ -2,25 +2,26 @@
 layout: base
 ---
 
-<div class="content container">
-  <header>
+<div class="page-header">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+
+    <p>{% include date.html date=page.date %}
+    {% if page.author %} &middot; {{ page.author }}{% endif %}
+    {% if page.meta %} &middot; {{ page.meta }}{% endif %}</p>
+
     {% if page.cover-image %}
     <img src="/images/{{ page.cover-image }}"
          class="cover-image" />
     {% endif %}
-
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
-
-  <article>
-    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}
-    {% if page.author %} &middot; {{ page.author }}{% endif %}
-    {% if page.meta %} &middot; {{ page.meta }}{% endif %}</p>
-    {{ content }}
-  </article>
+  </div>
 </div>
 
 <div class="container">
+  <article>
+    {{ content }}
+  </article>
+
   <div class="post-links">
     <p>
       {% if page.gplus %}
@@ -45,19 +46,23 @@ layout: base
       <a href="{{ "/blog/" | prepend: site.baseurl }}">Go to posts index</a>
     </p>
 
-    <form
+    <form class="form-inline"
         action="https://feedburner.google.com/fb/a/mailverify"
         method="post"
         target="popupwindow"
         onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=jmmv', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-      <p>Or subscribe to the blog via email:
-        <input type="text" style="width:200px" name="email"/>
-        <input type="hidden" value="jmmv" name="uri"/>
-        <input type="hidden" name="loc" value="en_US"/>
-        <input type="submit" value="Subscribe" />
-        &nbsp;&nbsp;&nbsp;Delivered by
-        <a href="https://feedburner.google.com" target="_blank">FeedBurner</a>
-      </p>
+      <div class="form-group form-group-sm">
+        <input type="text" style="width: 400px" name="email"
+                placeholder="Enter your email to subscribe to new posts"
+                class="form-control input-sm"/>
+      </div>
+      <button type="submit" value="Subscribe" class="btn btn-default btn-sm">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+      &nbsp;&nbsp;&nbsp;Delivered by
+      <input type="hidden" value="jmmv" name="uri"/>
+      <input type="hidden" name="loc" value="en_US"/>
+      <a href="https://feedburner.google.com" target="_blank">FeedBurner</a>
     </form>
   </div>
 

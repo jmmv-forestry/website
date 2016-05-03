@@ -22,13 +22,13 @@ $font-size-h6:           ceil(($font-size-base * 0.7)) !default;
 $font-size-navbar:       14px !default;
 $font-size-navbar-brand: 18px !default;
 
-$carousel-height: 350px;
-
-// Theme colors.  Should be kept in sync with the colors of the carousel
-// background.
-$glyphicon-background-color: #da3;
+$base-color: #117;
+$accent-color: #339;
+$glyphicon-background-color: $accent-color;
 $glyphicon-foreground-color: white;
-$footer-border-color: #fc5;
+$header-primary-color: white;
+$header-secondary-color: #ccf;
+$footer-border-color: $accent-color;
 
 $vertical-rhythm: 30px;
 

@@ -1,13 +1,11 @@
 <div class="container">
   <footer>
     <p class="pull-right"><a href="#">Back to top</a></p>
-    <p>Copyright 2016 {{ site.author }}.
-    Last updated on {{ site.last_updated }}.</p>
+    <p>Copyright 2016 {{ site.author }}</p>
   </footer>
 </div>
 
-<script
-  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+<script src="{{ '/js/jquery-1.11.2.min.js' | prepend: site.baseurl }}">
 </script>
 <script
   src="{{ "/css/bootstrap.min.js" | prepend: site.baseurl }}">

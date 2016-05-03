@@ -2,8 +2,6 @@ title: Julio Merino
 author: Julio Merino
 email: julio@meroh.net
 
-last_updated: April 19th, 2016
-
 description: >
   This is Julio Merino's homepage.  This site acts as the gateway to my
   presence in the web, and summarizes all my work.  In fact, you can
@@ -15,7 +13,11 @@ baseurl: ""
 permalink: /blog/:year/:month/:day/:title.html
 url: http://julio.meroh.net
 
-exclude: [CNAME, Makefile, README.md]
+exclude: [Makefile, Makefile.in, README.md, configure]
+
+gems: [jekyll-paginate]
+paginate: 7
+paginate_path: /blog/page:num
 
 analytics_account: UA-63557333-1
 
