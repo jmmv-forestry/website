@@ -39,64 +39,18 @@
 </div>
 
 <div class="row archive">
+  <h2>Archive</h2>
+
   {% comment %}
-  This is ridiculous but Liquid doesn't seem to make the processing any
-  easier.  It may be worth filing a feature request with jekyll-archives
-  to expose a mapping of dates to posts based on the various indexing
-  criteria.  Would be trivial to do from Ruby, and I'm sure much faster.
+  It would be nice to do this purely in Liquid but, at the moment, doing so is
+  ridiculous: the code needed to achive the desired results is obscure and,
+  worse, increases the build time of the site very significantly.  See
+  revision ae0ebafc3620bf4473613c2ca8ce9b52d603ed0e for what was previously
+  attempted.
+
+  A better alternative would be to modify jekyll-archives to just expose the
+  posts summary in some Liquid variable.
   {% endcomment %}
-  <ul>
-    {% capture raw_years %}
-      {% for post in site.posts %}
-        {{ post.date | date: "%Y" }}
-      {% endfor %}
-    {% endcapture %}
-    {% assign years = raw_years | split: " " | uniq %}
 
-    {% for year in years %}
-      {% capture raw_posts_in_year %}
-        {% for post in site.posts %}
-          {% assign post_year = post.date | date: "%Y" %}
-          {% if post_year == year %}
-            1
-          {% endif %}
-        {% endfor %}
-      {% endcapture %}
-      {% assign posts_in_year = raw_posts_in_year | split: " " %}
-      <li>
-        <a href="/{{ year }}">{{ year }}</a>
-        ({{ posts_in_year.size }})
-        <ul>
-          {% capture raw_months %}
-            {% for post in site.posts %}
-              {% assign post_year = post.date | date: "%Y" %}
-              {% if post_year == year %}
-                {{ post.date | date: "%m-%B" }}
-              {% endif %}
-            {% endfor %}
-          {% endcapture %}
-          {% assign months = raw_months | split: " " | uniq %}
-
-          {% for month in months %}
-            {% assign month_number = month | slice: 0, 2 %}
-            {% assign month_name = month | slice: 3, month.size - 3 %}
-            {% capture raw_posts_in_month %}
-              {% for post in site.posts %}
-                {% assign post_year = post.date | date: "%Y" %}
-                {% assign post_month = post.date | date: "%B" %}
-                {% if post_year == year and post_month == month_name %}
-                  1
-                {% endif %}
-              {% endfor %}
-            {% endcapture %}
-            {% assign posts_in_month = raw_posts_in_month | split: " " %}
-            <li>
-              <a href="/{{ year }}/{{ month_number }}">{{ month_name }}</a>
-              ({{ posts_in_month.size }})
-            </li>
-          {% endfor %}
-        </ul>
-      </li>
-    {% endfor %}
-  </ul>
+  {% include archive.html %}
 </div>

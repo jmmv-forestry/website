@@ -20,6 +20,7 @@
           {% include posts.html posts=page.posts %}
         </div>
         <div class="col-md-3 sidebar">
+          {% assign archive-year = page.date | date: "%Y" %}
           {% include sidebar.html %}
         </div>
       </div>

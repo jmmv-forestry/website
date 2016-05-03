@@ -33,12 +33,18 @@ build: build-dev
 serve: serve-dev
 
 .PHONY: build-prod
-build-prod: clean-site
+build-prod: clean-site _admin/generate-archive
+	echo >_includes/archive.html
 	$(RUN_JEKYLL) build $(JEKYLL_PROD_FLAGS)
+	_admin/generate-archive _site _includes/archive.html
+	$(RUN_JEKYLL) build --incremental $(JEKYLL_PROD_FLAGS)
 
 .PHONY: build-dev
-build-dev: clean-site
+build-dev: clean-site _admin/generate-archive
+	echo >_includes/archive.html
 	$(RUN_JEKYLL) build $(JEKYLL_DEV_FLAGS)
+	_admin/generate-archive _site _includes/archive.html
+	$(RUN_JEKYLL) build --incremental $(JEKYLL_DEV_FLAGS)
 
 .PHONY: serve-prod
 serve-prod: build-prod
@@ -49,8 +55,12 @@ serve-dev: build-dev
 	$(RUN_JEKYLL) serve --skip-initial-build $(JEKYLL_DEV_FLAGS)
 
 .PHONY: scripts
-scripts: _admin/import-blogger _admin/new-draft \
+scripts: _admin/generate-archive _admin/import-blogger _admin/new-draft \
          _admin/publish-draft _admin/publish-site
+
+CLEANFILES += _admin/generate-archive
+_admin/generate-archive: _admin/generate-archive.sh
+	shtk build -o $@ $<
 
 CLEANFILES += _admin/import-blogger
 _admin/import-blogger: _admin/import-blogger.sh
