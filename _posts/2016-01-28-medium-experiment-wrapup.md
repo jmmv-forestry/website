@@ -3,7 +3,6 @@ layout:     post
 title:      The Medium experiment wrap-up
 date:       2016-01-28 22:30:00 -0500
 categories: blog writing
-julipedia:  2016/01/the-medium-experiment-wrap-up.html
 ---
 
 Eight months ago, [I decided to try
