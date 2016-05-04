@@ -10,7 +10,7 @@ I confess I am late to the game: the [Go programming language](https://golang.or
 
 # The project
 
-What I set out to build is a read-only caching file system to try to solve the problems I presented in my previous [analysis of large builds on SSHFS](/blog/2016/02/17/sshfs-performance-analysis-for-builds.html). The reasons I chose Go are simple: I had to write a low-level system component and, in theory, Go excels at this; I did not want to use plain C; Go had the necessary bindings (for [FUSE](https://bazil.org/fuse/) and [SQLite](https://github.com/mattn/go-sqlite3)); and, heck, I *just* wanted to try it out!
+What I set out to build is a read-only caching file system to try to solve the problems I presented in my previous [analysis of large builds on SSHFS]({% post_url 2016-02-17-sshfs-performance-analysis-for-builds %}). The reasons I chose Go are simple: I had to write a low-level system component and, in theory, Go excels at this; I did not want to use plain C; Go had the necessary bindings (for [FUSE](https://bazil.org/fuse/) and [SQLite](https://github.com/mattn/go-sqlite3)); and, heck, I *just* wanted to try it out!
 
 It only took me a little over two days to get a fully-functional implementation of my file system, and this is without having ever written a FUSE-based file system before nor any non-toy Go code. That said, I had previously [written a kernel file system in 2005](http://netbsd-soc.sourceforge.net/projects/tmpfs/) and *that* helped navigating the whole endeavor and tuning the resulting performance.
 

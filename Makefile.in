@@ -12,7 +12,7 @@ JEKYLL_ENV  = LANG=en_US
 JEKYLL_ENV += LC_ALL=C
 JEKYLL_ENV += TZ=UTC
 
-LIMIT_POSTS = 15
+LIMIT_POSTS = 100
 
 JEKYLL_PROD_FLAGS = --config=_config.yml
 JEKYLL_DEV_FLAGS  = --config=_config.yml,_config_dev.yml

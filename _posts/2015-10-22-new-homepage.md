@@ -14,7 +14,7 @@ Internet.  To that end, I have now been playing with
 supported by GitHub Pages, and came up with the site you are own now, which went
 live yesterday.
 
-As part of the new site, I am also now opening a [news section](/blog/).  I am
+As part of the new site, I am also now opening a [news section](/).  I am
 reluctant to call it a blog because [I already have a blog and I now write on
 Medium](/writing/)... but I guess that's what this page is.  My intent for this
 section is to publish short blurbs about anything I do, even if it is just a

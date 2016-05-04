@@ -26,7 +26,7 @@ and got a coupe of follow-up questions from @ajm113 (edits mine):
 
 > How would you summarize your experience at Google so far if I may ask at this point? What would you say was the most difficult project at Google if your NDA will let you?
 
-Answering these would take much more than a tweet, so here I go with a Medium post to follow up on [my experimentation with this platform](/blog/2015/05/24/hello-medium.html).
+Answering these would take much more than a tweet, so here I go with a Medium post to follow up on [my experimentation with this platform]({% post_url 2015-05-24-hello-medium %}).
 
 # The internship
 

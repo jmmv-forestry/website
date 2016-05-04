@@ -49,7 +49,7 @@ fact, but you know what?  Modern Java is quite nice and enjoyable to write with
 a proper IDE, so I'm looking forward to that.
 
 I have recently come to this conclusion while working on the [Nudgy Timer
-Android app](/blog/2015/12/17/introducing-nudgytimer.html) I announced a month
+Android app]({% post_url 2015-12-17-introducing-nudgytimer %}) I announced a month
 ago.  I had not coded in Java for 7 years and I started doing so again for this
 app, resulting in a pretty nice experience.  (Not because Android Studio, which
 I'd rant about... but because of Java itself and IntelliJ's coding aids.)

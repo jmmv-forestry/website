@@ -49,7 +49,7 @@ At the end of my internship in November, I remember having a chat with my host i
 
 ## 2009: The move to Ireland
 
-A few months after the internship ended, I moved to Ireland for my [full-time position with Google SRE](/blog/2015/05/26/six-years-at-google.html). I was an expert in English already so it wouldn't be difficult, right? Ha, ha, HA. That was another shock right from the ride to the hotel.
+A few months after the internship ended, I moved to Ireland for my [full-time position with Google SRE]({% post_url 2015-05-26-six-years-at-google %}). I was an expert in English already so it wouldn't be difficult, right? Ha, ha, HA. That was another shock right from the ride to the hotel.
 
 First of all: the Irish accent, which was nothing like I had heard before in the U.S. nor in any of the language lessons I attended. (Mind you, I still cannot parse it fully at times, especially from Irish people outside of Dublin, but I really like the sound of it!) Going to the pharmacy, supermarket, etc. was once again challenging, and having phone conversations was hilarious. I'm still surprised the first taxi I requested arrived at the right location.
 

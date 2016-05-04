@@ -6,7 +6,7 @@ categories: blog writing
 ---
 
 Eight months ago, [I decided to try
-Medium](/blog/2015/05/24/hello-medium.html) as the platform on which to
+Medium]({% post_url 2015-05-24-hello-medium %}) as the platform on which to
 post my essays.  Over this time I have published a handful of posts in
 there---8, to be precise, which is... a very shy number---but the
 results have been quite satisfactory: the WYSIWYG composer is excellent,
