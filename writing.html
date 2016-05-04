@@ -18,40 +18,11 @@ begain in 2004 and that is being subsumed into this site.</p>
 
 <ul>
   {% for post in site.posts %}
-    {% if post.categories contains "essay" %}
+    {% if post.categories contains "featured" %}
       <li>{{ post.date | date: "%Y-%m-%d" }}:
       <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}
-
-  <li>2015-04-14:
-  <a href="http://julipedia.meroh.net/2015/04/on-bazel-and-open-source.html">On
-  Bazel and Open Source</a> <small>[The Julipedia]</small></li>
-
-  <li>2014-11-20:
-  <a href="http://julipedia.meroh.net/2014/11/task-tracking-and-bullet-journal.html">Task
-  tracking and the Bullet journal</a> <small>[The Julipedia]</small></li>
-
-  <li>2014-05-31:
-  <a href="http://julipedia.meroh.net/2014/05/code-review-culture-meets-freebsd.html">Code
-  review culture meets FreeBSD</a> <small>[The Julipedia]</small></li>
-
-  <li>2014-02-15:
-  <a href="http://julipedia.meroh.net/2014/02/how-to-merge-multiple-git-repositories.html">How
-  to merge multiple Git repositories into one</a> <small>[The
-  Julipedia]</small></li>
-
-  <li>2013-12-31:
-  <a href="http://julipedia.meroh.net/2013/12/introducing-freebsd-test-suite.html">Introducing
-  the FreeBSD Test Suite</a> <small>[The Julipedia]</small></li>
-
-  <li>2013-07-15:
-  <a href="http://julipedia.meroh.net/2013/07/putting-powermac-g5-to-good-use.html">Putting
-  a PowerMac G5 to good use</a> <small>[The Julipedia]</small></li>
-
-  <li>2013-06-20:
-  <a href="http://julipedia.meroh.net/2013/06/self-interview-after-leaving-netbsd.html">Self-interview
-  after leaving the NetBSD board</a> <small>[The Julipedia]</small></li>
 
   <li>2012-08-07:
   <a href="https://blog.netbsd.org/tnf/entry/introducing_sysbuild_and_sysupgrade">Introducing

@@ -2,7 +2,7 @@
 layout:     post
 title:      Hello, Medium!
 date:       2015-05-24 12:00:00 -0400
-categories: essay writing
+categories: essay featured writing
 medium:     hello-medium-2c73c580c4ca
 ---
 
