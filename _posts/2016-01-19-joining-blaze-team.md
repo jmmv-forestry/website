@@ -31,7 +31,7 @@ here, if only because they are still blurry to me!
 What I can say, though, is that Blaze was released as open source in March of
 2015 under the [Bazel](http://bazel.io/) project.  Around that time, I wrote an
 article titled [On Bazel and Open
-Source](http://julipedia.meroh.net/2015/04/on-bazel-and-open-source.html) which
+Source](/2015/04/on-bazel-and-open-source.html) which
 introduced Bazel and then went on to describe some of the shortcomings that
 would prevent wide adoption in the open source world if those issues went
 infixed

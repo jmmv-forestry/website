@@ -104,7 +104,7 @@ systems.
 
 Regardless of this minor annoyance, I have been able to set up a pretty
 decent [development machine with shiny bells and whistles like
-ZFS](http://julipedia.meroh.net/2013/07/installing-freebsd-with-zfs-root-on.html).
+ZFS](/2013/07/installing-freebsd-with-zfs-root-on.html).
 
 # Mac OS X (Leopard)
 

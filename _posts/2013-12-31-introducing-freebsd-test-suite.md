@@ -6,7 +6,7 @@ categories: featured freebsd kyua testing
 julipedia: 2013/12/introducing-freebsd-test-suite.html
 ---
 [I joined the FreeBSD committer
-ranks](http://julipedia.meroh.net/2013/11/joining-freebsd-committer-ranks.html)
+ranks](/2013/11/joining-freebsd-committer-ranks.html)
 a couple of months ago with the intention to equip FreeBSD with an
 out-of-the-box test suite and with a testing infrastructure. The time
 until now has been quite fruitful and I have been rushing to get
@@ -44,7 +44,7 @@ glue required to get all the above up and running ([see
 autotest](http://svnweb.freebsd.org/base/user/jmmv/autotest/)) is
 non-trivial &mdash; and that's a bug! Improving this area is very high up in
 the priorities list and [work is already
-undergoing](http://julipedia.meroh.net/2013/11/three-productive-days-on-kyua-front.html).
+undergoing](/2013/11/three-productive-days-on-kyua-front.html).
 
 The current test suite is not clean as you can see in the reports. Some
 tests are broken and they must be fixed. *Accepting breakage as the norm

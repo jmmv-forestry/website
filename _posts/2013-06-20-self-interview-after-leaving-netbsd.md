@@ -18,7 +18,7 @@ First, let me backtrack a little bit. A couple of years ago, I was
 nominated to serve the NetBSD Board of Directors. Needless to say, I was
 flattered that this was the case so I decided to run for the position.
 This worked, so "soon" after [I joined the board in May of
-2011](http://julipedia.meroh.net/2011/05/joining-board-of-directors-of-netbsd.html).
+2011](/2011/05/joining-board-of-directors-of-netbsd.html).
 
 Board memberships last two years, and the members whose terms are about
 to expire can opt to run for a renewal. I chose not to do so, mostly for
@@ -273,7 +273,7 @@ the project's infrastructure.
 In 2006, another ex-board member posted his own thoughts on the state of
 the project, some of which line up with what I've written above, some of
 which I don't agree with. At that time, [I could more or less
-see](http://julipedia.meroh.net/2006/09/letter-to-netbsd.html) where
+see](/2006/09/letter-to-netbsd.html) where
 those concerns were coming from. Now it's 2013 (that's **7 years**
 later) and little has changed since; if only, some aspects have only
 gotten worse.
