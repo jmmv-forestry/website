@@ -4,6 +4,6 @@ title: "Java: Visibility"
 date: 2005-12-11 12:19:00 -0500
 categories:
 julipedia: 2005/12/java-visibility.html
-excerpt: Post imported from The Julipedia; excerpt not available.
+excerpt_separator: </p>
 ---
 I'd always (incorrectly) believed that, if you didn't specify the visibility of an attribute or method in a Java class, it'd be private in the former case and public in the latter.  This is not what really happens.  In fact, Java has four different visibility modifiers: <tt>public</tt>, <tt>protected</tt>, <tt>private</tt> and "package".  The first three are the "standard" OOP types, while the last one is Java specific.<br /><br />There is no reserved keyword in the Java language to denote an attribute or method as "package"-visible; this status is automatically assigned when no modifier is applied.  But... what does it mean?  Consider a <tt>Foo</tt> class with an attribute <tt>bar</tt> and a method<tt>baz</tt>, both with the default visibility set.  Any other class in the same package as <tt>Foo</tt> will be able to freely access <tt>bar</tt> and <tt>baz</tt>.  In the other hand, classes from other pacakges will see <tt>bar</tt> and <tt>baz</tt> private.<br /><br />Aren't you thinking about C++'s <tt>friend</tt> keyword by now?  Exactly!  This default visibility status can be used to achieve a similar thing in Java.  Just put the classes with a friendship relation in the same package and they will be able to interact with each other, sharing implementation details without exposing them to the public.
