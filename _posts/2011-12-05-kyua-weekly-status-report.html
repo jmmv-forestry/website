@@ -4,6 +4,6 @@ title: "Kyua: Weekly status report"
 date: 2011-12-05 19:20:00 -0500
 categories: kyua report
 julipedia: 2011/12/kyua-weekly-status-report.html
-excerpt: Post imported from The Julipedia; excerpt not available.
+excerpt_separator: </p>
 ---
 <br /><ul><li>Some more work towards allowing storing and loading of full test case definitions (which in turn will allow us to provide detailed HTML reports). I have local changes that do this, but they are gated by the lack of some additional tests and probably some optimizations, because they slow down <tt>kyua report</tt> significantly. Regarding commits, I have only submitted some related cleanup-changes.</li><li>I got distracted by invalid Doxygen comments and traced down why they were not being correctly validated (which is the whole point of running Doxygen during the build). It turns out I had to enable some extra <tt>EXTRACT_*</tt> settings in the <tt>Doxyfile</tt>. After doing so, I realized there are many, many documentation problems in the code... and I have been fixing them since. It's a tough operation, but I'm more than half-way through already. To give you an idea, the current diffstat shows about 650 new comment lines (!).</li></ul>
