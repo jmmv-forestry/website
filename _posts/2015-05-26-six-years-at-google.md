@@ -2,7 +2,7 @@
 layout:     post
 title:      Six years at Google
 date:       2015-05-26 12:00:00 -0400
-categories: essay google personal-story work
+categories: essay featured google personal-story work
 medium:     six-years-at-google-8b06563fab08
 ---
 

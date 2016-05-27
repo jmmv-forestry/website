@@ -55,11 +55,16 @@ serve-dev: build-dev
 	$(RUN_JEKYLL) serve --skip-initial-build $(JEKYLL_DEV_FLAGS)
 
 .PHONY: scripts
-scripts: _admin/generate-archive _admin/import-blogger _admin/new-draft \
+scripts: _admin/generate-archive _admin/html-to-markdown \
+         _admin/import-blogger _admin/new-draft \
          _admin/publish-draft _admin/publish-site
 
 CLEANFILES += _admin/generate-archive
 _admin/generate-archive: _admin/generate-archive.sh
+	shtk build -o $@ $<
+
+CLEANFILES += _admin/html-to-markdown
+_admin/html-to-markdown: _admin/html-to-markdown.sh
 	shtk build -o $@ $<
 
 CLEANFILES += _admin/import-blogger
