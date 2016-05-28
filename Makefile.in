@@ -91,6 +91,10 @@ import-blogger: _admin/import-blogger external/julipedia/blog-04-23-2016.xml
 
 .PHONY: publish
 publish: build-prod _admin/publish-site
+	@if [ "$$(git status --porcelain)" != '' ]; then \
+		echo 'Work directory not clean; refusing push' 1>&2; \
+		exit 1; \
+	fi
 	./_admin/publish-site _site $(LIVE_REPOSITORY)
 
 .PHONY: clean
