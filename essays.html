@@ -49,6 +49,21 @@ articles, not all of which have been published in this site:</p>
   Packager-Friendly Software</a> <small>[ONLamp]</small></li>
 </ul>
 
+<h1>Series</h1>
+
+<p>At times, I have experimented running article series.  Here are links
+to the series' wrap-up posts, which provide a summary of the series and links
+to all the individual posts:</p>
+
+<ul>
+  {% for post in site.posts %}
+    {% if post.categories contains "series-summary" %}
+      <li>{{ post.date | date: "%Y-%m-%d" }}:
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
 <h1>Archive</h1>
 
 {% include archive.html %}
