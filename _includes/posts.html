@@ -12,7 +12,10 @@ The caller must past the list of posts via the "posts" variable.
       </h2>
       <span class="post-meta">{% include date.html date=post.date %}
         &middot;
-        <a href="{{ post.url | prepend: site.url }}#disqus_thread">Comments</a>
+        <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">
+          <span class="disqus-comment-count"
+                data-disqus-url="{{ post.url | prepend: site.url }}">Comments</span>
+        </a>
       </span>
       {% if post.excerpt %}
       <p>
@@ -23,3 +26,7 @@ The caller must past the list of posts via the "posts" variable.
     </li>
   {% endfor %}
 </ul>
+
+{% if site.environment == "production" %}
+<script id="dsq-count-scr" src="//jmmv.disqus.com/count.js" async></script>
+{% endif %}
