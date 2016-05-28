@@ -26,7 +26,6 @@ RUN_JEKYLL = env $(JEKYLL_ENV) $(JEKYLL)
 clean-site:
 	rm -rf _site
 	mkdir _site
-	touch _site/.nojekyll
 
 .PHONY: build serve
 build: build-dev

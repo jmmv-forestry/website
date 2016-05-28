@@ -25,6 +25,7 @@ main() {
         "not match; refusing to push"
 
     rsync -av --delete-after --exclude=".git" "${site}/" "${tempdir}"
+    touch "${tempdir}/.nojekyll"
 
     cd "${tempdir}"
     for f in $(git status --porcelain | grep '^\?' | cut -c 4-); do
