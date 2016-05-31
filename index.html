@@ -132,8 +132,10 @@ layout: empty
           <span class="previous"></span>
         {% endif %}
 
+        <!-- Disabled to not show a page count, which is meaningless.
         <span class="current">Page {{ paginator.page }} of
         {{ paginator.total_pages }}</span>
+        -->
 
         {% if paginator.next_page %}
           <span class="next"><a
