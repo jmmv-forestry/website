@@ -37,12 +37,6 @@
           &middot;
           {% endif %}
 
-          {% if page.julipedia %}
-          <a href="http://julipedia.meroh.net/{{ page.julipedia }}">Posted on
-          The Julipedia</a>
-          &middot;
-          {% endif %}
-
           {% if page.medium %}
           <a href="https://medium.com/@jmmv/{{ page.medium }}">Posted on
           Medium</a>
@@ -97,6 +91,15 @@
           powered by Disqus.</a>
         </noscript>
       </div>
+      {% if page.julipedia %}
+      <p>Comments from the original Blogger-hosted post:</p>
+      <script src="https://apis.google.com/js/plusone.js"></script>
+      <div class="g-comments"
+           data-href="http://julipedia.meroh.net/{{ page.julipedia }}"
+           data-first_party_property="BLOGGER"
+           data-view_type="FILTERED_POSTMOD">
+      </div>
+      {% endif %}
       {% endif %}
     </div>
 
