@@ -37,4 +37,4 @@ For anything else, here are some possible alternatives to using this harmful she
 
 **Just don't assume that the magic `#! /usr/bin/env foo` is sufficient or even correct** for the final installed program.
 
-*Bonus chatter:* Did you know that the [traditional shebang prefix is `#! `](https://en.wikipedia.org/wiki/Shebang_(Unix)#History) (note the trailing space)? This 3-byte character sequence was the one that the original Unix kernel searched for to determine if an external interpreter was necessary, not just `#!`.
+*Bonus chatter:* There is a myth that the original shebang prefix was `#! /` so that the kernel could look for it as a 32-bit magic cookie at the beginning of an executable file. I actually believed this myth for a long time... until today, as a couple of readers pointed me at [The `#!` magic, details about the shebang/hash-bang mechanism on various Unix flavours](http://www.in-ulm.de/~mascheck/various/shebang/) with interesting background that contradicts this.
