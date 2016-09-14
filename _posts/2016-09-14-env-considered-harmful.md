@@ -25,10 +25,16 @@ Unfortunately, this advice is plagued with problems and assuming it will work is
 
 *vi)* The sixth and last problem is that **a script prefixed with `#! /usr/bin/env` is not suitable to being installed**. This is justified by all the other points illustrated above: once a program is installed on the system, it must behave deterministically no matter how it is invoked. More importantly, when you install a program, you do so under a set of assumptions gathered by a `configure`-like script or prespecified by a package manager. To ensure things work, the installed script must see the exact same environment that was specified at installation time. In particular, the script must point at the correct interpreter version and at the interpreter that has access to all package dependencies.
 
-## When is it OK?
+## So what to do?
 
-All this considered, you may still use `#! /usr/bin/env` for the **convenience of your own throwaway scripts** (those that don't leave your machine).
+All this considered, you may still use `#! /usr/bin/env` for the **convenience of your own throwaway scripts** (those that don't leave your machine) and also **for documentation purposes and as a placeholder for a better default**.
 
-You may also use this shebang **for documentation purposes and as a placeholder for a better default**: for example, you could patch up the scripts during `make install` to point to the right interpreter, which is pretty much what pkgsrc (and likely any other packaging system) does automatically. **Just don't assume that the magic `#! /usr/bin/env foo` is sufficient or even correct** for the final installed program.
+For anything else, here are some possible alternatives to using this harmful shebang:
+
+* Patch up the scripts during the "build" of your software to point to the specific chosen interpreter based on a setting the user provided at `configure` time or one that you detected automatically. Yes, this means you need `make` or similar for a simple script, but these are the realities of the environment they'll run under...
+
+* Rely on the packaging system do the patching, which is pretty much what pkgsrc does automatically (and I suppose pretty much any other packaging system out there).
+
+**Just don't assume that the magic `#! /usr/bin/env foo` is sufficient or even correct** for the final installed program.
 
 *Bonus chatter:* Did you know that the [traditional shebang prefix is `#! `](https://en.wikipedia.org/wiki/Shebang_(Unix)#History) (note the trailing space)? This 3-byte character sequence was the one that the original Unix kernel searched for to determine if an external interpreter was necessary, not just `#!`.
