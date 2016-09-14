@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "#! /usr/bin/env considered harmful"
+date:  2016-09-14 07:07:46 -0400
 categories: portability programming scripts unix
 ---
 
