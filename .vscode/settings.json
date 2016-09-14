@@ -1,5 +1,5 @@
 {
-  "editor.insertSpaces": "auto",
+  "editor.quickSuggestions": false,
   "editor.renderWhitespace": true,
   "editor.rulers": [80],
   "editor.tabSize": 2,
