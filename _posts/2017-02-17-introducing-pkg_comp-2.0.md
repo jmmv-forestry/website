@@ -1,6 +1,7 @@
 ---
 layout:      post
 title:       Introducing pkg_comp 2.0 (and sandboxctl 1.0)
+date:        2017-02-17 16:37:06 -0500
 categories:  software
 excerpt:
     Announcing the launch of pkg_comp 2.0, how this differs from the 1.x series,
