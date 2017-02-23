@@ -64,7 +64,7 @@ Installation is still a bit convoluted unless you are on one of the tier 1 NetBS
 
 For now though, you need to download and install the latest source releases of [shtk](https://github.com/jmmv/shtk/), [sandboxctl](https://github.com/jmmv/sandboxctl/), and [pkg_comp](https://github.com/jmmv/pkg_comp/)&mdash;in this order; pass the `--with-atf=no` flag to the `configure` scripts to cut down the required dependencies.  On macOS, you will also need [OSXFUSE](https://osxfuse.github.io/) and the [bindfs](http://bindfs.org) file system.
 
-If you are already using pkgsrc, you can install the `pkgtools/pkg_comp` package to get the basic tool and its dependencies in place, or you can install the wrapper `pkgtools/pkg_comp-cron` package to create a pre-configured environment with a daily cron job to run your builds.  See the package's `MESSAGE` (with `pkg_info -E pkg_comp-cron`) for more details.
+If you are already using pkgsrc, you can install the `pkgtools/pkg_comp` package to get the basic tool and its dependencies in place, or you can install the wrapper `pkgtools/pkg_comp-cron` package to create a pre-configured environment with a daily cron job to run your builds.  See the package's `MESSAGE` (with `pkg_info pkg_comp-cron`) for more details.
 
 # Documentation
 
