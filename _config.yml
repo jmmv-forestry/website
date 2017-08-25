@@ -20,7 +20,7 @@ exclude:
   - configure
   - external
 
-gems: [jekyll-archives, jekyll-paginate]
+plugins: [jekyll-archives, jekyll-paginate]
 
 jekyll-archives:
   enabled:

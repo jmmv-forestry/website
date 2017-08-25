@@ -61,7 +61,7 @@ set_jekyll() {
             "${user_override}; bogus argument to --jekyll?"
         JEKYLL="${user_override}"
     else
-        local jekyll="$(find_progs jekyll23 jekyll22 jekyll21 jekyll)"
+        local jekyll="$(find_progs jekyll24 jekyll)"
         [ -n "${jekyll}" ] || err "Cannot find jekyll in path; pass" \
             "--jekyll=/path/to/jekyll to configure"
         JEKYLL="${jekyll}"
