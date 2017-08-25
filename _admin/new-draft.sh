@@ -14,6 +14,6 @@ main() {
         *) draft_name="${draft_name}.md" ;;
     esac
 
-    cp admin/_template.md "_drafts/${draft_name}"
+    cp _admin/_template.md "_drafts/${draft_name}"
     git add "_drafts/${draft_name}"
 }
