@@ -1,6 +1,7 @@
 ---
 layout:      post
 title:       Fighting execs via sandboxfs on macOS
+date:        2017-10-06 16:27:34 -0400
 categories:  software
 excerpt_separator: <!--end-of-excerpt-->
 ---
