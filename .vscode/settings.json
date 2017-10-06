@@ -3,7 +3,6 @@
   "editor.renderWhitespace": true,
   "editor.rulers": [80],
   "editor.tabSize": 2,
-  "editor.wrappingColumn": 80,
   "editor.wrappingIndent": "none",
   "files.trimTrailingWhitespace": true,
 
@@ -25,5 +24,19 @@
     "_site": true,
     "fonts": true,
     "images": true
-  }
+  },
+
+  "[markdown]": {
+    "editor.rulers": [100],
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 100
+  },
+
+  "spellchecker.ignoreWordsList": [
+    "macOS",
+    "FreeBSD",
+    "NetBSD",
+    "sandboxfs",
+    "sourcachefs"
+  ]
 }
