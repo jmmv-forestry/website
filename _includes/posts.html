@@ -17,12 +17,10 @@ The caller must past the list of posts via the "posts" variable.
                 data-disqus-url="{{ post.url | prepend: site.url }}">Comments</span>
         </a>
       </span>
-      {% if post.excerpt %}
       <p>
         {{ post.excerpt | strip_html }}
         <a href="{{ post.url | prepend: site.baseurl }}">[Continue reading]</a>
       </p>
-      {% endif %}
     </li>
   {% endfor %}
 </ul>

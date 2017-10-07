@@ -12,7 +12,7 @@ caller to define the 'title' element itself.
       content must come *after* these tags -->
 
 <meta name="description"
-      content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+      content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
 <meta name="author" content="{{ site.author }}">
 
 <meta content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" property="og:url">
