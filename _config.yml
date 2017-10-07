@@ -20,6 +20,10 @@ exclude:
   - configure
   - external
 
+collections:
+  top:
+    output: true
+
 plugins: [jekyll-archives, jekyll-paginate]
 
 jekyll-archives:

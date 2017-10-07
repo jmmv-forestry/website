@@ -16,7 +16,7 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        {% for site_page in site.pages %}
+        {% for site_page in site.top %}
           {% if site_page.navgroup != "right" %}
             {% if site_page.title %}
               {% if page.url == site_page.url %}
