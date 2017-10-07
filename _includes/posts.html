@@ -10,7 +10,7 @@ The caller must past the list of posts via the "posts" variable.
       <h2>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
-      <span class="post-meta">{% include date.html date=post.date %}
+      <span class="post-meta">{{ post.date | date_to_rfc822 }}
         &middot;
         <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">
           <span class="disqus-comment-count"

@@ -13,13 +13,10 @@
       <div class="container">
         <h1>{{ page.title }}</h1>
 
-        <p>{% include date.html date=page.date %}
-        {% if page.author %} &middot; {{ page.author }}{% endif %}
-        {% if page.meta %} &middot; {{ page.meta }}{% endif %}</p>
+        <p>{{ page.date | date_to_rfc822 }}</p>
 
         {% if page.cover-image %}
-        <img src="/images/{{ page.cover-image }}"
-            class="cover-image" />
+        <img src="/images/{{ page.cover-image }}" class="cover-image" />
         {% endif %}
       </div>
     </div>
