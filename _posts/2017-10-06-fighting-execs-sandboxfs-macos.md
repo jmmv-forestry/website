@@ -3,7 +3,8 @@ layout:      post
 title:       Fighting execs via sandboxfs on macOS
 date:        2017-10-06 16:27:34 -0400
 categories:  software
-excerpt_separator: <!--end-of-excerpt-->
+excerpt:
+  Since the announcement of sandboxfs a few weeks ago, I've been stabilizing its integration with Bazel as a new sandboxing technique.  As part of this work, I encountered issues when macOS was immediately killing signed binaries executed through the sandbox.  Read on for the long troubleshooting process and the surprising trivial solution.
 ---
 
 A few weeks ago, [we announced sandboxfs]({% post_url 2017-08-25-introducing-sandboxfs %}): a FUSE file system to expose an arbitrary view of the host's file system.  We intend to use this file system in [Bazel](http://bazel.build/) to provide a faster and more correct sandboxing technique for build actions.
@@ -13,8 +14,6 @@ Since then, I've been actively working on stabilizing sandboxfs per se and its i
 Work on the first milestone has been far from easy.  Getting sandboxfs to a sufficiently stable state that is able to support Bazel's self-build has been very tricky.  The original implementation was written on Linux and, even though FUSE should be the same across systems, there are subtle (unexpected) differences that cause strange behaviors.
 
 The last issue in this saga was "fun" to troubleshoot and fix.  As I was telling the story to a coworker, I realized how ridiculous this all was... so I decided to write it down for you.  As you will see, the fix was pretty much a one-liner&mdash;but understanding what was happening took hours and writing tests for the fix took days.
-
-<!--end-of-excerpt-->
 
 # Problem statement
 
