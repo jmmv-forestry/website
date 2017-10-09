@@ -5,8 +5,8 @@
 @charset "utf-8";
 
 $font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$headings-font-family:   "Trebuchet MS", Helvetica, Arial, sans-serif !default;
-$title-font-family:      "Arial Black", "Trebuchet MS", Helvetica, Arial, sans-serif !default;
+$headings-font-family:   "Lucida Sans Unicode", "Lucida Grande", sans-serif !default;
+$title-font-family:      "Lucida Sans Unicode", "Lucida Grande", sans-serif !default;
 
 $grid-gutter-width:       30px !default;
 $container-desktop:       (900px + $grid-gutter-width) !default;
@@ -23,12 +23,20 @@ $font-size-navbar:       14px !default;
 $font-size-navbar-brand: 18px !default;
 
 $base-color: #117;
-$accent-color: #339;
+$accent-color: #55b;
 $glyphicon-background-color: $accent-color;
 $glyphicon-foreground-color: white;
 $header-primary-color: white;
 $header-secondary-color: #ccf;
 $footer-border-color: $accent-color;
+
+$navbar-default-bg: $accent-color;
+$navbar-default-brand-color: white;
+$navbar-default-brand-hover-color: #777;
+$navbar-default-color: white;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-color: #777;
+$navbar-default-link-active-color: white;
 
 $vertical-rhythm: 30px;
 
