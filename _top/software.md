@@ -22,7 +22,7 @@ peek of the projects I started:
        target="_blank">
       <img alt="Open Hub profile for Julio Merino" border="0"
            height="35" width="230"
-           src="https://www.openhub.net/accounts/5130/widgets/account_detailed.gif"></img>
+           src="https://www.openhub.net/accounts/5130/widgets/account_detailed.gif">
     </a>
   </div>
 </div>
