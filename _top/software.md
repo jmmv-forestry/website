@@ -60,10 +60,32 @@ peek of the projects I started:
   Android that subtly pokes you every few minutes to help you figure out
   where your precious time is going to.  Written in Java.
 
+* **[pkg_comp](http://github.com/jmmv/pkg_comp/)** and
+  **[sandboxctl](http://github.com/jmmv/sandboxctl/)**: A couple of utilities
+  to automatically build pkgsrc binary packages from source in a chroot-based
+  sandbox.  pkg_comp orchestrates the build using the pbulk build system and
+  sandboxctl implements the management of the chroot-based sandbox on a bunch
+  of different operating systems.
+
 * **[Shell Toolkit (shtk)](http://github.com/jmmv/shtk/)**: Application toolkit
   for programmers writing POSIX-compliant shell scripts.  This is a simple
   collection of shell functions to simplify the implementation of user-friendly
   command-line utilities.
+
+* **[sandboxfs](http://github.com/bazelbuild/sandboxfs/)**: A virtual file
+  system for sandboxing.  This file system exposes an arbitrary view of the
+  host's file system under the mount point, allowing the fast creation of
+  directory trees to back sandboxes and containers.  Written in Go and owned by
+  the Bazel project.
+
+* **[sourcachefs](http://github.com/jmmv/sourcachefs/)**: Persistent, read-only,
+  FUSE-based caching file system.  This file system offers a mechanism to cache
+  the contents of remote file systems transparently.  Note that this was my
+  first real Go program and hasn't received a lot of maintenance since its
+  publication so it may not be in the greatest style, but I wanted to publish it
+  anyway.  See [Analysis of SSHFS performance for large builds]({% post_url
+  2016-02-17-sshfs-performance-analysis-for-builds %}) for the motivation behind
+  this project.
 
 * **[sysbuild](http://github.com/jmmv/sysbuild/)** and
   **[sysupgrade](http://github.com/jmmv/sysupgrade/)**: A couple of utilities to
@@ -83,6 +105,11 @@ peek of the projects I started:
 # Contributions to existing projects
 
 I have also contributed significantly to the following projects:
+
+* **[Bazel](http://bazel.build/)**: A fast and correct build system, originated
+  at Google.  I started working on this project as [my main work assignment on
+  January 2016]({% post_url 2016-01-19-joining-blaze-team %}) and currently
+  focus on making this work on macOS as well as it does on Linux.
 
 * **[Colloquy](http://colloquy.info/)**: An IRC client for Mac OS X.  Back when
   I decided to fully switch to this operating system for my desktop machine, I
