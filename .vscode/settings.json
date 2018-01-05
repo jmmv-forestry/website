@@ -27,9 +27,9 @@
   },
 
   "[markdown]": {
-    "editor.rulers": [100],
+    "editor.rulers": [80],
     "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 100
+    "editor.wordWrapColumn": 80
   },
 
   "spellchecker.ignoreWordsList": [
