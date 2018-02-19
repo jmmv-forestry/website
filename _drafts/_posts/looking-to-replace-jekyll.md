@@ -2,7 +2,9 @@
 title: Looking to replace Jekyll
 layout: post
 date: 2018-02-19 00:00:00 +0000
-categories: []
+categories:
+- blog
+- writing
 excerpt: ''
 excerpt_separator: ''
 ---
@@ -78,4 +80,4 @@ Well. I'm typing this right now from Forestry. I ended up connecting this tool t
 
 The problem is I'm still not happy with Jekyll after having discovered Hugo. I played significantly with Hugo over the last two days, trying to migrate the full site, and still haven't gone anywhere. But I like the experience so far: it is super-fast; the workspace contents feel better thought-out (those underscore prefixes in Jekyll drive me nuts); and it's written in a language that I know and enjoy, which means I can dive into its internals if I need to.
 
-So I don't know. I'll keep playing with Hugo. I think Hugo+Forestry can be a great combination if I manage to set up the site the way I like.
+So I don't know. I'll keep playing with Hugo. I think Hugo+Forestry can be a great combination if I manage to set up the site the way I like, but it's still lacking. The little details get in the way of painless posting.
