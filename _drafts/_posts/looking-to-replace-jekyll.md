@@ -46,14 +46,32 @@ Wordpress is the always-tempting option. It's a mature product. There is an appa
 
 I was even excited to see [an option to enable Markdown support for posts](https://en.support.wordpress.com/markdown/)... but in playing with it, I found it lacking. It took me a while to discover how this works given that, after enabling this option, the UI does _not_ change: the composer is still only offered in the WYSIWYG and HTML versions. The trick is that you can actually type Markdown in either of them, and Wordpress will respect the markup.
 
-Good enough? Almost. If you compose in the HTML version and write Markdown there, and as long as you don't switch to the WYSIWYG editor, Wordpress seems to respect your input verbatim. But then try a site export: the exported contents lose the original formatting, which is replaced by some simplified HTML version.
+Good enough? Almost. If you compose in the HTML version and write Markdown there, as long as you don't switch to the WYSIWYG editor, Wordpress seems to respect your input verbatim. But then try a site export: the exported contents lose the original formatting, which is replaced by some simplified HTML version. Not sufficient.
 
-There is one more thing: Wordpress.com has a "new" UI to manage your site, but this is quite incomplete. You can fall back to the legacy (?) wp-admin interface to do anything you need (like enabling Markdown support), but this duality doesn't give me a good vibe.
+There is one more thing: Wordpress.com has a "new" UI to manage your site, but this is quite incomplete. You can fall back to the legacy (?) `wp-admin` interface to do anything you need—like enabling something as basic as Markdown support(!)—but this duality doesn't give me a good vibe.
 
-## Hugo + Forestry
+## Hugo
 
-What if there was a fast static site generator with a decent web UI? Would it be too hard to come up with this myself? It certainly doesn't seem that hard to write support for the few things I need.
+What if there was a fast static site generator with a decent web UI? Would it be too hard to come up with this myself? It certainly doesn't seem that hard to write something that supports the few things I need (ha, ha, it's not easy by any means either).
 
-The good news are that these have been invented already.
+The good news is that this has already been invented.
 
-First, a bit of searching turned out [Hugo](https://gohugo.io/), which is mind-bogglingly fast static content generator written in Go. It really is. A demo site with all of my post
+A bit of searching turned out [Hugo](https://gohugo.io/), which is mind-bogglingly fast static content generator written in Go. It really is. A demo site with all of my posts in it takes less than a second to rebuild, with live reloads on the browser.
+
+On the other hand, I tried a bunch of the themes for Hugo. At first I was "wow, this looks amazing", but after trying to fit all of my abundant content I was less than impressed. There are many rough edges in many themes.
+
+## Web UIs for Jekyll/Hugo
+
+As for a web UI to manage a static site, I found a bunch of them that seem quite mature.
+
+The one that caught most my eye, maybe because of its visuals and free offering, is [Forestry](http://forestry.io/). This connects to a GitHub repository and lets you manage a Jekyll or Hugo site from the web. There are many rough edges here, but the basics of post management seem to be there, and the WYSIWYG editor is pretty decent.
+
+The other one that seems quite promising is [Netlify](http://netlify.com/), but I haven't had a chance to play with this one yet.
+
+# Where am I at?
+
+Well. I'm typing this right now from Forestry. I ended up connecting this tool to my already-existing Jekyll site, which seems to mitigate some of the friction problems I am having. Typing this post has been quite a nice experience. Unfortunately, Forestry doesn't work perfectly with my site because of the unusual setup I have, but that's my own fault.
+
+The problem is I'm still not happy with Jekyll after having discovered Hugo. I played significantly with Hugo over the last two days, trying to migrate the full site, and still haven't gone anywhere. But I like the experience so far: it is super-fast; the workspace contents feel better thought-out (those underscore prefixes in Jekyll drive me nuts); and it's written in a language that I know and enjoy, which means I can dive into its internals if I need to.
+
+So I don't know. I'll keep playing with Hugo. I think Hugo+Forestry can be a great combination if I manage to set up the site the way I like.
