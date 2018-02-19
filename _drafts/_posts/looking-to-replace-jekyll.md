@@ -58,30 +58,30 @@ There is one more thing: Wordpress has a "new" UI to manage the site, but this i
 
 ## Hugo
 
-What if there was a fast static site generator with a decent web UI? Would it be too hard to come up with this myself? It certainly doesn't seem that hard to write something that supports the few things I need (ha, ha, it's not easy by any means either).
+What if there was a fast static site generator with a decent web UI? Would it be too hard to come up with one myself? It certainly doesn't seem that hard given that there are plenty of libraries to parse and render Markdown, Front Matter, YAML, etc. (haha, but it wouldn't be easy either).
 
 The good news is that this has already been invented.
 
-A bit of searching turned out [Hugo](https://gohugo.io/), a mind-bogglingly fast static content generator written in Go. It really is. A demo site with all of my posts in it takes less than a second to rebuild, with live reloads on the browser.
+Enter [Hugo](https://gohugo.io/): a mind-bogglingly fast static content generator written in Go. It really is. A demo site with all of my posts in it takes less than a second to rebuild. Even posts reload live in the browser for immediate previews: no need to hunt down an editor that offers this on its own.
 
-The tool looks mature all around. The command line feels polished, the documentation is abundant, and there are lively discussions on the bug tracker, denoting it's not dead.
+The tool looks mature all around. The command line feels polished, the documentation is abundant, and there are lively discussions on the bug tracker denoting it's not dead. The project layout feels nicer than Jekyll's (if only because I despise those underscore prefixes in all of my originals).
 
-On the other hand, I tried a bunch of the themes for Hugo. At first I was "wow, this looks amazing", but I kept hitting bugs all around with the themes and my specific posting needs. I could migrate my current hand-crafted theme I suppose, but I just realized I rely on Jekyll's SASS integration which Hugo doesn't offer.
+On the other hand, I tried a bunch of the themes for Hugo. At first I was "wow, this looks amazing" but I kept hitting shortcomings in most of the themes I liked. I can probably migrate my current hand-crafted theme, but I just realized I rely on Jekyll's SASS integration which Hugo doesn't seem to offer.
 
 ## Web UIs for Jekyll/Hugo
 
-As for a web UI to manage a static site, there are a bunch of them that seem quite mature.
+As for a web UI to manage a static site, there are a bunch of them that seem decent.
 
-The one that caught my eye the most, maybe because of its visuals and free offering, is [Forestry](http://forestry.io/). This connects to a GitHub repository and lets you manage a Jekyll or Hugo site from the web. There are many rough edges here, but the basics of post management seem to exist and the WYSIWYG editor is pretty decent.
+The one that caught my eye the most so far, maybe because of its visuals and free offering, is [Forestry](http://forestry.io/). This connects to a GitHub repository and lets you manage a Jekyll or Hugo site from the web. There are many rough edges here, but the basics of post management seem to exist and the WYSIWYG editor is pretty decent. You don't get to edit the site's visuals from the UI, but as mentioned earlier, this is not that important for my use cases.
 
-You don't get to edit the site's visuals from the UI, but as mentioned earlier, this is not that important for me.
-
-The other one that seems quite promising is [Netlify](http://netlify.com/), but I haven't had a chance to play with this one yet.
+The other one that seems quite promising is [Netlify](http://netlify.com/) but I haven't had a chance to play with this one yet.
 
 # Where am I at?
 
-Well. I'm typing this right now from Forestry. I ended up connecting this tool to my already-existing Jekyll site, which seems to mitigate some of the friction problems I am having. Typing this post has been quite a nice experience. Unfortunately, Forestry doesn't work perfectly with my site because of the unusual setup I have, but that's my own fault.
+Well. I'm typing this right now from Forestry. I ended up connecting this tool to my already-existing Jekyll site to give it a real shot. Despite of its shortcomings, Forestry seems to mitigate some of the friction problems I am having. Typing this post has been a nicer experience than usual.
 
-The problem is I'm still not happy with Jekyll after having discovered Hugo. I played significantly with Hugo over the last two days, trying to migrate the full site, and still haven't gone anywhere. But I like the experience so far: it is super-fast; the workspace contents feel better thought-out (those underscore prefixes in Jekyll drive me nuts); and it's written in a language that I know and enjoy, which means I can dive into its internals if I need to.
+The problem is I'm still not happy with Jekyll after having discovered Hugo. I played significantly with Hugo over the last two days and tried to migrate the full site. Even though I haven't been able to complete a migration, I like the experience so far: it is super-fast; the workspace contents feel better thought-out; and it's written in a language that I know and enjoy, which means I can dive into its internals if I need to.
 
-So I don't know. I'll keep playing with Hugo. I think Hugo+Forestry can be a great combination if I manage to set up the site the way I like, but it's still lacking. The little details get in the way of painless posting.
+But Hugo is still a static content generator. The friction problems with site design and posting still exist. It's not as a well-rounded solution as Wordpress would be out of the box... but it does fulfill my wishes of keeping Markdown originals and having direct access to the underlying data.
+
+So I don't know. I'll keep playing with Hugo. I think Hugo+Forestry can be a great combination if I manage to set up the site the way I like. And if I can do so while respecting its current looks and links, why not? At least it won't be any worse than what I have today...
