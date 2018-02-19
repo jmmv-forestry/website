@@ -36,23 +36,25 @@ And third, **data liberation**. I want to own my data. This means being able to 
 
 # What are the options?
 
+Here is what I've been considering and testing.
+
 ## Blogger
 
-Should I go back to Blogger? It was simple enough when I used it for more than 10 years...
+Should I go back to Blogger? It was simple enough when I used it for more than 10 years... and it's still the same thing it was.
 
-Nope. Logging into my previous Blogger account took me, at least, 5 years into the past: the service has barely changed since the damage introduced by Google+. Coupled with the fact that Blogger has always been a secondary product to Google (and we know how that goes for many things, _cough_ Reader _cough_), using Blogger at this point would be a bad choice.
+Logging into my previous Blogger account brought me back in time 5 years or more: the service has barely changed since the damage introduced by Google+. Coupled with the fact that Blogger has always been a secondary product to Google (and we know how that goes for many things, _cough_ Reader _cough_), using Blogger at this point would be a bad choice.
 
-Plus there is zero Markdown support.
+Plus there is zero Markdown support and Blogger often messes up hand-crafted HTML.
 
 ## Wordpress
 
-Wordpress is the always-tempting option. It's a mature product. There is an apparently-good managed service behind it (because there is no way I'm running this insecure piece of software myself). There are clients for the web and for mobile platforms. There are all kinds of imaginable plugins and extensions. The themes are gorgeous. The friction to publish is very low (OK, not as low as Medium's, but still low enough).
+Wordpress is the always-tempting option. It's a mature product. There is an apparently-good managed service behind it—there is no way I'm running this insecure piece of software myself. There are clients for the web and for mobile platforms. There are all kinds of imaginable plugins and extensions. The themes are gorgeous. The friction to publish is very low (OK, not as low as Medium's but still low enough).
 
-I was even excited to see [an option to enable Markdown support for posts](https://en.support.wordpress.com/markdown/)... but in playing with it, I found it lacking. It took me a while to discover how this works given that, after enabling this option, the UI does _not_ change: the composer is still only offered in the WYSIWYG and HTML versions. The trick is that you can actually type Markdown in either of them, and Wordpress will respect the markup.
+I was even excited to see [an option to enable Markdown support for posts](https://en.support.wordpress.com/markdown/)... but in playing with it, I found it lacking. It took me a while to discover how this works given that, after enabling this option, the UI does _not_ change: the composer is still only offered in its WYSIWYG and HTML versions. The trick is that you can actually type Markdown in either of them, and Wordpress will respect the markup.
 
-Good enough? Almost. If you compose in the HTML version and write Markdown there, as long as you don't switch to the WYSIWYG editor, Wordpress seems to respect your input verbatim. But then try a site export: the exported contents lose the original formatting, which is replaced by some simplified HTML version. Not sufficient.
+Good enough? Almost. If you compose in the HTML version and write Markdown there, as long as you don't switch to the WYSIWYG editor, Wordpress seems to respect your input verbatim. But then try a site export: the exported contents lose the original formatting which is replaced by some simplified HTML version. Not sufficient for my desires.
 
-There is one more thing: Wordpress.com has a "new" UI to manage your site, but this is quite incomplete. You can fall back to the legacy (?) `wp-admin` interface to do anything you need—like enabling something as basic as Markdown support(!)—but this duality doesn't give me a good vibe.
+There is one more thing: Wordpress has a "new" UI to manage the site, but this it is incomplete. It's possible to fall back to the legacy (?) `wp-admin` interface to do anything you need—like enabling something as basic as Markdown support (!)—but this duality doesn't give me a good vibe.
 
 ## Hugo
 
