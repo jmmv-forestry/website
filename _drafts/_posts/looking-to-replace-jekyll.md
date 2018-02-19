@@ -56,15 +56,19 @@ What if there was a fast static site generator with a decent web UI? Would it be
 
 The good news is that this has already been invented.
 
-A bit of searching turned out [Hugo](https://gohugo.io/), which is mind-bogglingly fast static content generator written in Go. It really is. A demo site with all of my posts in it takes less than a second to rebuild, with live reloads on the browser.
+A bit of searching turned out [Hugo](https://gohugo.io/), a mind-bogglingly fast static content generator written in Go. It really is. A demo site with all of my posts in it takes less than a second to rebuild, with live reloads on the browser.
 
-On the other hand, I tried a bunch of the themes for Hugo. At first I was "wow, this looks amazing", but after trying to fit all of my abundant content I was less than impressed. There are many rough edges in many themes.
+The tool looks mature all around. The command line feels polished, the documentation is abundant, and there are lively discussions on the bug tracker, denoting it's not dead.
+
+On the other hand, I tried a bunch of the themes for Hugo. At first I was "wow, this looks amazing", but I kept hitting bugs all around with the themes and my specific posting needs. I could migrate my current hand-crafted theme I suppose, but I just realized I rely on Jekyll's SASS integration which Hugo doesn't offer.
 
 ## Web UIs for Jekyll/Hugo
 
-As for a web UI to manage a static site, I found a bunch of them that seem quite mature.
+As for a web UI to manage a static site, there are a bunch of them that seem quite mature.
 
-The one that caught most my eye, maybe because of its visuals and free offering, is [Forestry](http://forestry.io/). This connects to a GitHub repository and lets you manage a Jekyll or Hugo site from the web. There are many rough edges here, but the basics of post management seem to be there, and the WYSIWYG editor is pretty decent.
+The one that caught my eye the most, maybe because of its visuals and free offering, is [Forestry](http://forestry.io/). This connects to a GitHub repository and lets you manage a Jekyll or Hugo site from the web. There are many rough edges here, but the basics of post management seem to exist and the WYSIWYG editor is pretty decent.
+
+You don't get to edit the site's visuals from the UI, but as mentioned earlier, this is not that important for me.
 
 The other one that seems quite promising is [Netlify](http://netlify.com/), but I haven't had a chance to play with this one yet.
 
