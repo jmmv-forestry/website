@@ -8,29 +8,31 @@ categories:
 excerpt: ''
 excerpt_separator: ''
 ---
-Back in [May 2015]({% post_url 2015-05-24-hello-medium %}), I was lured to Medium by its simplicity and growing community, which resulted in me posting a bunch of articles there and enjoying every bit of it. But [I didn't feel the content was mine]({% post_url 2016-01-28-medium-experiment-wrapup %}). So a year later, my experiments to create static "homepage" resulted in me moving from Blogger and Medium to a [Jekyll](https://jekyllrb.com/)-managed site in [May 2016]({% post_url 2016-05-29-homepage-v3 %}).
+Back in [May 2015]({% post_url 2015-05-24-hello-medium %}), I was lured to Medium by its simplicity and growing community, which resulted in me posting a bunch of articles there and enjoying every moment of it. But, eventually, I noticed that [I was losing control of my content]({% post_url 2016-01-28-medium-experiment-wrapup %}). So [a year later]({% post_url 2016-05-29-homepage-v3 %}), my experiments to create static homepage resulted in me moving from Blogger and Medium to a [Jekyll](https://jekyllrb.com/)-managed site.
 
-Almost two years have passed since that migration and I can only count 7 miserable new posts. This ridiculously-low number, unfortunately, doesn't track my willingness to write—but the friction to posting has become so high that I feared composing quick posts.
+Almost two years have passed since that migration and I can only count 7 miserable new posts. This ridiculously-low number, unfortunately, doesn't track my willingness to write—but **the friction to posting has become so high** that I fear composing new essays.
 
-Last week was pretty active writing-wise at work, which made me realize I missed writing quite a bit... and this made me reevaluate my choices during this long weekend.
+Albeit late, this hit me last week. I wrote a couple of long-form articles for work and the process made me realize I miss updating my blog more frequently. And thanks to this long weekend, I've been reevaluating my choices and trying new things.
 
-Here are some disconnected thoughts on where I am up to. I do not have an answer yet, but maybe you can help? :-)
+Here are some disconnected thoughts on where I am up to. I do not have a final answer yet on what to do; maybe you can help?
 
 # What are the problems?
 
 Why did I say above that "the friction to posting is too high"?
 
-* Building the site takes too long. The site used to take over a minute to build. With some profiling and optimization, I got the full build down to under 5 seconds, but that's still slow. Delays are infuriating, especially when working on the final touches of a post.
-* Having to deal with a Git client, an editor, files, commits, builds, and publishing takes all the fun out of jotting down thoughts. I am incredibly lazy to post quick articles because of the overhead involved: if I sit down to write, it's only because I know the content is worth it and is "long enough"... but that's not how blogs typically work.
-* The environment is non-inviting. Preparing the workspace to work on the blog takes effort. Installing all necessary tools is not trivial. My Jekyll set up is a bit unusual, with some preprocessing involved to generate the archives index. All of these mean that my setup for writing is tied to a specific computer that is already configured, but many times I don't want to write from there.
+* Building the site takes too long. The site used to take over a minute to build. With some profiling and optimization, I got the full build down to under 5 seconds, but that's still slow. Delays are infuriating, especially when working on the final touches of a post or during site redesigns.
+* The workflow is too heavy. Having to deal with a Git client, an editor (VSCode), files, commits, build scripts, and the actual deployment takes all the fun out of jotting down thoughts quickly. I am incredibly lazy to post articles because of the overhead involved: if I sit down to write, it's only because I know the content is worth to work on, but the results are very infrequent and very long posts. That's not how blogs typically work.
+* The environment is non-inviting. Kinda related to the above, getting the environment set up takes effort and I never know where I left things the next time I want to pick writing up. Installing all necessary tools is not trivial. My Jekyll set up is a bit unusual due to some preprocessing involved in generating the archives index. Many times I want to start a draft and preview it, but I'm not in the right computer or some tool has stopped working.
 
 # What am I looking for?
 
-Not a lot I think.
+Not a lot I'd like to think.
 
-First, I want to be able to publish again with minimal overhead, anytime, anywhere. This means having a web UI with which create new content and to edit existing content. This means having a UI with which to manage drafts. This does not imply having a UI to edit the whole site, particularly the layouts and stylesheets.
+First, I want to be able to **publish again with minimal overhead, anytime, anywhere**. This means having a web UI with which to create new content and to edit existing content. This means having a UI with which to manage drafts. This does _not_ imply having a UI to edit the whole site, particularly the layouts and stylesheets: changing these is infrequent, so I can go down into the console when truly necessary.
 
-Second, first-class Markdown support. I consider Markdown to be the digital negative of my posts: a simple-enough, future-proof format. I want whatever platform I use to allow me to compose primarily in this format and to preserve the contents verbatim.
+Second, **first-class Markdown support**. I consider Markdown to be the digital negative of my posts: a simple-enough, future-proof format. I want whatever platform I use to allow me to compose primarily in this format and to preserve the contents verbatim.
+
+And third, **data liberation**. I want to own my data. This means being able to access my posts in a format that's "future-proof". Many blogging platforms offer export functionality, but the output is often mangled HTML that can't really be imported anywhere else because the formatting is built into the text and the logical layout is missing.
 
 # What are the options?
 
