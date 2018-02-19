@@ -1,4 +1,6 @@
 ---
+pages:
+- _posts/looking-to-replace-jekyll.md
 hide_body: false
 fields:
 - type: text
