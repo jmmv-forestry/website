@@ -20,8 +20,9 @@ fields:
   label: Date
   config:
     date_format: YYYY-MM-DD
-    time_format: hh:mm:ss
+    time_format: hh:mm:ss -ZZ00
     required: true
+  default: Invalid date
 - type: tag_list
   name: categories
   label: Categories
