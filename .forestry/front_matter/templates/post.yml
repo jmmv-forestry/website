@@ -20,7 +20,7 @@ fields:
   label: Date
   config:
     date_format: YYYY-MM-DD
-    time_format: hh:mm:ss -ZZ00
+    time_format: hh:mm:ss ZZ
     required: true
   default: Invalid date
 - type: tag_list
