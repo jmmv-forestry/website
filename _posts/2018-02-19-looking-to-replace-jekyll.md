@@ -5,12 +5,13 @@ date: 2018-02-19 00:00:00 +0000
 categories:
 - blog
 - writing
-excerpt: ''
-excerpt_separator: ''
+excerpt_separator: <!--end-of-excerpt-->
 ---
 Back in [May 2015]({% post_url 2015-05-24-hello-medium %}), I was lured to Medium by its simplicity and growing community, which resulted in me posting a bunch of articles there and enjoying every moment of it. But, eventually, I noticed that [I was losing control of my content]({% post_url 2016-01-28-medium-experiment-wrapup %}). So [a year later]({% post_url 2016-05-29-homepage-v3 %}), my experiments to create static homepage resulted in me moving from Blogger and Medium to a [Jekyll](https://jekyllrb.com/)-managed site.
 
 Almost two years have passed since that migration and I can only count 7 miserable new posts. This ridiculously-low number, unfortunately, doesn't track my willingness to write—but **the friction to posting has become so high** that I fear composing new essays.
+
+<!--end-of-excerpt-->
 
 Albeit late, this hit me last week. I wrote a couple of long-form articles for work and the process made me realize I miss updating my blog more frequently. And thanks to this long weekend, I've been reevaluating my choices and trying new things.
 
@@ -20,7 +21,7 @@ Here are some disconnected thoughts on where I am up to. I do not have a final a
 
 Why did I say above that "the friction to posting is too high"?
 
-* Building the site takes too long. The site used to take over a minute to build. With some profiling and optimization, I got the full build down to under 5 seconds, but that's still slow. Delays are infuriating, especially when working on the final touches of a post or during site redesigns.
+* Building the site takes too long. The site used to take over a minute to build. With some profiling and optimization, I got the full build down to under 10 seconds, but that's still slow. Delays are infuriating, especially when working on the final touches of a post or during site redesigns.
 * The workflow is too heavy. Having to deal with a Git client, an editor (VSCode), files, commits, build scripts, and the actual deployment takes all the fun out of jotting down thoughts quickly. I am incredibly lazy to post articles because of the overhead involved: if I sit down to write, it's only because I know the content is worth to work on, but the results are very infrequent and very long posts. That's not how blogs typically work.
 * The environment is non-inviting. Kinda related to the above, getting the environment set up takes effort and I never know where I left things the next time I want to pick writing up. Installing all necessary tools is not trivial. My Jekyll set up is a bit unusual due to some preprocessing involved in generating the archives index. Many times I want to start a draft and preview it, but I'm not in the right computer or some tool has stopped working.
 
