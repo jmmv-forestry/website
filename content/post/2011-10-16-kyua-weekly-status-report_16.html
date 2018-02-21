@@ -1,0 +1,10 @@
+---
+title: "Kyua: Weekly status report"
+date: 2011-10-16 22:55:00 -0400
+categories:
+  - "kyua"
+  - "report"
+julipedia: 2011/10/kyua-weekly-status-report_16.html
+excerpt_separator: </p>
+---
+<br /><ul><li>Added support to prepare and execute statements to <tt>utils::sqlite</tt>.</li><li>Added the <tt>UTILS_PURE</tt> definition to tag functions as pure. I should now sweep through old code to apply the attribute where possible.</li><li>Created a pkgsrc package for Vera++. Investigating if I can use this tool for coding style validation, as the current code of Kyua is a bit messy in this regard.</li><li>Made a quick attempt at getting <tt>kyua test</tt> record test results in a simple database; success! This was just a proof of concept, so it is not submitted yet.</li><li>Started to refactor the code to move many logic constructions from the <tt>cli</tt> to the <tt>engine</tt>. With the need to store test results in the database, it's clear that these semantics do not belong in the CLI, but the current code structure do not easily allow this. Need to add some "controller" classes in the <tt>engine</tt> to hide all the interaction among internal components.</li></ul>

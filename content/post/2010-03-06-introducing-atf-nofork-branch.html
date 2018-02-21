@@ -1,0 +1,9 @@
+---
+title: "Introducing the ATF nofork branch"
+date: 2010-03-06 15:00:00 -0500
+categories:
+  - "atf"
+julipedia: 2010/03/introducing-atf-nofork-branch.html
+excerpt_separator: </p>
+---
+Despite my time for free software being virtually zero these days, I have managed to implement a prototype of what ATF would look like if it didn't implement forking and isolation in test programs. This feature has been often requested by users to simplify their life when debugging test cases.<div><div><br /></div><div>I shouldn't repeat everything I posted on the atf-devel mailing list regarding this announcement, so please <a href="http://mail-index.netbsd.org/atf-devel/2010/03/05/msg000070.html">refer to that email for details</a>. But I must say that the results look promising: the overall code of ATF is much simpler and also faster. (An execution I just tried cuts the run time of the ATF test suite from 1m 41s to 1m 16s.)  Expect more simplifications and speed-ups!</div></div>

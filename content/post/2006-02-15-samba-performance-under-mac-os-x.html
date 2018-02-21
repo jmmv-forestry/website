@@ -1,0 +1,7 @@
+---
+title: "Samba performance under Mac OS X"
+date: 2006-02-15 13:34:00 -0500
+julipedia: 2006/02/samba-performance-under-mac-os-x.html
+excerpt_separator: </p>
+---
+I have a NetBSD/i386 3.0 file server at home running Samba 3.x.  Read and write access from NetBSD and Windows XP clients is fast (although, under the NetBSD clients, NFS performance wins).<br /><br />Unfortunately, reading large files from Mac OS X is incredibly slow.  Adding the following to <tt>/etc/sysctl.conf</tt> solves this annoying problem:<pre>net.inet.tcp.delayed_ack=0</pre>This configuration file does not exist in a default installation so simply create it from scratch.  rc(8) takes care of it automatically.
