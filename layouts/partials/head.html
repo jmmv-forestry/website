@@ -1,0 +1,28 @@
+{{/*
+This include must be placed within a 'head' element.
+
+Note that the title is NOT defined in here and it is the responsibility of the
+caller to define the 'title' element itself.
+*/}}
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head
+      content must come *after* these tags -->
+
+<meta name="description" content="{{ .Summary }}">
+<meta name="author" content="{{ .Site.Author }}">
+
+<meta content="{{ .URL }}" property="og:url">
+
+<link rel="canonical" href="{{ replace .URL "index.html" "" }}">
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="/feed.xml" />
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="/js/html5shiv-3.7.2.min.js"></script>
+  <script src="/js/respond-1.4.2.min.js"></script>
+<![endif]-->

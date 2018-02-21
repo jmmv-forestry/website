@@ -6,24 +6,26 @@
   "editor.wrappingIndent": "none",
   "files.trimTrailingWhitespace": true,
 
-  // TODO: Would be nice to extend the default values instead of duplicating
-  // them here.
   "files.exclude": {
     "**/.git": true,
     "**/.DS_Store": true,
     "_site": true,
-    "fonts": true,
-    "images": true
+    "bazel-*": true,
+    "public": true,
+    "static": true
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
-    "_site": true
+    "_site": true,
+    "bazel-*": true,
+    "public": true
   },
   "search.exclude": {
-    "_sass/bootstrap": true,
     "_site": true,
-    "fonts": true,
-    "images": true
+    "bazel-*": true,
+    "public": true,
+    "sass/bootstrap": true,
+    "static": true
   },
 
   "[markdown]": {

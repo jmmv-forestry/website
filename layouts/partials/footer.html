@@ -1,18 +1,13 @@
 <div class="container">
   <footer>
     <p class="pull-right"><a href="#">Back to top</a></p>
-    <p>Copyright 2018 {{ site.author }}</p>
+    <p>Copyright 2018 {{ .Site.Params.Author }}</p>
   </footer>
 </div>
 
-<script src="{{ '/js/jquery-1.11.2.min.js' | prepend: site.baseurl }}">
-</script>
-<script
-  src="{{ "/css/bootstrap.min.js" | prepend: site.baseurl }}">
-</script>
-
-<script src="{{ '/js/auto-toc-1.0.0.dist.js' | prepend: site.baseurl }}">
-</script>
+<script src="/js/jquery-1.11.2.min.js"></script>
+<script src="/css/bootstrap.min.js"></script>
+<script src="/js/auto-toc-1.0.0.dist.js"></script>
 
 <script>
 $("p:contains('NOTE: ')").addClass("callout callout-info");
@@ -21,7 +16,6 @@ $("p:contains('WARNING: ')").addClass("callout callout-warning");
 $("p:contains('DANGER: ')").addClass("callout callout-danger");
 </script>
 
-{% if site.environment == "production" %}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -29,7 +23,6 @@ $("p:contains('DANGER: ')").addClass("callout callout-danger");
   m.parentNode.insertBefore(a,m)})(window,document,'script',
   '//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', '{{ site.analytics_account }}', 'auto');
+  ga('create', '{{ .Site.GoogleAnalytics }}', 'auto');
   ga('send', 'pageview');
 </script>
-{% endif %}

@@ -1,13 +1,11 @@
 ---
-layout: empty
+type: empty
 ---
 
 <!-- We need these to be present early during load so we can avoid hiding
      or showing elements once the page has already been rendered. -->
-<script src="{{ '/js/jquery-1.11.2.min.js' | prepend: site.baseurl }}">
-</script>
-<script src="{{ '/js/js.cookie-2.1.1.min.js' | prepend: site.baseurl }}">
-</script>
+<script src="/js/jquery-1.11.2.min.js"></script>
+<script src="/js/js.cookie-2.1.1.min.js"></script>
 
 <script>
   function loadMarketing() {
@@ -45,7 +43,7 @@ layout: empty
 
     <div class="marketing row" style="display: none" id="buttons">
       <div class="col-md-3">
-        <a href="{{ "/essays/" | prepend: site.baseurl }}">
+        <a href="/essays.html">
           <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
         </a>
         <h2>Author</h2>
@@ -56,7 +54,7 @@ layout: empty
       </div>
 
       <div class="col-md-3">
-        <a href="{{ "/software/" | prepend: site.baseurl }}">
+        <a href="/software.html">
           <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
         </a>
         <h2>Developer</h2>
@@ -67,7 +65,7 @@ layout: empty
       </div>
 
       <div class="col-md-3">
-        <a href="{{ "/work/" | prepend: site.baseurl }}">
+        <a href="/work.html">
           <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
         </a>
         <h2>Engineer</h2>
@@ -77,7 +75,7 @@ layout: empty
       </div>
 
       <div class="col-md-3">
-        <a href="{{ "/about/" | prepend: site.baseurl }}">
+        <a href="/about.html">
           <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
         </a>
         <h2>Social</h2>
@@ -121,8 +119,9 @@ layout: empty
 <div class="container">
   <div class="row">
     <div class="col-md-9">
-      {% include posts.html posts=paginator.posts %}
+      {{< posts >}}
 
+      {{/*
       <div class="pagination">
         {% if paginator.previous_page %}
           <span class="previous"><a
@@ -145,9 +144,10 @@ layout: empty
           <span class="next"></span>
         {% endif %}
       </div>
+      */}}
     </div>
     <div class="col-md-3 sidebar">
-      {% include sidebar.html %}
+      {{< sidebar >}}
     </div>
   </div>
 </div>

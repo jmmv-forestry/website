@@ -1,8 +1,6 @@
 ---
-layout: page
 title: Software
 subtitle: The software I have written and contributed to
-permalink: /software/
 ---
 
 As an open source enthusiast, I have authored and maintain a few projects of my

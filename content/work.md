@@ -1,8 +1,6 @@
 ---
-layout: page
 title: Work
 subtitle: What I do, and have done, for a living
-permalink: /work/
 ---
 
 I am a Software Engineer by profession.  My expertise is in C++, Python, shell

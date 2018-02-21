@@ -1,0 +1,11 @@
+baseURL: "http://julio.meroh.net/"
+title: "Julio Merino"
+languageCode: "en-us"
+googleAnalytics: "UA-63557333-1"
+uglyURLs: true
+
+params:
+  author: "Julio Merino"
+
+permalinks:
+  post: /:year/:month/:slug

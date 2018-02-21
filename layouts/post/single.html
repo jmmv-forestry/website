@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% include head.html %}
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <meta content="{{ page.title }} - {{ site.title }}" property="og:title">
+    {{ partial "head.html" . }}
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta content="{{ .Title }} - {{ .Site.Title }}" property="og:title">
   </head>
 
   <body>
-    {% include header.html %}
+    {{ partial "header.html" . }}
 
     <div class="page-header">
       <div class="container">
-        <h1>{{ page.title }}</h1>
+        <h1>{{ .Title }}</h1>
 
-        <p>{{ page.date | date_to_rfc822 }}</p>
+        <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
 
-        {% if page.cover-image %}
-        <img src="/images/{{ page.cover-image }}" class="cover-image" />
-        {% endif %}
+        {{ if isset .Params "cover-image" }}
+        <img src="/images/{{ index .Params "cover-image" }}"
+        class="cover-image" />
+        {{ end }}
       </div>
     </div>
 
     <div class="container">
       <article>
-        {{ content }}
+        {{ .Content }}
       </article>
 
       <div class="post-links">
         <p>
-          {% if page.gplus %}
-          <a href="https://plus.google.com/+JulioMerino/posts/{{ page.gplus }}">
+          {{ if isset .Params "gplus" }}
+          <a href="https://plus.google.com/+JulioMerino/posts/{{ index .Params "gplus" }}">
           Posted on Google+</a>
           &middot;
-          {% endif %}
+          {{ end }}
 
-          {% if page.medium %}
-          <a href="https://medium.com/@jmmv/{{ page.medium }}">Posted on
-          Medium</a>
+          {{ if isset .Params "medium" }}
+          <a href="https://medium.com/@jmmv/{{ index .Params "medium" }}">
+          Posted on Medium</a>
           &middot;
-          {% endif %}
+          {{ end }}
 
-          <a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe
-          via RSS</a>
+          <a href="/feed.xml">Subscribe via RSS</a>
           &middot;
-          <a href="{{ "/blog/" | prepend: site.baseurl }}">Go to posts index</a>
+          <a href="/blog">Go to posts index</a>
         </p>
 
         <form class="form-inline"
@@ -67,12 +67,11 @@
         </form>
       </div>
 
-      {% if site.environment == "production" %}
       <div id="disqus_thread">
         <script>
           var disqus_config = function () {
-            this.page.url = "{{ page.url | prepend: site.url }}";
-            this.page.identifier = "{{ page.id }}";
+            this.page.url = "{{ .URL }}";
+            this.page.identifier = "{{ .Source.BaseFileName }}";
           };
           (function() { // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
@@ -88,18 +87,17 @@
           powered by Disqus.</a>
         </noscript>
       </div>
-      {% if page.julipedia %}
+      {{ if isset .Params "julipedia" }}
       <p>Comments from the original Blogger-hosted post:</p>
       <script src="https://apis.google.com/js/plusone.js"></script>
       <div class="g-comments"
-           data-href="http://julipedia.meroh.net/{{ page.julipedia }}"
+           data-href="http://julipedia.meroh.net/{{ index .Params "julipedia" }}"
            data-first_party_property="BLOGGER"
            data-view_type="FILTERED_POSTMOD">
       </div>
-      {% endif %}
-      {% endif %}
+      {{ end }}
     </div>
 
-    {% include footer.html %}
+    {{ partial "footer.html" . }}
   </body>
 </html>

@@ -24,8 +24,7 @@
     </p>
   </form>
 
-  <p class="text-center"><a
-  href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS feed</a></p>
+  <p class="text-center"><a href="/feed.xml">RSS feed</a></p>
 
   <p class="text-center">
     <a href="https://twitter.com/jmmv"
@@ -39,7 +38,7 @@
 <div class="row archive">
   <h2>Archive</h2>
 
-  {% comment %}
+  {{/*
   It would be nice to do this purely in Liquid but, at the moment, doing so is
   ridiculous: the code needed to achive the desired results is obscure and,
   worse, increases the build time of the site very significantly.  See
@@ -48,7 +47,9 @@
 
   A better alternative would be to modify jekyll-archives to just expose the
   posts summary in some Liquid variable.
-  {% endcomment %}
+  */}}
 
+  {{/*
   {% include archive.html %}
+  */}}
 </div>
