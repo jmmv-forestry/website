@@ -8,59 +8,22 @@ Makefile: configure Makefile.in
 	@echo "Makefile out of date; rerun ./configure with desired args"
 	@false
 
-JEKYLL_ENV  = LANG=en_US
-JEKYLL_ENV += LC_ALL=C
-JEKYLL_ENV += TZ=UTC
-
-LIMIT_POSTS = 120
-
-JEKYLL_PROD_FLAGS = --config=_config.yml
-JEKYLL_DEV_FLAGS  = --config=_config.yml,_config_dev.yml
-JEKYLL_DEV_FLAGS += --drafts
-JEKYLL_DEV_FLAGS += --future
-JEKYLL_DEV_FLAGS += --limit_posts=$(LIMIT_POSTS)
-
-RUN_JEKYLL = env $(JEKYLL_ENV) $(JEKYLL)
-
 .PHONY: clean-site
 clean-site:
-	rm -rf _site
-	mkdir _site
+	rm -rf public
+	mkdir public
 
 .PHONY: build serve
-build: build-dev
-serve: serve-dev
+build:
+	$(HUGO)
 
-.PHONY: build-prod
-build-prod: clean-site _admin/generate-archive
-	echo >_includes/archive.html
-	$(RUN_JEKYLL) build $(JEKYLL_PROD_FLAGS)
-	_admin/generate-archive _site _includes/archive.html
-	$(RUN_JEKYLL) build --incremental $(JEKYLL_PROD_FLAGS)
-
-.PHONY: build-dev
-build-dev: clean-site _admin/generate-archive
-	echo >_includes/archive.html
-	$(RUN_JEKYLL) build $(JEKYLL_DEV_FLAGS)
-	_admin/generate-archive _site _includes/archive.html
-	$(RUN_JEKYLL) build --incremental $(JEKYLL_DEV_FLAGS)
-
-.PHONY: serve-prod
-serve-prod: build-prod
-	$(RUN_JEKYLL) serve --skip-initial-build $(JEKYLL_PROD_FLAGS)
-
-.PHONY: serve-dev
-serve-dev: build-dev
-	$(RUN_JEKYLL) serve --skip-initial-build $(JEKYLL_DEV_FLAGS)
+serve:
+	$(HUGO) serve
 
 .PHONY: scripts
-scripts: _admin/generate-archive _admin/html-to-markdown \
-         _admin/import-blogger _admin/new-draft \
-         _admin/publish-draft _admin/publish-site
-
-CLEANFILES += _admin/generate-archive
-_admin/generate-archive: _admin/generate-archive.sh
-	shtk build -o $@ $<
+scripts: _admin/html-to-markdown \
+         _admin/import-blogger \
+         _admin/publish-site
 
 CLEANFILES += _admin/html-to-markdown
 _admin/html-to-markdown: _admin/html-to-markdown.sh
@@ -68,14 +31,6 @@ _admin/html-to-markdown: _admin/html-to-markdown.sh
 
 CLEANFILES += _admin/import-blogger
 _admin/import-blogger: _admin/import-blogger.sh
-	shtk build -o $@ $<
-
-CLEANFILES += _admin/new-draft
-_admin/new-draft: _admin/new-draft.sh
-	shtk build -o $@ $<
-
-CLEANFILES += _admin/publish-draft
-_admin/publish-draft: _admin/publish-draft.sh
 	shtk build -o $@ $<
 
 CLEANFILES += _admin/publish-site
@@ -90,12 +45,12 @@ import-blogger: _admin/import-blogger external/julipedia/blog-04-23-2016.xml
 	./_admin/import-blogger external/julipedia/blog-04-23-2016.xml
 
 .PHONY: publish
-publish: build-prod _admin/publish-site
+publish: build _admin/publish-site
 	@if [ "$$(git status --porcelain)" != '' ]; then \
 		echo 'Work directory not clean; refusing push' 1>&2; \
 		exit 1; \
 	fi
-	./_admin/publish-site _site $(LIVE_REPOSITORY)
+	./_admin/publish-site public $(LIVE_REPOSITORY)
 
 .PHONY: clean
 clean:

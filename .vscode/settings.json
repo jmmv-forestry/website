@@ -9,19 +9,16 @@
   "files.exclude": {
     "**/.git": true,
     "**/.DS_Store": true,
-    "_site": true,
     "bazel-*": true,
     "public": true,
     "static": true
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
-    "_site": true,
     "bazel-*": true,
     "public": true
   },
   "search.exclude": {
-    "_site": true,
     "bazel-*": true,
     "public": true,
     "sass/bootstrap": true,
