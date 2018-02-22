@@ -38,18 +38,18 @@
 <div class="row archive">
   <h2>Archive</h2>
 
-  {{/*
-  It would be nice to do this purely in Liquid but, at the moment, doing so is
-  ridiculous: the code needed to achive the desired results is obscure and,
-  worse, increases the build time of the site very significantly.  See
-  revision ae0ebafc3620bf4473613c2ca8ce9b52d603ed0e for what was previously
-  attempted.
-
-  A better alternative would be to modify jekyll-archives to just expose the
-  posts summary in some Liquid variable.
-  */}}
-
-  {{/*
-  {% include archive.html %}
-  */}}
+  <ul>
+    {{ range (where .Site.Pages "Type" "post").GroupByDate "2006" }}
+      <li>
+        {{ $year := .Key }}
+        <a data-toggle="collapse" href="#archive-year-{{ $year }}">{{ $year }}</a> ({{ len .Pages }})
+        <ul id="archive-year-{{ $year }}" class="collapse">
+          {{ range .Pages.GroupByDate "2006-01" }}
+            {{ $month := dateFormat "January" (print .Key "-01") }}
+            <li><a href="/archive.html#{{ .Key }}">{{ print $month " " $year }}</a> ({{ len .Pages }})</li>
+          {{ end }}
+        </ul>
+      </li>
+    {{ end }}
+  </ul>
 </div>

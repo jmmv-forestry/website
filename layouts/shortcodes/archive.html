@@ -1,0 +1,17 @@
+{{ range (where .Site.Pages "Type" "post").GroupByDate "2006" }}
+  {{ $year := .Key }}
+  <h1>{{ $year }}</h1>
+  {{ range .Pages.GroupByDate "2006-01" }}
+    {{ $month := dateFormat "January" (print .Key "-01") }}
+    <ul>
+      <a id="{{ .Key }}"></a>
+      <li>{{ print $month " " $year }}
+        <ul>
+          {{ range .Pages }}
+            <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </li>
+    </ul>
+  {{ end }}
+{{ end }}
