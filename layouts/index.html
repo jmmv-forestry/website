@@ -11,6 +11,54 @@
 
     {{ .Content }}
 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          {{ $paginator := (.Paginator 7) }}
+
+          <ul class="post-list">
+            {{ range $paginator.Pages }}
+              <li>
+                <h2><a class="post-link" href="{{ .URL }}">{{ .Title }}</a></h2>
+                <span class="post-meta">{{ .PublishDate.Format "January 2, 2006" }}
+                  &middot;
+                  <a href="{{ .URL }}#disqus_thread">
+                    <span class="disqus-comment-count"
+                          data-disqus-url="{{ .URL }}">Comments</span>
+                  </a>
+                </span>
+                <p>
+                  {{ .Summary }} <a href="{{ .URL }}">[Continue reading;
+                  about {{ .ReadingTime }} minutes]</a>
+                </p>
+              </li>
+            {{ end }}
+          </ul>
+
+          <div class="pagination">
+            {{ if $paginator.HasPrev }}
+              <span class="previous"><a href="{{ $paginator.Prev.URL }}">&laquo;
+              Newer posts</a></span>
+            {{ else }}
+              <span class="previous"></span>
+            {{ end }}
+
+            {{ if $paginator.HasNext }}
+              <span class="next"><a href="{{ $paginator.Next.URL }}">Older posts
+              &raquo;</a></span>
+            {{ else }}
+              <span class="next"></span>
+            {{ end }}
+          </div>
+        </div>
+        <div class="col-md-3 sidebar">
+          {{ partial "sidebar.html" . }}
+        </div>
+      </div>
+    </div>
+
     {{ partial "footer.html" . }}
+
+    <script id="dsq-count-scr" src="//jmmv.disqus.com/count.js" async></script>
   </body>
 </html>

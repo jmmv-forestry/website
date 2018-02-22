@@ -115,39 +115,3 @@ type: empty
     <script>loadMarketing();</script>
   </div>
 </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-9">
-      {{< posts >}}
-
-      {{/*
-      <div class="pagination">
-        {% if paginator.previous_page %}
-          <span class="previous"><a
-          href="{{ paginator.previous_page_path }}">&laquo;
-          Newer posts</a></span>
-        {% else %}
-          <span class="previous"></span>
-        {% endif %}
-
-        <!-- Disabled to not show a page count, which is meaningless.
-        <span class="current">Page {{ paginator.page }} of
-        {{ paginator.total_pages }}</span>
-        -->
-
-        {% if paginator.next_page %}
-          <span class="next"><a
-          href="{{ paginator.next_page_path }}">Older posts
-          &raquo;</a></span>
-        {% else %}
-          <span class="next"></span>
-        {% endif %}
-      </div>
-      */}}
-    </div>
-    <div class="col-md-3 sidebar">
-      {{< sidebar >}}
-    </div>
-  </div>
-</div>
