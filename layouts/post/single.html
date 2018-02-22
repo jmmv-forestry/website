@@ -70,7 +70,7 @@
       <div id="disqus_thread">
         <script>
           var disqus_config = function () {
-            this.page.url = "{{ .URL }}";
+            this.page.url = "{{ .URL | absURL }}";
             this.page.identifier = "{{ .Source.BaseFileName }}";
           };
           (function() { // DON'T EDIT BELOW THIS LINE

@@ -24,7 +24,7 @@
                   &middot;
                   <a href="{{ .URL }}#disqus_thread">
                     <span class="disqus-comment-count"
-                          data-disqus-url="{{ .URL }}">Comments</span>
+                          data-disqus-url="{{ .URL | absURL }}">Comments</span>
                   </a>
                 </span>
                 <p>
