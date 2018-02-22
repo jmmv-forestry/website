@@ -4,6 +4,8 @@ date:   2016-01-19 08:30:00 -0500
 categories:
   - "google"
   - "work"
+aliases:
+  - /blog/2016/01/19/joining-blaze-team.html
 excerpt_separator: <!--end-of-excerpt-->
 ---
 

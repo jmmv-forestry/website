@@ -8,6 +8,8 @@ categories:
   - "featured"
   - "software"
 medium:     compilers-in-the-bsd-base-system-1c4515a18c49
+aliases:
+  - /blog/2015/10/23/compilers-in-the-bsd-base-system.html
 ---
 
 A commonly held axiom in the BSD community is that the C compiler belongs in the base system. "This is how things have been since the beginning of time and they define the way BSD systems are", the proposition goes.

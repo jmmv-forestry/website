@@ -4,6 +4,8 @@ date:       2016-01-28 22:30:00 -0500
 categories:
   - "blog"
   - "writing"
+aliases:
+  - /blog/2016/01/29/medium-experiment-wrapup.html
 ---
 
 Eight months ago, [I decided to try

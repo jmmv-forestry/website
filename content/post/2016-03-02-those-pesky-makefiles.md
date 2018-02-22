@@ -4,6 +4,8 @@ date:       2016-03-02 09:45:00 -0500
 categories:
   - "software"
 medium:     those-pesky-makefiles-4784d4dc4888
+aliases:
+  - /blog/2016/03/02/those-pesky-makefiles.html
 excerpt_separator: <!--end-of-excerpt-->
 ---
 

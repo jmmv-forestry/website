@@ -3,6 +3,8 @@ title:      Analysis of SSHFS performance for large builds
 date:       2016-02-17 08:30:00 -0500
 categories:
   - "software"
+aliases:
+  - /blog/2016/02/17/sshfs-performance-analysis-for-builds.html
 excerpt_separator: <!--end-of-excerpt-->
 ---
 

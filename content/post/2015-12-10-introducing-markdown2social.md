@@ -3,6 +3,8 @@ title:  Introducing Markdown2Social
 date:   2015-12-10 10:00:00 -0500
 categories:
   - "software"
+aliases:
+  - /blog/2015/12/10/introducing-markdown2social.html
 
 excerpt: Markdown2Social is a new open-source tool, originally written
   at Google for Google-internal posts, that converts Markdown documents

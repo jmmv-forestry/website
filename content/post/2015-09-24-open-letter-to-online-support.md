@@ -5,6 +5,8 @@ categories:
   - "fun"
   - "essay"
 medium:     an-open-letter-to-online-support-staff-f4ea93ffc0df
+aliases:
+  - /blog/2015/09/24/open-letter-to-online-support.html
 ---
 
 Dear online support staff member,
