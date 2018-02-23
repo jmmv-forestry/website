@@ -16,6 +16,9 @@ clean-site:
 .PHONY: build serve
 build:
 	$(HUGO)
+	@# Create compatibility feed for Blogger subscriptions.
+	mkdir -p public/feeds/posts/
+	cp -f public/feed.xml public/feeds/posts/default
 
 serve:
 	$(HUGO) serve
