@@ -12,7 +12,7 @@ peek of the projects I started:
 <div class="row">
   <div class="col-md-6 text-center">
     <a href="https://github.com/jmmv/">
-      <img src="{{ "/images/badges/GitHub-Mark-32px.png" | prepend: site.baseurl }}">
+      <img src="/images/badges/GitHub-Mark-32px.png">
     </a>
   </div>
   <div class="col-md-6 text-center">
@@ -81,9 +81,9 @@ peek of the projects I started:
   the contents of remote file systems transparently.  Note that this was my
   first real Go program and hasn't received a lot of maintenance since its
   publication so it may not be in the greatest style, but I wanted to publish it
-  anyway.  See [Analysis of SSHFS performance for large builds]({% post_url
-  2016-02-17-sshfs-performance-analysis-for-builds %}) for the motivation behind
-  this project.
+  anyway.  See [Analysis of SSHFS performance for large builds]({{< relref
+  "2016-02-17-sshfs-performance-analysis-for-builds.md" >}}) for the motivation
+  behind this project.
 
 * **[sysbuild](http://github.com/jmmv/sysbuild/)** and
   **[sysupgrade](http://github.com/jmmv/sysupgrade/)**: A couple of utilities to
@@ -106,7 +106,7 @@ I have also contributed significantly to the following projects:
 
 * **[Bazel](http://bazel.build/)**: A fast and correct build system, originated
   at Google.  I started working on this project as [my main work assignment on
-  January 2016]({% post_url 2016-01-19-joining-blaze-team %}) and currently
+  January 2016]({{< relref "2016-01-19-joining-blaze-team.md" >}}) and currently
   focus on making this work on macOS as well as it does on Linux.
 
 * **[Colloquy](http://colloquy.info/)**: An IRC client for Mac OS X.  Back when
