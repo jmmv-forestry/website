@@ -72,11 +72,11 @@ In my case, I chose `Ctrl+J` years ago as a replacement because this particular 
 
 For tmux, add this to your `~/.tmux.conf`:
 
-{% highlight text %}
+```
 set-option -g prefix C-j
 unbind-key C-b
 bind-key C-j send-prefix
-{% endhighlight %}
+```
 
 # Project directories
 
@@ -95,7 +95,7 @@ I then have an alias for `open-session.sh` called `s` so that I can jump into an
 
 You can find the verbatim contents of my script here:
 
-{% highlight sh %}
+```sh
 #! /bin/sh
 
 if [ ${#} -eq 2 ]; then
@@ -120,7 +120,7 @@ else
         ( DISPLAY= tmux new-session -s "${name}" )
     fi
 fi
-{% endhighlight %}
+```
 
 ## Switching projects
 

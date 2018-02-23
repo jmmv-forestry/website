@@ -94,15 +94,14 @@ support direct publication to Medium.
 
 For your reference, here is the list of posts taken out:
 
-{% for post in site.posts %}
-  {% if post.medium %}
-    {% assign year = post.date | date: "%Y" %}
-    {% if year == "2015" %}
-* {{ post.date | date: "%Y-%m-%d" }}:
-  [{{ post.title }}]({{ post.url | prepend: site.baseurl }})
-    {% endif %}
-  {% endif %}
-{% endfor %}
+*   [2015-10-23: Compilers in the (BSD) base system]({{< relref "2015-10-23-compilers-in-the-bsd-base-system.md" >}})
+*   [2015-09-24: An open letter to online support staff]({{< relref "2015-09-24-open-letter-to-online-support.md" >}})
+*   [2015-09-20: "Your English is pretty good!", they said]({{< relref "2015-09-21-your-english-is-pretty-good-they-said.md" >}})
+*   [2015-09-07: My coding workflow]({{< relref "2015-09-08-my-coding-workflow.md" >}})
+*   [2015-06-19: How to commit a code hack and not perish along the way]({{< relref "2015-06-19-how-to-commit-a-code-hack.md" >}})
+*   [2015-06-06: Get a handle on email subscriptions]({{< relref "2015-06-06-get-a-handle-on-email-subscriptions.md" >}})
+*   [2015-05-26: Six years at Google]({{< relref "2015-05-26-six-years-at-google.md" >}})
+*   [2015-05-24: Hello, Medium!]({{< relref "2015-05-24-hello-medium.md" >}})
 
 # What about The Julipedia?
 

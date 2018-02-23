@@ -29,10 +29,10 @@ accurate.
 So how did this happen? This summer I had the pleasure of hosting [Pallav
 Agarwal](https://github.com/pallavagarwal07) as an intern in the
 [Bazel](https://bazel.build/) team working from our Google NYC office. I
-leveraged my [experience last year with sourcachefs]({% post_url
-2017-07-30-introducing-sourcachefs %}) to design and lead the implementation of
-sandboxfs. With this and Pallav's strong skills, we got to a feature-complete
-implementation by the beginning of August.
+leveraged my [experience last year with sourcachefs]({{< relref
+"2017-07-30-introducing-sourcachefs.md" >}}) to design and lead the
+implementation of sandboxfs. With this and Pallav's strong skills, we got to a
+feature-complete implementation by the beginning of August.
 
 And today, after a bit of extra work to make the full codebase open-sourceable
 and collecting all necessary approvals, I am happy to announce that sandboxfs
