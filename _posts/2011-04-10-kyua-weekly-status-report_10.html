@@ -1,9 +1,0 @@
----
-layout: post
-title: "Kyua: Weekly status report"
-date: 2011-04-10 15:00:00 -0400
-categories: atf kyua report
-julipedia: 2011/04/kyua-weekly-status-report_10.html
-excerpt_separator: </p>
----
-Few things worth mentioning this week as reviewing Summer of Code student applications has taken priority. The good thing is that there are several strong applications for NetBSD; the bad thing is that none relate directly to testing. Anyway, the work this week:<br /><br /><ul><li>Added a pkg-config file for atf-sh as well as an Autoconf macro to detect its presence. This is needed by Kyua to easily find atf-sh. (Yes, I know: this is an abuse of pkg-config, but it works pretty well and is consistent with atf-c and atf-c++.)</li><li>Implemented basic integration tests for Kyua in <a href="http://code.google.com/p/kyua/source/detail?r=98">r98</a>&nbsp;using atf-sh. These tests are still very simple but provide a placeholder into which new tests will be plugged. Having good integration test coverage is key in preparation for a 0.1 release. Oh, and by the way, this revision has bumped the number of tests to 601, crossing the 600 barrier :-)</li></ul><div>That's pretty much it. Now, back to attempting to fix my home server as a fresh installation of NetBSD/macppc has decided to not boot any more. &nbsp;(Yes, this has blocked most of my weekend...)</div>

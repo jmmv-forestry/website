@@ -1,0 +1,26 @@
+baseURL: "http://julio.meroh.net/"
+title: "Julio Merino"
+languageCode: "en-us"
+googleAnalytics: "UA-63557333-1"
+uglyURLs: true
+rssLimit: 15
+pygmentsCodeFences: true
+pygmentsUseClasses: true
+
+params:
+  author: "Julio Merino"
+
+permalinks:
+  post: /:year/:month/:slug
+
+# Rename the default RSS at the top-level of the site from index.xml
+# to feed.xml to maintain backwards compatibility with the name used
+# when the site was built with Jekyll.
+outputs:
+  home:
+    - HTML
+    - RSS
+outputFormats:
+  RSS:
+    mediatype: application/rss
+    baseName: feed

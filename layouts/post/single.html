@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+
+  <body>
+    {{ partial "header.html" . }}
+
+    <div class="page-header">
+      <div class="container">
+        <h1>{{ .Title }}</h1>
+
+        <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
+
+        {{ if isset .Params "cover-image" }}
+        <img src="/images/{{ index .Params "cover-image" }}"
+        class="cover-image" />
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="container">
+      <article>
+        {{ .Content }}
+      </article>
+
+      <div class="post-links">
+        <p>
+          {{ if isset .Params "gplus" }}
+          <a href="https://plus.google.com/+JulioMerino/posts/{{ index .Params "gplus" }}">
+          Posted on Google+</a>
+          &middot;
+          {{ end }}
+
+          {{ if isset .Params "medium" }}
+          <a href="https://medium.com/@jmmv/{{ index .Params "medium" }}">
+          Posted on Medium</a>
+          &middot;
+          {{ end }}
+
+          <a href="/feed.xml">Subscribe via RSS</a>
+          &middot;
+          <a href="/blog">Go to posts index</a>
+        </p>
+
+        <form class="form-inline"
+            action="https://feedburner.google.com/fb/a/mailverify"
+            method="post"
+            target="popupwindow"
+            onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=jmmv', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+          <div class="form-group form-group-sm">
+            <input type="text" style="width: 400px" name="email"
+                    placeholder="Enter your email to subscribe to new posts"
+                    class="form-control input-sm"/>
+          </div>
+          <button type="submit" value="Subscribe"
+                  class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          </button>
+          &nbsp;&nbsp;&nbsp;Delivered by
+          <input type="hidden" value="jmmv" name="uri"/>
+          <input type="hidden" name="loc" value="en_US"/>
+          <a href="https://feedburner.google.com" target="_blank">FeedBurner</a>
+        </form>
+      </div>
+
+      <div id="disqus_thread">
+        <script>
+          var disqus_config = function () {
+            this.page.url = "{{ .URL | absURL }}";
+            this.page.identifier = "{{ .Source.BaseFileName }}";
+          };
+          (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+
+            s.src = '//jmmv.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+          powered by Disqus.</a>
+        </noscript>
+      </div>
+      {{ if isset .Params "julipedia" }}
+      <p>Comments from the original Blogger-hosted post:</p>
+      <script src="https://apis.google.com/js/plusone.js"></script>
+      <div class="g-comments"
+           data-href="http://julipedia.meroh.net/{{ index .Params "julipedia" }}"
+           data-first_party_property="BLOGGER"
+           data-view_type="FILTERED_POSTMOD">
+      </div>
+      {{ end }}
+    </div>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>

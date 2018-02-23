@@ -1,0 +1,6 @@
+{{ range where .Site.Pages "Type" "post" -}}
+  {{- if in .Params.categories ($.Get "category") -}}
+  <li>{{ .PublishDate.Format "2006-01-02" }}:
+  <a href="{{ .URL }}">{{ .Title }}</a></li>
+  {{- end -}}
+{{- end }}

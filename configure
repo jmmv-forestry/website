@@ -8,11 +8,11 @@ SRCDIR="$(cd "$(dirname "${0}")" && pwd -P)"
 # Dynamically-configured settings.
 CLEANFILES=
 DISTCLEANFILES=
-JEKYLL=
+HUGO=
 LIVE_REPOSITORY=
 
 # List of variables exposed to the Makefile.
-MK_VARS="CLEANFILES DISTCLEANFILES JEKYLL LIVE_REPOSITORY"
+MK_VARS="CLEANFILES DISTCLEANFILES HUGO LIVE_REPOSITORY"
 
 info() {
     echo "${ProgName}: I: ${@}" 1>&2
@@ -53,21 +53,21 @@ find_progs() {
     return 1
 }
 
-set_jekyll() {
+set_hugo() {
     local user_override="${1}"; shift
 
     if [ -n "${user_override}" ]; then
-        [ -e "${user_override}" ] || err "jekyll not found in" \
-            "${user_override}; bogus argument to --jekyll?"
-        JEKYLL="${user_override}"
+        [ -e "${user_override}" ] || err "hugo not found in" \
+            "${user_override}; bogus argument to --hugo?"
+        HUGO="${user_override}"
     else
-        local jekyll="$(find_progs jekyll24 jekyll)"
-        [ -n "${jekyll}" ] || err "Cannot find jekyll in path; pass" \
-            "--jekyll=/path/to/jekyll to configure"
-        JEKYLL="${jekyll}"
+        local hugo="$(find_progs hugo)"
+        [ -n "${hugo}" ] || err "Cannot find hugo in path; pass" \
+            "--hugo=/path/to/hugo to configure"
+        HUGO="${hugo}"
     fi
 
-    info "Using Jekyll from: ${JEKYLL}"
+    info "Using Hugo from: ${HUGO}"
 }
 
 set_live_repository() {
@@ -100,18 +100,18 @@ generate_makefile() {
 main() {
     cd "${SRCDIR}"
 
-    local jekyll=
+    local hugo=
     local live_repository=
     for arg in "${@}"; do
         case "${arg}" in
-            --jekyll=*) jekyll="${arg#*=}" ;;
+            --hugo=*) hugo="${arg#*=}" ;;
             --live-repository=*) live_repository="${arg#*=}" ;;
             *) err "Unknown argument ${arg}" ;;
         esac
     done
 
     CLEANFILES=_site
-    set_jekyll "${jekyll}"
+    set_hugo "${hugo}"
 
     set_live_repository "${live_repository}"
 
