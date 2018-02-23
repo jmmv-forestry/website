@@ -5,7 +5,6 @@ categories:
   - "software"
 aliases:
   - /blog/2016/02/17/sshfs-performance-analysis-for-builds.html
-excerpt_separator: <!--end-of-excerpt-->
 slug: sshfs-performance-analysis-for-builds
 ---
 
@@ -13,7 +12,7 @@ Last week, I spent some time looking at the **feasibility of using SSHFS on OS X
 
 What I found highlights that **SSHFS is not the right choice for locally building a remote source tree**. That said, the overall study process was interesting, fun, and I am now tempted to make SSHFS viable for this use case. Read on for the details.
 
-<!--end-of-excerpt-->
+<!--more-->
 
 *Obligatory disclaimer:* There is not much specific to Google here and any opinions are my own. In fact, I had used SSHFS in the past for similar purposes: to expose a NetBSD source tree from the host machine to a VM running on it, using the virtual network interface. Knowing these details at the time would have been very helpful in understanding the behavior of the setup.
 

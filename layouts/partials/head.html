@@ -19,7 +19,7 @@
   {{ if isset .Params "excerpt" -}}
   <meta name="description" content="{{ index .Params "excerpt" }}">
   {{- else -}}
-  <meta name="description" content="{{ .Summary }}">
+  <meta name="description" content="{{ .Summary | plainify }}">
   {{- end }}
   <meta name="author" content="{{ .Site.Params.Author }}">
   {{ .Hugo.Generator }}

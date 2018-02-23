@@ -9,7 +9,6 @@ categories:
   - "workflow"
 medium:      my-coding-workflow-f26f81235752
 cover-image: 2015-09-08-header.png
-excerpt_separator: "* * *"
 aliases:
   - /blog/2015/09/07/my-coding-workflow.html
 slug: my-coding-workflow
@@ -21,6 +20,7 @@ slug: my-coding-workflow
 
 **This post aims to answer the above for the type of work I do by sharing how my workflow looks like. I want to compel you to share your own story in the comments section, and by doing so, create a collection of stories so that others can benefit from them.**
 
+<!--more-->
 * * *
 
 Development workflows are like colors: each programmer has their favorite and their favorite is not gonna change easily based on others' preferences.

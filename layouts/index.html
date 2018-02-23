@@ -27,7 +27,7 @@
                   {{ if isset .Params "excerpt" -}}
                   {{- index .Params "excerpt" -}}
                   {{- else -}}
-                  {{- .Summary -}}
+                  {{- .Summary | plainify | safeHTML -}}
                   {{- end }}
                   <a href="{{ .URL }}">[Continue reading;
                   about {{ .ReadingTime }} minutes]</a>

@@ -5,7 +5,6 @@ categories:
   - "software"
 aliases:
   - /blog/2015/12/17/introducing-nudgytimer.html
-excerpt_separator: <!--end-of-excerpt-->
 slug: introducing-nudgytimer
 ---
 
@@ -24,7 +23,7 @@ my first Android app.  The goal was to get a basic app that could later be
 built on iteratively as open source.  The specifics of the app did not
 matter much for this exercise, but I had a simple idea in mind.
 
-<!--end-of-excerpt-->
+<!--more-->
 
 And those three days played out really well.  After three intense days, I
 had a functional application running on my phone, ready to be demoed on

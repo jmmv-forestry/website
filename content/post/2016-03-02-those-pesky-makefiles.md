@@ -6,7 +6,6 @@ categories:
 medium:     those-pesky-makefiles-4784d4dc4888
 aliases:
   - /blog/2016/03/02/those-pesky-makefiles.html
-excerpt_separator: <!--end-of-excerpt-->
 slug: those-pesky-makefiles
 ---
 
@@ -14,7 +13,7 @@ As a software developer, you have probably disregarded the build system of your 
 
 But hang on a second. Those build files are way more important than you may think and deserve a wee bit more attention.
 
-<!--end-of-excerpt-->
+<!--more-->
 
 # What if... you lost them?
 

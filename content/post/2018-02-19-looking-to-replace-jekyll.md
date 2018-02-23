@@ -4,7 +4,6 @@ date: 2018-02-19 00:00:00 +0000
 categories:
   - blog
   - writing
-excerpt_separator: <!--end-of-excerpt-->
 slug: looking-to-replace-jekyll
 ---
 
@@ -12,7 +11,7 @@ Back in [May 2015]({{< relref "2015-05-24-hello-medium.md" >}}), I was lured to 
 
 Almost two years have passed since that migration and I can only count 7 miserable new posts. This ridiculously-low number, unfortunately, doesn't track my willingness to write—but **the friction to posting has become so high** that I fear composing new essays.
 
-<!--end-of-excerpt-->
+<!--more-->
 
 Albeit late, this hit me last week. I wrote a couple of long-form articles for work and the process made me realize I miss updating my blog more frequently. And thanks to this long weekend, I've been reevaluating my choices and trying new things.
 

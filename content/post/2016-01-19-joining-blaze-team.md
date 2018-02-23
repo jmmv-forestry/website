@@ -6,7 +6,6 @@ categories:
   - "work"
 aliases:
   - /blog/2016/01/19/joining-blaze-team.html
-excerpt_separator: <!--end-of-excerpt-->
 slug: joining-blaze-team
 ---
 
@@ -24,7 +23,7 @@ grow in a different direction.  And why now, you ask?  Well, simply because I
 have found a role in the NYC office for a project that I am personally
 passionate about.
 
-<!--end-of-excerpt-->
+<!--more-->
 
 # The new team
 
