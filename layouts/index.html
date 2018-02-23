@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    {{ partial "head.html" . }}
-    <title>{{ .Site.Title }}</title>
-    <meta content="{{ .Site.Title }}" property="og:title">
-  </head>
+  {{ partial "head.html" . }}
 
   <body>
     {{ partial "header.html" . }}
@@ -28,7 +24,12 @@
                   </a>
                 </span>
                 <p>
-                  {{ .Summary }} <a href="{{ .URL }}">[Continue reading;
+                  {{ if isset .Params "excerpt" -}}
+                  {{- index .Params "excerpt" -}}
+                  {{- else -}}
+                  {{- .Summary -}}
+                  {{- end }}
+                  <a href="{{ .URL }}">[Continue reading;
                   about {{ .ReadingTime }} minutes]</a>
                 </p>
               </li>

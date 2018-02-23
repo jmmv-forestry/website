@@ -1,28 +1,40 @@
-{{/*
-This include must be placed within a 'head' element.
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head
+        content must come *after* these tags -->
 
-Note that the title is NOT defined in here and it is the responsibility of the
-caller to define the 'title' element itself.
-*/}}
+  {{ if eq (len .Title) 0 -}}
+  <title>{{ .Site.Title }}</title>
+  <meta content="{{ .Site.Title }}" property="og:title">
+  {{- else -}}
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <meta content="{{ .Title }} - {{ .Site.Title }}" property="og:title">
+  {{- end }}
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head
-      content must come *after* these tags -->
+  <!-- We basically have to do this because of
+       https://github.com/gohugoio/hugo/issues/3235, as otherwise the summary
+       of _index.html is garbage. -->
+  {{ if isset .Params "excerpt" -}}
+  <meta name="description" content="{{ index .Params "excerpt" }}">
+  {{- else -}}
+  <meta name="description" content="{{ .Summary }}">
+  {{- end }}
+  <meta name="author" content="{{ .Site.Params.Author }}">
+  {{ .Hugo.Generator }}
 
-<meta name="description" content="{{ .Summary }}">
-<meta name="author" content="{{ .Site.Author }}">
+  <meta content="{{ .URL | absURL }}" property="og:url">
 
-<meta content="{{ .URL }}" property="og:url">
+  <link rel="canonical" href="{{ .URL | absURL }}">
+  <link rel="alternate" type="application/rss+xml"
+        title="{{ .Site.Title }}" href="/feed.xml" />
 
-<link rel="canonical" href="{{ replace .URL "index.html" "" }}">
-<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="/feed.xml" />
+  <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="/css/main.css">
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-  <script src="/js/html5shiv-3.7.2.min.js"></script>
-  <script src="/js/respond-1.4.2.min.js"></script>
-<![endif]-->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  {{ "<!--[if lt IE 9]>" | safeHTML }}
+    <script src="/js/html5shiv-3.7.2.min.js"></script>
+    <script src="/js/respond-1.4.2.min.js"></script>
+  {{ "<![endif]-->" | safeHTML }}
+</head>

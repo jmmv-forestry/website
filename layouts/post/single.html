@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    {{ partial "head.html" . }}
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
-    <meta content="{{ .Title }} - {{ .Site.Title }}" property="og:title">
-  </head>
+  {{ partial "head.html" . }}
 
   <body>
     {{ partial "header.html" . }}
