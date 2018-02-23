@@ -6,6 +6,7 @@ categories:
 cover-image: 2016-03-22-header.png
 aliases:
   - /blog/2016/03/22/golang-review.html
+slug: golang-review
 ---
 
 I confess I am late to the game: the [Go programming language](https://golang.org/) came out in 2009 and I had not had the chance to go *all in* for a real project until two weeks ago. Here is a summary of my experience. Spoiler alert: I'm truly pleased.

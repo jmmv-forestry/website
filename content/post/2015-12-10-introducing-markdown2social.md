@@ -9,6 +9,7 @@ aliases:
 excerpt: Markdown2Social is a new open-source tool, originally written
   at Google for Google-internal posts, that converts Markdown documents
   to Google+ posts.
+slug: introducing-markdown2social
 ---
 
 During the course of this year, I have experimented with writing internal

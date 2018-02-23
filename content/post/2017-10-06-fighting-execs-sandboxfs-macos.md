@@ -5,6 +5,7 @@ categories:
   - "software"
 excerpt:
   Since the announcement of sandboxfs a few weeks ago, I've been stabilizing its integration with Bazel as a new sandboxing technique.  As part of this work, I encountered issues when macOS was immediately killing signed binaries executed through the sandbox.  Read on for the long troubleshooting process and the surprising trivial solution.
+slug: fighting-execs-sandboxfs-macos
 ---
 
 A few weeks ago, [we announced sandboxfs]({{< relref "2017-08-25-introducing-sandboxfs.md" >}}): a FUSE file system to expose an arbitrary view of the host's file system.  We intend to use this file system in [Bazel](http://bazel.build/) to provide a faster and more correct sandboxing technique for build actions.

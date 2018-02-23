@@ -11,6 +11,7 @@ medium:      your-english-is-pretty-good-they-said-b67e0aa7c99f
 cover-image: 2015-09-21-header.png
 aliases:
   - /blog/2015/09/20/your-english-is-pretty-good-they-said.html
+slug: your-english-is-pretty-good-they-said
 ---
 
 As I spend September in Seoul and attend an intensive Korean language course, **my story with English** comes to mind. This is a story I have told a bunch of times to friends and coworkers and it's time to write it down for posterity's sake.

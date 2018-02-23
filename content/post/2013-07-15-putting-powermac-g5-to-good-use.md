@@ -7,6 +7,7 @@ categories:
   - "powerpc"
   - "review"
 julipedia: 2013/07/putting-powermac-g5-to-good-use.html
+slug: putting-powermac-g5-to-good-use
 ---
 A few months ago I bought an old PowerMac G5 off of Craigslist and since
 then I have been experimenting with various operating systems and

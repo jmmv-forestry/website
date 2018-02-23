@@ -6,6 +6,7 @@ categories:
 aliases:
   - /blog/2016/02/17/sshfs-performance-analysis-for-builds.html
 excerpt_separator: <!--end-of-excerpt-->
+slug: sshfs-performance-analysis-for-builds
 ---
 
 Last week, I spent some time looking at the **feasibility of using SSHFS on OS X to access Google's centralized source tree for the purpose of issuing local builds**. My goals were two-fold: first, to **avoid having to "clone" the large source code** of the apps I wanted to build; and, second, to **avoid having to port** the source file system (a FUSE module) to the Mac.

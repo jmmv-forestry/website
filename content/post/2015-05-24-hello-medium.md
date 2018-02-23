@@ -8,6 +8,7 @@ categories:
 medium:     hello-medium-2c73c580c4ca
 aliases:
   - /blog/2015/05/24/hello-medium.html
+slug: hello-medium
 ---
 
 _In search for a new home to personal essays._

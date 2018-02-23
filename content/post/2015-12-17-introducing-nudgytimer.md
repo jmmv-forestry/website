@@ -6,6 +6,7 @@ categories:
 aliases:
   - /blog/2015/12/17/introducing-nudgytimer.html
 excerpt_separator: <!--end-of-excerpt-->
+slug: introducing-nudgytimer
 ---
 
 <img src="{{ "/images/2015-12-17-nudgytimer.png" | prepend: site.baseurl }}"

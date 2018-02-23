@@ -6,5 +6,6 @@ categories:
   - "teasert"
 julipedia: 2008/02/c-little-teaser-about-stdset.html
 excerpt_separator: </p>
+slug: c-little-teaser-about-stdset
 ---
 This does not build.  Can you guess why?  Without testing it?<pre>std::set&lt; int &gt; numbers;<br /><br />for (int i = 0; i &lt; 10; i++)<br />   numbers.insert(i);<br /><br />for (std::set&lt; int &gt;::iterator iter = numbers.begin();<br />    iter != numbers.end(); iter++) {<br />   int&amp; i = *iter;<br />   i++;<br />}</pre><b>Update (23:40)</b>: John gave a correct answer in the comments.

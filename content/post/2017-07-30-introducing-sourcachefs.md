@@ -5,6 +5,7 @@ categories:
   - "software"
 excerpt:
     Announcing the launch of sourcachefs, a FUSE-based persistent caching layer.
+slug: introducing-sourcachefs
 ---
 
 You may remember a post from over a year ago titled [Analysis of SSHFS performance for large builds]({{< relref "2016-02-17-sshfs-performance-analysis-for-builds.md" >}}), in which I outlined how Google exposes its gigantic source monorepo via a FUSE file system and in which I analyzed the performance of large builds using SSHFS to access such file system.

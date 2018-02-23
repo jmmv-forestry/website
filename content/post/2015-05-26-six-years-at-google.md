@@ -10,6 +10,7 @@ categories:
 medium:     six-years-at-google-8b06563fab08
 aliases:
   - /blog/2015/05/26/six-years-at-google.html
+slug: six-years-at-google
 ---
 
 > **Mission: Site Reliability Engineer for the Storage Infrastructure at Google**

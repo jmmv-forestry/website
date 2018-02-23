@@ -6,6 +6,7 @@ categories:
   - "google"
   - "software"
 julipedia: 2015/04/on-bazel-and-open-source.html
+slug: on-bazel-and-open-source
 ---
 This is a rare post because I don't usually talk about Google stuff
 here, and this post is about Bazel: a tool recently published by Google.

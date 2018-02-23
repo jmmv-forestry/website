@@ -5,6 +5,7 @@ categories:
   - "featured"
   - "netbsd"
 julipedia: 2013/06/self-interview-after-leaving-netbsd.html
+slug: self-interview-after-leaving-netbsd
 ---
 *The decision to **not** renew my NetBSD board membership was
 bittersweet.*

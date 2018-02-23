@@ -12,6 +12,7 @@ cover-image: 2015-09-08-header.png
 excerpt_separator: "* * *"
 aliases:
   - /blog/2015/09/07/my-coding-workflow.html
+slug: my-coding-workflow
 ---
 
 **How would you best organize your work environment for maximum productivity if you were tasked to develop a type of application you had never developed before?**

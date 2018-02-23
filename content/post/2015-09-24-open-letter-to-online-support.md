@@ -7,6 +7,7 @@ categories:
 medium:     an-open-letter-to-online-support-staff-f4ea93ffc0df
 aliases:
   - /blog/2015/09/24/open-letter-to-online-support.html
+slug: open-letter-to-online-support
 ---
 
 Dear online support staff member,

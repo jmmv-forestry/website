@@ -6,6 +6,7 @@ categories:
   - "freebsd"
   - "google"
 julipedia: 2014/05/code-review-culture-meets-freebsd.html
+slug: code-review-culture-meets-freebsd
 ---
 One of the things that often shocks new engineers at Google is the fact
 that *every change to the source tree **must** be reviewed **before**

@@ -11,6 +11,7 @@ medium:      how-to-commit-a-code-hack-and-not-perish-along-the-way-7059dac49df6
 cover-image: 2015-06-19-header.jpg
 aliases:
   - /blog/2015/06/19/how-to-commit-a-code-hack.html
+slug: how-to-commit-a-code-hack
 ---
 
 **You are the developer in charge to resolve a problem and have prepared a _[changelist](http://svnbook.red-bean.com/en/1.7/svn.advanced.changelists.html)_ to fix the bug. You need the changelist to be reviewed by someone else before checkin. Your changelist _is_ an ugly hack.**

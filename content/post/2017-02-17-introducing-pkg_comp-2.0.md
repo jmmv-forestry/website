@@ -6,6 +6,7 @@ categories:
 excerpt:
     Announcing the launch of pkg_comp 2.0, how this differs from the 1.x series,
     why there was a rewrite, what sandboxctl 1.0 is, and more.
+slug: introducing-pkg_comp-2.0
 ---
 
 After many (many) years in the making, **[pkg_comp](https://github.com/jmmv/pkg_comp/) 2.0 and its companion [sandboxctl](https://github.com/jmmv/sandboxctl/) 1.0 are finally here!**

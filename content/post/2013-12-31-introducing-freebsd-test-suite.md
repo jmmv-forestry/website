@@ -7,6 +7,7 @@ categories:
   - "kyua"
   - "testing"
 julipedia: 2013/12/introducing-freebsd-test-suite.html
+slug: introducing-freebsd-test-suite
 ---
 [I joined the FreeBSD committer
 ranks](/2013/11/joining-freebsd-committer-ranks.html)

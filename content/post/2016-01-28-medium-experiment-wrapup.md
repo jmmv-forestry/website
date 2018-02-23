@@ -6,6 +6,7 @@ categories:
   - "writing"
 aliases:
   - /blog/2016/01/29/medium-experiment-wrapup.html
+slug: medium-experiment-wrapup
 ---
 
 Eight months ago, [I decided to try

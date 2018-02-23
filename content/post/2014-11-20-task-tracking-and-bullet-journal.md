@@ -5,6 +5,7 @@ categories:
   - "featured"
   - "productivity"
 julipedia: 2014/11/task-tracking-and-bullet-journal.html
+slug: task-tracking-and-bullet-journal
 ---
 iGTD, Things, Org mode, OmniFocus, Google Tasks, Trello, Google Keep...
 All of them. All of them I have tried over the last few years and all of

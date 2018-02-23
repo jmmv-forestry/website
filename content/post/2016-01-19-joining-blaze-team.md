@@ -7,6 +7,7 @@ categories:
 aliases:
   - /blog/2016/01/19/joining-blaze-team.html
 excerpt_separator: <!--end-of-excerpt-->
+slug: joining-blaze-team
 ---
 
 It has been [over 6 years since I joined

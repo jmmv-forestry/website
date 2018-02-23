@@ -6,6 +6,7 @@ categories:
   - "git"
   - "kyua"
 julipedia: 2014/02/how-to-merge-multiple-git-repositories.html
+slug: how-to-merge-multiple-git-repositories
 ---
 Are you looking for a method to merge multiple Git repositories into a
 single one? If so, you have reached the right tutorial!

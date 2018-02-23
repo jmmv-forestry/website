@@ -11,6 +11,7 @@ medium:      get-a-handle-on-email-subscriptions-137a7472d71d
 cover-image: 2015-06-06-header.jpg
 aliases:
   - /blog/2015/06/06/get-a-handle-on-email-subscriptions.html
+slug: get-a-handle-on-email-subscriptions
 ---
 
 Do you have any idea which online services and stores have you given your email address to? Are you able to quantify the effort it would take to fully migrate to a different email account if you ever wanted to?

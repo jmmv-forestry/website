@@ -4,6 +4,7 @@ date:        2017-08-25 16:25:18 -0400
 categories:
   - "bazel"
   - "software"
+slug: introducing-sandboxfs
 ---
 
 sandboxfs is a FUSE-based file system that exposes an arbitrary view of the

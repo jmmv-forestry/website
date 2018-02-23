@@ -5,6 +5,7 @@ categories:
   - blog
   - writing
 excerpt_separator: <!--end-of-excerpt-->
+slug: looking-to-replace-jekyll
 ---
 
 Back in [May 2015]({{< relref "2015-05-24-hello-medium.md" >}}), I was lured to Medium by its simplicity and growing community, which resulted in me posting a bunch of articles there and enjoying every moment of it. But, eventually, I noticed that [I was losing control of my content]({{< relref "2016-01-28-medium-experiment-wrapup.md" >}}). So [a year later]({{< relref "2016-05-29-homepage-v3.md" >}}), my experiments to create static homepage resulted in me moving from Blogger and Medium to a [Jekyll](https://jekyllrb.com/)-managed site.

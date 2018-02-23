@@ -7,6 +7,7 @@ medium:     those-pesky-makefiles-4784d4dc4888
 aliases:
   - /blog/2016/03/02/those-pesky-makefiles.html
 excerpt_separator: <!--end-of-excerpt-->
+slug: those-pesky-makefiles
 ---
 
 As a software developer, you have probably disregarded the build system of your project---those pesky `Makefile`s---as unimportant. You have probably "chosen" to use the de-facto build tool `make(1)`. And you have probably hacked your way around until things "seemingly worked".

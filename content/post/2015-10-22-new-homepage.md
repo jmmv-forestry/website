@@ -5,6 +5,7 @@ categories:
   - "website"
 aliases:
   - /blog/2015/10/22/new-homepage.html
+slug: new-homepage
 ---
 
 Back in May, I wanted to play a little bit with [Twitter

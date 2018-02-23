@@ -6,6 +6,7 @@ categories:
   - "programming"
   - "scripts"
   - "unix"
+slug: env-considered-harmful
 ---
 
 Many programming guides recommend to begin scripts with the `#! /usr/bin/env` [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) in order to to automatically locate the necessary interpreter. For example, for a Python script you would use `#! /usr/bin/env python`, and then the saying goes, the script would "just work" on any machine with Python installed.
