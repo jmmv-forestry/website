@@ -1,7 +1,8 @@
 ---
-layout:      post
 title:       11 years of the Julipedia... and thanks for the ride
-categories:  blogging
+categories:
+  - blogging
+draft: yes
 ---
 
 The Julipedia turns 11 years today. And it is time to let it go. This is not a decision I made lightly; in fact, this post was started at the beginning of March and I purposely let it sit until the blog's birthday to put it out.

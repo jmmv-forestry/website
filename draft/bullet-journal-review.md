@@ -1,7 +1,10 @@
 ---
-layout:      post
 title:       Bullet Journal review after two years
-categories:  essay journaling productivity
+categories:
+  - essay
+  - journaling
+  - productivity
+draft: yes
 ---
 
 It has now been a year and a half since I first started using the Bullet Journal principles for task tracking and I am about to finish my first notebook. This is an incredible feat for which I must give credit to the system: I had been unable to use any single task management system for so long, and I had never completed any notebook. With the completion of the notebook, it's time for a second reflection on the Bullet Journal.

@@ -1,7 +1,10 @@
 ---
 layout: post
 title: A look at Windows 10 with fresh eyes
-categories: featured software
+categories:
+  - featured
+  - software
+draft: yes
 ---
 
 My story with Windows started many years ago, back in 1993 when I got my first computer. That computer, a multimedia 386-based PC, came with Windows 3.1. Soon after that, I "upgraded" to OS/2 Warp 3 and pretty much abandoned Windows. Granted: on the next computers I had, I installed Windows 95, 98, and later 2000, only to be able to run a couple of games. OS/2, and later, Linux and BSD, were my main platforms.

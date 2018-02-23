@@ -1,7 +1,8 @@
 ---
-layout: post
 title: "From Blogger to Jekyll: How to export a Blogger site"
-categories: blog
+categories:
+  - blog
+draft: yes
 ---
 
 Exporting the contents of a Blogger blog is easy: just click a button on the administrator's site to download an XML file with a very complete representation of the blog contents and its configuration. But making use of this exported data for any other purpose than reimporting into Blogger is difficult, and may be the reason why the export functionality is called *backup* and not *export*. This is a bit sad but, with a bit of effort, one can extract the contents of the XML backup into a more manageable state.

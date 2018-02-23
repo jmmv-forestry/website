@@ -1,8 +1,9 @@
 ---
-layout:      post
 title:       How the smartphone made me email-sloppy
-categories:  essay
+categories:
+  - essay
 excerpt_separator: <!--end-of-excerpt-->
+draft: yes
 ---
 
 I used to be good at replying to emails on time. When dozens of emails came in every day, I would sort them out, and I would immediately reply, at the very least, to the ones directed to me. One or two would slip for a few days, but soon after the sought Inbox Zero was achieved again. Inbox Zero wasn't a specific goal: it "just was".

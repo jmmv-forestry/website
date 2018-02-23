@@ -1,7 +1,8 @@
 ---
-layout: post
 title: Articles that succeed
-categories: featured
+categories:
+  - featured
+draft: yes
 ---
 
 <!-- TODO: Enable cover and add credits.

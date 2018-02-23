@@ -1,8 +1,10 @@
 ---
-layout:      post
 title:       My Git Workflow
-categories:  development essay
+categories:
+  - development
+  - essay
 excerpt_separator: <!--end-of-excerpt-->
+draft: yes
 ---
 
 On [My coding workflow](TODO), I presented the way I work on the command line to handle various different console-based projects. It's now the time to dive into the specifics of how I interact with a tool: Git.

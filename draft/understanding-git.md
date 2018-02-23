@@ -1,8 +1,10 @@
 ---
-layout:      post
 title:       Understanding Git
 date:        2016-04-15 13:00:00
-categories:  git software
+categories:
+  - git
+  - software
+draft: yes
 ---
 
 Whether you like it or not, Git has become the de-facto Version Control System (VCS). As a result, it is better for you overall to be proficient at it than to not be, which is easier said than done: the Git command-line interface (CLI) is hard to grasp and the Git workflows are sufficiently different from those in other VCSs to look alien.

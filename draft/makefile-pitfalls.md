@@ -1,7 +1,8 @@
 ---
-layout:      post
 title:       Common Makefile pitfalls
-categories:  development
+categories:
+  - development
+draft: yes
 ---
 
 Post a recollection of issues with little snippets on each. Use the form:

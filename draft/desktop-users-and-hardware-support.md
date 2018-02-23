@@ -1,9 +1,10 @@
 ---
-layout:     post
 title:      On the success of an OS
 date:       2016-04-20 09:00:00
-categories: essay
+categories:
+  - essay
 excerpt_separator: <!--end-of-excerpt-->
+draft: yes
 ---
 
 As the summery breeze blew through my apartment this morning, my mind was transported to the day I started tinkering with NetBSD. Those were the days of 1.5 and I vividly remember holding the purple-colored CD I had burned and the yellow-on-black installer. Of course, this was not my first exposure to Unix systems nor other alternative OSes: that history started with OS/2 Warp 3 on 1994 and was then followed by several years of Linux usage.

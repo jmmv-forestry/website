@@ -1,8 +1,10 @@
 ---
-layout:      post
 title:       The GOPATH problem
-categories:  development go
+categories:
+  - development
+  - go
 excerpt_separator: <!--end-of-excerpt-->
+draft: yes
 ---
 
 In my last article, I posted a review of the Go language from the perspective of a newcomer. The very first thing I classified as bad was `GOPATH` and, as I could predict, readers were eager to dispute this claim.
