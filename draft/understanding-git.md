@@ -19,8 +19,6 @@ Think of this post as a crash course to Git's fundamentals and a cookbook for co
 
 I thought about splitting this article in multiple posts, but then decided to keep everything together for further reference. The next post will also be Git-related, but it'll focus on detailing my personal workflow. Therefore, here is the table of contents to guide you through this piece:
 
-<div id="toc" data-toc data-toc-max="2"></div>
-
 # The object model
 
 Simply put, Git stores objects. Objects are identified by their digest (or hash, SHA1), have a type, a size, and arbitrary content. There are three key object types:
