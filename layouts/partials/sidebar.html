@@ -46,7 +46,7 @@
         <ul id="archive-year-{{ $year }}" class="collapse">
           {{ range .Pages.GroupByDate "2006-01" }}
             {{ $month := dateFormat "January" (print .Key "-01") }}
-            <li><a href="/archive.html#{{ .Key }}">{{ print $month " " $year }}</a> ({{ len .Pages }})</li>
+            <li><a href="/essays.html#{{ .Key }}">{{ print $month " " $year }}</a> ({{ len .Pages }})</li>
           {{ end }}
         </ul>
       </li>

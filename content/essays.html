@@ -15,12 +15,7 @@ site on May 2016 <!--TODO(jmmv): Add post to announcement. -->.</p>
 articles, not all of which have been published in this site:</p>
 
 <ul>
-  {% for post in site.posts %}
-    {% if post.categories contains "featured" %}
-      <li>{{ post.date | date: "%Y-%m-%d" }}:
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
-    {% endif %}
-  {% endfor %}
+  {{< posts category="featured" >}}
 
   <li>2012-08-07:
   <a href="https://blog.netbsd.org/tnf/entry/introducing_sysbuild_and_sysupgrade">Introducing
@@ -54,14 +49,9 @@ to the series' wrap-up posts, which provide a summary of the series and links
 to all the individual posts:</p>
 
 <ul>
-  {% for post in site.posts %}
-    {% if post.categories contains "series-summary" %}
-      <li>{{ post.date | date: "%Y-%m-%d" }}:
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
-    {% endif %}
-  {% endfor %}
+  {{< posts category="series-summary" >}}
 </ul>
 
 <h1>Archive</h1>
 
-{% include archive.html %}
+{{< archive >}}

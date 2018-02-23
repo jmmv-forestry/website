@@ -1,6 +1,6 @@
 {{ range (where .Site.Pages "Type" "post").GroupByDate "2006" }}
   {{ $year := .Key }}
-  <h1>{{ $year }}</h1>
+  <h2>{{ $year }}</h2>
   {{ range .Pages.GroupByDate "2006-01" }}
     {{ $month := dateFormat "January" (print .Key "-01") }}
     <ul>
