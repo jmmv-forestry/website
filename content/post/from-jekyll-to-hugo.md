@@ -38,3 +38,16 @@ If you had visited recently, you may notice that the site has barely changed —
 Some highlights:
 
 * Having all posts as plain files is great for any kind of refactoring. I had to do multiple passes over all posts to adjust tiny details in their Front Matter... and you can't beat a trivial AWK script run on all of them at once followed by a `git commit`
+
+Some lowlights:
+
+* I was originally very excited by Hugo's predefined themes. I previewed a bunch that looked cool, but in the end they all felt clunky. Either they didn't work well, or the site's contents didn't fully adapt to the theme's expectations. The more I looked, the more I realized that I actually like my current hand-crafted theme quite a bit. It fits my needs, and I mostly understand what's going on under the hood. In the end it was pretty easy to adapt the Liquid templates to build with Hugo.
+* No symlinks support. The RSS issue I mentioned above could be trivially solved if Hugo supported symlinks in the static tree, but it doesn't. And, [unfortunately, it doesn't look like that's going to happen](https://discourse.gohugo.io/t/option-to-retain-symlinks-in-static-dir/4688).
+
+# Forestry
+
+As you can imagine, the switch to Hugo has done little to minimize the friction problems that get in the way of posting. It's a bit nicer of course, but probably because this migration exercise has brought back to mind how the site works.
+
+Now, last week's experimentation mentioned that Forestry might be a nice UI to interact with the blog.
+
+Maybe... or maybe not. With the switch to Hugo, things are worse now. The list of posts has lost its chronological order, which makes it impossible to find anything. And worst of all... the preview doesn't work. I imagined it would solve those issues because I got rid of my custom `make`-based build, but apparently something is still off.
