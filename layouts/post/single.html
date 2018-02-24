@@ -9,7 +9,8 @@
       <div class="container">
         <h1>{{ .Title }}</h1>
 
-        <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
+        <p>{{ .PublishDate.Format "January 2, 2006" }} &middot;
+        About {{ .ReadingTime }} minutes</p>
 
         {{ if isset .Params "cover-image" }}
         <img src="/images/{{ index .Params "cover-image" }}"
